@@ -1,0 +1,13 @@
+For information about how GitHub works abstractly
+https://guides.github.com/introduction/flow/
+
+For information about how you would setup a repo and how the actual commits pulls and etc are done on GitHub itself
+https://guides.github.com/activities/hello-world/
+
+For the web IDE that can have multiple editors at once that has github integration
+  -> you will need to log in with you github account on repl.it and let if have access to your repos
+  -> also the branching and commits are a little bit strange on repl.it you have to close the project and repo open it direcet for merges and pulls to take effect
+https://repl.it/
+
+For information about how to use git from command line locally
+https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html#download-vs-clone
