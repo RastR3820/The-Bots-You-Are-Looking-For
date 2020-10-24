@@ -10,4 +10,4 @@ For the web IDE that can have multiple editors at once that has github integrati
 https://repl.it/
 
 For information about how to use git from command line locally
-https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html#download-vs-clone
+https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html
