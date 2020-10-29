@@ -33,8 +33,9 @@ class QueryHandler:
 		# This will be where the query is sent to the DB and the response is returned
 		
 		# Cursor executes the current query nd storede the result to the cursor
-		self.cur.execute(self.currentQuery)
+		### self.cur.execute(self.currentQuery)
 
 		# TODO : I might want to change the fetchall to fetchone depending on how the queries are defined
 		# Returns the result of the query stored in the cursor
-		return self.cur.fetchall()
+		### return self.cur.fetchall()
+		pass

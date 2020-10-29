@@ -58,7 +58,3 @@ class InputHandler:
 			return "badinput"
 		else:
 			return self.proc.doThing(self.userInput)
-
-	def getInput(self):
-		# This will return the current user input
-		return self.userInput
