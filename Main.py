@@ -1,14 +1,37 @@
 # ./Main.py
 # The main structure of the chatbot. THis will bring together all of the functions from the other iles
 
-#Import statements for the other classes
+# Import statements for the other classes
 from Handlers.InputHandler import InputHandler
 from Handlers.QueryHandler import QueryHandler
 from Handlers.ResponseHandler import ResponseHandler
 
-#Creating instances of the classes
+# Creating instances of the classes
 inp = InputHandler()
 qry = QueryHandler()
 res = ResponseHandler()
 
-# TODO -- the rest of the code
+
+while True:
+	# TEMP spacing for console outputs
+	print("\n\n")
+
+	# Receive the user input
+	inp.receive()
+
+	# Processes input to check for intent
+	intent = inp.process()
+
+	# Sends an appropriate message based off the intent
+	out = res.create(intent, inp.verifyLogin())
+	
+	# Handle functions that need to be done base on the input
+	if out == "login":
+		inp.setLogin()
+
+	# Sends the created response
+	res.send()
+
+	# Quits if the user said a goodbye
+	if out == "quit":
+		break

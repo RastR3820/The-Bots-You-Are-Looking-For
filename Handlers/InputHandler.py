@@ -1,17 +1,64 @@
 # ./Handlers/InputHandler.py
 # This handler will get the input from the webpage and process it
 
-from IntentHandler import IntentHandler
+from Handlers.IntentHandler import IntentHandler
 
 class InputHandler:
 	userInput = ""
+	userLogin = False
+	okayChars = [' ','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','1','2','3','4','5','6','7','8','9','0','/','#','$','%','&','@']
 	proc = IntentHandler()
 	
-	def recieve():
-		#This will be where the chatbot will recieve imput from the webpage
-		
-	def check():
-		#This will be where the input is checked for bad input, ie. bad characters or other languages
+	def verifyLogin(self):
+		# This will get the user's current login status from the web page
 
-	def process():
-		#This will be where the input gets processed by the IntentHandler, meaning the NLP
+		# TODO : Figure out how the login status will be receieved from the web page
+		return self.userLogin
+
+	def setLogin(self):
+		# TEMP function to set login status
+		self.userLogin = True
+
+	def receive(self):
+		# This will be where the chatbot will recieve input from the webpage
+
+		# TODO : Figure out how input is going to be receieved from the webpage
+		# I don't know what language the webpage is built on nor do I know how to hook this program into an existing webpage
+		# Temporarily I will just have it read input from a prompt
+		inputFromWeb = input("What can I do for you?\n")
+		self.userInput = inputFromWeb
+
+	def cleanInput(self):
+		# This will clean the input so the intent handler can better understand the input
+
+		# Sets the input string to lowercase for easier processing
+		self.userInput = self.userInput.lower()
+
+		# Removes punctuation
+		self.userInput = self.userInput.replace(',','')
+		self.userInput = self.userInput.replace('.','')
+		self.userInput = self.userInput.replace('!','')
+		self.userInput = self.userInput.replace('?','')
+		
+	def check(self):
+		# This will be where the input is checked for bad input, ie. bad characters or other languages
+		
+		# Cleans the input before checking for bad input
+		self.cleanInput()
+
+		# Iterates through each character in the input and checks if they are valid characters
+		for char in self.userInput:
+			if char not in self.okayChars:
+				return False
+		return True
+
+	def process(self):
+		# This will return whether the input is bad or what the intent was on good input
+		if not self.check():
+			return "badinput"
+		else:
+			return self.proc.doThing(self.userInput)
+
+	def getInput(self):
+		# This will return the current user input
+		return self.userInput
