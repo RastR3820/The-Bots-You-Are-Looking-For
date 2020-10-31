@@ -13,7 +13,7 @@ class QueryHandler:
 
 	# TODO : Need to get the login details for the DB
 	### infoDB = mysql.connector.connect(host="", user="", password="", database="")
-	### cur = infoDB.cursor()
+	### dbCursor = infoDB.cursor()
 
 	def __init__(self):
 		# Constructor
@@ -54,11 +54,11 @@ class QueryHandler:
 		# This will be where the query is sent to the DB and the response is returned
 		
 		# Cursor executes the current query and stores the result to the cursor
-		### self.cur.execute(self.currentQuery)
+		### self.dbCursor.execute(self.currentQuery)
 
 		# TODO : I might want to change the fetchall to fetchone depending on how the queries are defined
 		# Returns the result of the query stored in the cursor
-		### return self.cur.fetchall()
+		### return self.dbCursor.fetchall()
 		
 		# TEMP fake query responses
 		if self.currentQuery == "notfound":
