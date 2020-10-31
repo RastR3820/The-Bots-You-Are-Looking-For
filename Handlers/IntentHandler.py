@@ -9,17 +9,17 @@ class IntentHandler:
 		# As such I will just make this simple function to just simulate things for now
 		
 		greet = ['hi','hello','greetings','howdy']
-		functions = ['map','degree','major']
+		functions = ['map','major']
 		goodbye = ['bye','goodbye']
-		needLogin = ['credits','gpa','appointment']
+		needLogin = ['credits','gpa','appointment','degree']
 
 		tokens = inString.split()
 
 		for word in tokens:
 			if word in functions:
-				return "func"
+				return "cmd "+word
 			elif word in needLogin:
-				return "needlog"
+				return "usrcmd "+word
 			elif word in goodbye:
 				return "done"
 			elif word in greet:

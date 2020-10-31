@@ -24,8 +24,9 @@ class InputHandler:
 
 		# TODO : Figure out how input is going to be receieved from the webpage
 		# I don't know what language the webpage is built on nor do I know how to hook this program into an existing webpage
-		# Temporarily I will just have it read input from a prompt
-		inputFromWeb = input("What can I do for you?\n")
+
+		# TEMP I will just have it read input from a prompt
+		inputFromWeb = input("Functions: appointment, credits, degree, gpa, major, map, login, greet, goodbye\n")
 		self.userInput = inputFromWeb
 
 	def cleanInput(self):
