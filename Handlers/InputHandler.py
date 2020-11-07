@@ -2,12 +2,14 @@
 # This handler will get the input from the webpage and process it
 
 from Handlers.IntentHandler import IntentHandler
+from Handlers.WebHandler import WebHandler
 
 class InputHandler:
 	userInput = ""
 	userLogin = False
 	okayChars = [' ','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','1','2','3','4','5','6','7','8','9','0','/','#','$','%','&','@']
 	proc = IntentHandler()
+	web = WebHandler()
 	
 	def verifyLogin(self):
 		# This will get the user's current login status from the web page

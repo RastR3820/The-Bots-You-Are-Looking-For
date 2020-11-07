@@ -1,8 +1,11 @@
 # ./Handlers/ReponseHandler.py
 # This handler will be where the responses are created and sent back to the webpage
 
+from Handlers.WebHandler import WebHandler
+
 class ResponseHandler:
 	currentResponse = ""
+	web = WebHandler()
 	
 	def create(self, content):
 		#This will be where responses are generated
