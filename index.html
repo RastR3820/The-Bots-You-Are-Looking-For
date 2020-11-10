@@ -4,11 +4,12 @@
 		<title>Advising ChatBot</title>
 		
 		<link rel="stylesheet" type="text/css" 
-		href="H:\Documents\Chatbot/desktop_login.css">		
+		href="{{ url_for('static', filename='desktop_login.css') }}">
+		
 	</head>
 	
 	<body>
-	
+		
 		<div class="banner">
 		<h1>University of Houston - Clear Lake</h1>
 		</div>
@@ -21,19 +22,21 @@
 		<h3>Please login to your E-Services account</h3>
 		</div>
 		
+		<form method="POST" action"">
 		<div class="username">
 		<label>Username:</label>
-		<input type="text" username="Username">
+		<input type="text" username="Username" name="username">
 		</div> 
 		
 		<div class="password">
 		<label>Password:</label>
-		<input type="password" password="Password">
+		<input type="password" password="Password" name="password">
 		</div> 
 		
-		<a href="H:\Documents\Chatbot/chatbot.html"
-		class="button1"  type="submit" 
-		name=""<label>Login</label></a>
+		<div class="button1"> 
+		<input type="submit" value="Login">
+		</div>
+		</form>
 		
 		<a href="H:\Documents\Chatbot/chatbot.html"
 		class="button2" type="submit" 
