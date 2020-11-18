@@ -1,0 +1,2017 @@
+base                                                     | 3.6 kB     00:00
+extras                                                   | 2.9 kB     00:00
+updates                                                  | 2.9 kB     00:00
+No packages marked for update
+[aaron@tbyalf ~]$ sudo yum install vim
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: centos.mirror.lstn.net
+ * extras: mirror.dal.nexril.net
+ * updates: mirror.cc.columbia.edu
+Resolving Dependencies
+--> Running transaction check
+---> Package vim-enhanced.x86_64 2:7.4.629-6.el7 will be installed
+--> Processing Dependency: vim-common = 2:7.4.629-6.el7 for package: 2:vim-enhan                                                                                                             ced-7.4.629-6.el7.x86_64
+--> Processing Dependency: perl(:MODULE_COMPAT_5.16.3) for package: 2:vim-enhanc                                                                                                             ed-7.4.629-6.el7.x86_64
+--> Processing Dependency: libperl.so()(64bit) for package: 2:vim-enhanced-7.4.6                                                                                                             29-6.el7.x86_64
+--> Processing Dependency: libgpm.so.2()(64bit) for package: 2:vim-enhanced-7.4.                                                                                                             629-6.el7.x86_64
+--> Running transaction check
+---> Package gpm-libs.x86_64 0:1.20.7-6.el7 will be installed
+---> Package perl.x86_64 4:5.16.3-295.el7 will be installed
+--> Processing Dependency: perl(Socket) >= 1.3 for package: 4:perl-5.16.3-295.el                                                                                                             7.x86_64
+--> Processing Dependency: perl(Scalar::Util) >= 1.10 for package: 4:perl-5.16.3                                                                                                             -295.el7.x86_64
+--> Processing Dependency: perl-macros for package: 4:perl-5.16.3-295.el7.x86_64
+--> Processing Dependency: perl(threads::shared) for package: 4:perl-5.16.3-295.                                                                                                             el7.x86_64
+--> Processing Dependency: perl(threads) for package: 4:perl-5.16.3-295.el7.x86_                                                                                                             64
+--> Processing Dependency: perl(constant) for package: 4:perl-5.16.3-295.el7.x86                                                                                                             _64
+--> Processing Dependency: perl(Time::Local) for package: 4:perl-5.16.3-295.el7.                                                                                                             x86_64
+--> Processing Dependency: perl(Time::HiRes) for package: 4:perl-5.16.3-295.el7.                                                                                                             x86_64
+--> Processing Dependency: perl(Storable) for package: 4:perl-5.16.3-295.el7.x86                                                                                                             _64
+--> Processing Dependency: perl(Socket) for package: 4:perl-5.16.3-295.el7.x86_6                                                                                                             4
+--> Processing Dependency: perl(Scalar::Util) for package: 4:perl-5.16.3-295.el7                                                                                                             .x86_64
+--> Processing Dependency: perl(Pod::Simple::XHTML) for package: 4:perl-5.16.3-2                                                                                                             95.el7.x86_64
+--> Processing Dependency: perl(Pod::Simple::Search) for package: 4:perl-5.16.3-                                                                                                             295.el7.x86_64
+--> Processing Dependency: perl(Getopt::Long) for package: 4:perl-5.16.3-295.el7                                                                                                             .x86_64
+--> Processing Dependency: perl(Filter::Util::Call) for package: 4:perl-5.16.3-2                                                                                                             95.el7.x86_64
+--> Processing Dependency: perl(File::Temp) for package: 4:perl-5.16.3-295.el7.x                                                                                                             86_64
+--> Processing Dependency: perl(File::Spec::Unix) for package: 4:perl-5.16.3-295                                                                                                             .el7.x86_64
+--> Processing Dependency: perl(File::Spec::Functions) for package: 4:perl-5.16.                                                                                                             3-295.el7.x86_64
+--> Processing Dependency: perl(File::Spec) for package: 4:perl-5.16.3-295.el7.x                                                                                                             86_64
+--> Processing Dependency: perl(File::Path) for package: 4:perl-5.16.3-295.el7.x                                                                                                             86_64
+--> Processing Dependency: perl(Exporter) for package: 4:perl-5.16.3-295.el7.x86                                                                                                             _64
+--> Processing Dependency: perl(Cwd) for package: 4:perl-5.16.3-295.el7.x86_64
+--> Processing Dependency: perl(Carp) for package: 4:perl-5.16.3-295.el7.x86_64
+---> Package perl-libs.x86_64 4:5.16.3-295.el7 will be installed
+---> Package vim-common.x86_64 2:7.4.629-6.el7 will be installed
+--> Processing Dependency: vim-filesystem for package: 2:vim-common-7.4.629-6.el                                                                                                             7.x86_64
+--> Running transaction check
+---> Package perl-Carp.noarch 0:1.26-244.el7 will be installed
+---> Package perl-Exporter.noarch 0:5.68-3.el7 will be installed
+---> Package perl-File-Path.noarch 0:2.09-2.el7 will be installed
+---> Package perl-File-Temp.noarch 0:0.23.01-3.el7 will be installed
+---> Package perl-Filter.x86_64 0:1.49-3.el7 will be installed
+---> Package perl-Getopt-Long.noarch 0:2.40-3.el7 will be installed
+--> Processing Dependency: perl(Pod::Usage) >= 1.14 for package: perl-Getopt-Lon                                                                                                             g-2.40-3.el7.noarch
+--> Processing Dependency: perl(Text::ParseWords) for package: perl-Getopt-Long-                                                                                                             2.40-3.el7.noarch
+---> Package perl-PathTools.x86_64 0:3.40-5.el7 will be installed
+---> Package perl-Pod-Simple.noarch 1:3.28-4.el7 will be installed
+--> Processing Dependency: perl(Pod::Escapes) >= 1.04 for package: 1:perl-Pod-Si                                                                                                             mple-3.28-4.el7.noarch
+--> Processing Dependency: perl(Encode) for package: 1:perl-Pod-Simple-3.28-4.el                                                                                                             7.noarch
+---> Package perl-Scalar-List-Utils.x86_64 0:1.27-248.el7 will be installed
+---> Package perl-Socket.x86_64 0:2.010-5.el7 will be installed
+---> Package perl-Storable.x86_64 0:2.45-3.el7 will be installed
+---> Package perl-Time-HiRes.x86_64 4:1.9725-3.el7 will be installed
+---> Package perl-Time-Local.noarch 0:1.2300-2.el7 will be installed
+---> Package perl-constant.noarch 0:1.27-2.el7 will be installed
+---> Package perl-macros.x86_64 4:5.16.3-295.el7 will be installed
+---> Package perl-threads.x86_64 0:1.87-4.el7 will be installed
+---> Package perl-threads-shared.x86_64 0:1.43-6.el7 will be installed
+---> Package vim-filesystem.x86_64 2:7.4.629-6.el7 will be installed
+--> Running transaction check
+---> Package perl-Encode.x86_64 0:2.51-7.el7 will be installed
+---> Package perl-Pod-Escapes.noarch 1:1.04-295.el7 will be installed
+---> Package perl-Pod-Usage.noarch 0:1.63-3.el7 will be installed
+--> Processing Dependency: perl(Pod::Text) >= 3.15 for package: perl-Pod-Usage-1                                                                                                             .63-3.el7.noarch
+--> Processing Dependency: perl-Pod-Perldoc for package: perl-Pod-Usage-1.63-3.e                                                                                                             l7.noarch
+---> Package perl-Text-ParseWords.noarch 0:3.29-4.el7 will be installed
+--> Running transaction check
+---> Package perl-Pod-Perldoc.noarch 0:3.20-4.el7 will be installed
+--> Processing Dependency: perl(parent) for package: perl-Pod-Perldoc-3.20-4.el7                                                                                                             .noarch
+--> Processing Dependency: perl(HTTP::Tiny) for package: perl-Pod-Perldoc-3.20-4                                                                                                             .el7.noarch
+---> Package perl-podlators.noarch 0:2.5.1-3.el7 will be installed
+--> Running transaction check
+---> Package perl-HTTP-Tiny.noarch 0:0.033-3.el7 will be installed
+---> Package perl-parent.noarch 1:0.225-244.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package                     Arch        Version                Repository
+                                                                           Size
+================================================================================
+Installing:
+ vim-enhanced                x86_64      2:7.4.629-6.el7        base      1.1 M
+Installing for dependencies:
+ gpm-libs                    x86_64      1.20.7-6.el7           base       32 k
+ perl                        x86_64      4:5.16.3-295.el7       base      8.0 M
+ perl-Carp                   noarch      1.26-244.el7           base       19 k
+ perl-Encode                 x86_64      2.51-7.el7             base      1.5 M
+ perl-Exporter               noarch      5.68-3.el7             base       28 k
+ perl-File-Path              noarch      2.09-2.el7             base       26 k
+ perl-File-Temp              noarch      0.23.01-3.el7          base       56 k
+ perl-Filter                 x86_64      1.49-3.el7             base       76 k
+ perl-Getopt-Long            noarch      2.40-3.el7             base       56 k
+ perl-HTTP-Tiny              noarch      0.033-3.el7            base       38 k
+ perl-PathTools              x86_64      3.40-5.el7             base       82 k
+ perl-Pod-Escapes            noarch      1:1.04-295.el7         base       51 k
+ perl-Pod-Perldoc            noarch      3.20-4.el7             base       87 k
+ perl-Pod-Simple             noarch      1:3.28-4.el7           base      216 k
+ perl-Pod-Usage              noarch      1.63-3.el7             base       27 k
+ perl-Scalar-List-Utils      x86_64      1.27-248.el7           base       36 k
+ perl-Socket                 x86_64      2.010-5.el7            base       49 k
+ perl-Storable               x86_64      2.45-3.el7             base       77 k
+ perl-Text-ParseWords        noarch      3.29-4.el7             base       14 k
+ perl-Time-HiRes             x86_64      4:1.9725-3.el7         base       45 k
+ perl-Time-Local             noarch      1.2300-2.el7           base       24 k
+ perl-constant               noarch      1.27-2.el7             base       19 k
+ perl-libs                   x86_64      4:5.16.3-295.el7       base      689 k
+ perl-macros                 x86_64      4:5.16.3-295.el7       base       44 k
+ perl-parent                 noarch      1:0.225-244.el7        base       12 k
+ perl-podlators              noarch      2.5.1-3.el7            base      112 k
+ perl-threads                x86_64      1.87-4.el7             base       49 k
+ perl-threads-shared         x86_64      1.43-6.el7             base       39 k
+ vim-common                  x86_64      2:7.4.629-6.el7        base      5.9 M
+ vim-filesystem              x86_64      2:7.4.629-6.el7        base       11 k
+
+Transaction Summary
+================================================================================
+Install  1 Package (+30 Dependent packages)
+
+Total download size: 18 M
+Installed size: 60 M
+Is this ok [y/d/N]: y
+Downloading packages:
+(1/31): gpm-libs-1.20.7-6.el7.x86_64.rpm                   |  32 kB   00:00
+(2/31): perl-Exporter-5.68-3.el7.noarch.rpm                |  28 kB   00:00
+(3/31): perl-File-Path-2.09-2.el7.noarch.rpm               |  26 kB   00:00
+(4/31): perl-Carp-1.26-244.el7.noarch.rpm                  |  19 kB   00:00
+(5/31): perl-Filter-1.49-3.el7.x86_64.rpm                  |  76 kB   00:00
+(6/31): perl-Getopt-Long-2.40-3.el7.noarch.rpm             |  56 kB   00:00
+(7/31): perl-File-Temp-0.23.01-3.el7.noarch.rpm            |  56 kB   00:00
+(8/31): perl-HTTP-Tiny-0.033-3.el7.noarch.rpm              |  38 kB   00:00
+(9/31): perl-PathTools-3.40-5.el7.x86_64.rpm               |  82 kB   00:00
+(10/31): perl-Pod-Perldoc-3.20-4.el7.noarch.rpm            |  87 kB   00:00
+(11/31): perl-Pod-Escapes-1.04-295.el7.noarch.rpm          |  51 kB   00:00
+(12/31): perl-Pod-Simple-3.28-4.el7.noarch.rpm             | 216 kB   00:00
+(13/31): perl-Pod-Usage-1.63-3.el7.noarch.rpm              |  27 kB   00:00
+(14/31): perl-Scalar-List-Utils-1.27-248.el7.x86_64.rpm    |  36 kB   00:00
+(15/31): perl-Socket-2.010-5.el7.x86_64.rpm                |  49 kB   00:00
+(16/31): perl-Storable-2.45-3.el7.x86_64.rpm               |  77 kB   00:00
+(17/31): perl-Time-HiRes-1.9725-3.el7.x86_64.rpm           |  45 kB   00:00
+(18/31): perl-Time-Local-1.2300-2.el7.noarch.rpm           |  24 kB   00:00
+(19/31): perl-Text-ParseWords-3.29-4.el7.noarch.rpm        |  14 kB   00:00
+(20/31): perl-constant-1.27-2.el7.noarch.rpm               |  19 kB   00:00
+(21/31): perl-parent-0.225-244.el7.noarch.rpm              |  12 kB   00:00
+(22/31): perl-macros-5.16.3-295.el7.x86_64.rpm             |  44 kB   00:00
+(23/31): perl-libs-5.16.3-295.el7.x86_64.rpm               | 689 kB   00:00
+(24/31): perl-podlators-2.5.1-3.el7.noarch.rpm             | 112 kB   00:00
+(25/31): perl-threads-shared-1.43-6.el7.x86_64.rpm         |  39 kB   00:00
+(26/31): perl-Encode-2.51-7.el7.x86_64.rpm                 | 1.5 MB   00:00
+(27/31): perl-threads-1.87-4.el7.x86_64.rpm                |  49 kB   00:00
+(28/31): vim-enhanced-7.4.629-6.el7.x86_64.rpm             | 1.1 MB   00:00
+(29/31): vim-filesystem-7.4.629-6.el7.x86_64.rpm           |  11 kB   00:00
+(30/31): vim-common-7.4.629-6.el7.x86_64.rpm               | 5.9 MB   00:00
+(31/31): perl-5.16.3-295.el7.x86_64.rpm                    | 8.0 MB   00:01
+--------------------------------------------------------------------------------
+Total                                              9.9 MB/s |  18 MB  00:01
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : 1:perl-parent-0.225-244.el7.noarch                                                                                                                                       1/31
+  Installing : perl-HTTP-Tiny-0.033-3.el7.noarch                                                                                                                                        2/31
+  Installing : perl-podlators-2.5.1-3.el7.noarch                                                                                                                                        3/31
+  Installing : perl-Pod-Perldoc-3.20-4.el7.noarch                                                                                                                                       4/31
+  Installing : 1:perl-Pod-Escapes-1.04-295.el7.noarch                                                                                                                                   5/31
+  Installing : perl-Text-ParseWords-3.29-4.el7.noarch                                                                                                                                   6/31
+  Installing : perl-Encode-2.51-7.el7.x86_64                                                                                                                                            7/31
+  Installing : perl-Pod-Usage-1.63-3.el7.noarch                                                                                                                                         8/31
+  Installing : 4:perl-libs-5.16.3-295.el7.x86_64                                                                                                                                        9/31
+  Installing : 4:perl-macros-5.16.3-295.el7.x86_64                                                                                                                                     10/31
+  Installing : perl-Storable-2.45-3.el7.x86_64                                                                                                                                         11/31
+  Installing : perl-Exporter-5.68-3.el7.noarch                                                                                                                                         12/31
+  Installing : perl-constant-1.27-2.el7.noarch                                                                                                                                         13/31
+  Installing : perl-Socket-2.010-5.el7.x86_64                                                                                                                                          14/31
+  Installing : perl-Time-Local-1.2300-2.el7.noarch                                                                                                                                     15/31
+  Installing : perl-Carp-1.26-244.el7.noarch                                                                                                                                           16/31
+  Installing : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                                                                                                                                   17/31
+  Installing : perl-PathTools-3.40-5.el7.x86_64                                                                                                                                        18/31
+  Installing : perl-Scalar-List-Utils-1.27-248.el7.x86_64                                                                                                                              19/31
+  Installing : perl-File-Temp-0.23.01-3.el7.noarch                                                                                                                                     20/31
+  Installing : perl-File-Path-2.09-2.el7.noarch                                                                                                                                        21/31
+  Installing : perl-threads-shared-1.43-6.el7.x86_64                                                                                                                                   22/31
+  Installing : perl-threads-1.87-4.el7.x86_64                                                                                                                                          23/31
+  Installing : perl-Filter-1.49-3.el7.x86_64                                                                                                                                           24/31
+  Installing : 1:perl-Pod-Simple-3.28-4.el7.noarch                                                                                                                                     25/31
+  Installing : perl-Getopt-Long-2.40-3.el7.noarch                                                                                                                                      26/31
+  Installing : 4:perl-5.16.3-295.el7.x86_64                                                                                                                                            27/31
+  Installing : gpm-libs-1.20.7-6.el7.x86_64                                                                                                                                            28/31
+  Installing : 2:vim-filesystem-7.4.629-6.el7.x86_64                                                                                                                                   29/31
+  Installing : 2:vim-common-7.4.629-6.el7.x86_64                                                                                                                                       30/31
+  Installing : 2:vim-enhanced-7.4.629-6.el7.x86_64                                                                                                                                     31/31
+  Verifying  : perl-HTTP-Tiny-0.033-3.el7.noarch                                                                                                                                        1/31
+  Verifying  : perl-threads-shared-1.43-6.el7.x86_64                                                                                                                                    2/31
+  Verifying  : perl-Storable-2.45-3.el7.x86_64                                                                                                                                          3/31
+  Verifying  : 1:perl-Pod-Escapes-1.04-295.el7.noarch                                                                                                                                   4/31
+  Verifying  : perl-Exporter-5.68-3.el7.noarch                                                                                                                                          5/31
+  Verifying  : perl-constant-1.27-2.el7.noarch                                                                                                                                          6/31
+  Verifying  : perl-PathTools-3.40-5.el7.x86_64                                                                                                                                         7/31
+  Verifying  : perl-Socket-2.010-5.el7.x86_64                                                                                                                                           8/31
+  Verifying  : 1:perl-parent-0.225-244.el7.noarch                                                                                                                                       9/31
+  Verifying  : 4:perl-libs-5.16.3-295.el7.x86_64                                                                                                                                       10/31
+  Verifying  : perl-File-Temp-0.23.01-3.el7.noarch                                                                                                                                     11/31
+  Verifying  : 1:perl-Pod-Simple-3.28-4.el7.noarch                                                                                                                                     12/31
+  Verifying  : perl-Time-Local-1.2300-2.el7.noarch                                                                                                                                     13/31
+  Verifying  : 4:perl-macros-5.16.3-295.el7.x86_64                                                                                                                                     14/31
+  Verifying  : 4:perl-5.16.3-295.el7.x86_64                                                                                                                                            15/31
+  Verifying  : 2:vim-enhanced-7.4.629-6.el7.x86_64                                                                                                                                     16/31
+  Verifying  : perl-Carp-1.26-244.el7.noarch                                                                                                                                           17/31
+  Verifying  : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                                                                                                                                   18/31
+  Verifying  : perl-Scalar-List-Utils-1.27-248.el7.x86_64                                                                                                                              19/31
+  Verifying  : perl-Pod-Usage-1.63-3.el7.noarch                                                                                                                                        20/31
+  Verifying  : 2:vim-common-7.4.629-6.el7.x86_64                                                                                                                                       21/31
+  Verifying  : 2:vim-filesystem-7.4.629-6.el7.x86_64                                                                                                                                   22/31
+  Verifying  : perl-Encode-2.51-7.el7.x86_64                                                                                                                                           23/31
+  Verifying  : perl-Pod-Perldoc-3.20-4.el7.noarch                                                                                                                                      24/31
+  Verifying  : perl-podlators-2.5.1-3.el7.noarch                                                                                                                                       25/31
+  Verifying  : perl-File-Path-2.09-2.el7.noarch                                                                                                                                        26/31
+  Verifying  : perl-threads-1.87-4.el7.x86_64                                                                                                                                          27/31
+  Verifying  : gpm-libs-1.20.7-6.el7.x86_64                                                                                                                                            28/31
+  Verifying  : perl-Filter-1.49-3.el7.x86_64                                                                                                                                           29/31
+  Verifying  : perl-Getopt-Long-2.40-3.el7.noarch                                                                                                                                      30/31
+  Verifying  : perl-Text-ParseWords-3.29-4.el7.noarch                                                                                                                                  31/31
+
+Installed:
+  vim-enhanced.x86_64 2:7.4.629-6.el7
+
+Dependency Installed:
+  gpm-libs.x86_64 0:1.20.7-6.el7              perl.x86_64 4:5.16.3-295.el7                perl-Carp.noarch 0:1.26-244.el7                perl-Encode.x86_64 0:2.51-7.el7
+  perl-Exporter.noarch 0:5.68-3.el7           perl-File-Path.noarch 0:2.09-2.el7          perl-File-Temp.noarch 0:0.23.01-3.el7          perl-Filter.x86_64 0:1.49-3.el7
+  perl-Getopt-Long.noarch 0:2.40-3.el7        perl-HTTP-Tiny.noarch 0:0.033-3.el7         perl-PathTools.x86_64 0:3.40-5.el7             perl-Pod-Escapes.noarch 1:1.04-295.el7
+  perl-Pod-Perldoc.noarch 0:3.20-4.el7        perl-Pod-Simple.noarch 1:3.28-4.el7         perl-Pod-Usage.noarch 0:1.63-3.el7             perl-Scalar-List-Utils.x86_64 0:1.27-248.el7
+  perl-Socket.x86_64 0:2.010-5.el7            perl-Storable.x86_64 0:2.45-3.el7           perl-Text-ParseWords.noarch 0:3.29-4.el7       perl-Time-HiRes.x86_64 4:1.9725-3.el7
+  perl-Time-Local.noarch 0:1.2300-2.el7       perl-constant.noarch 0:1.27-2.el7           perl-libs.x86_64 4:5.16.3-295.el7              perl-macros.x86_64 4:5.16.3-295.el7
+  perl-parent.noarch 1:0.225-244.el7          perl-podlators.noarch 0:2.5.1-3.el7         perl-threads.x86_64 0:1.87-4.el7               perl-threads-shared.x86_64 0:1.43-6.el7
+  vim-common.x86_64 2:7.4.629-6.el7           vim-filesystem.x86_64 2:7.4.629-6.el7
+
+Complete!
+[aaron@tbyalf ~]$ sudo yum install httpd
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: repos-tx.psychz.net
+ * extras: mirror.dal.nexril.net
+ * updates: mirror.teklinks.com
+Resolving Dependencies
+--> Running transaction check
+---> Package httpd.x86_64 0:2.4.6-93.el7.centos will be installed
+--> Processing Dependency: httpd-tools = 2.4.6-93.el7.centos for package: httpd-2.4.6-93.el7.centos.x86_64
+--> Processing Dependency: /etc/mime.types for package: httpd-2.4.6-93.el7.centos.x86_64
+--> Processing Dependency: libaprutil-1.so.0()(64bit) for package: httpd-2.4.6-93.el7.centos.x86_64
+--> Processing Dependency: libapr-1.so.0()(64bit) for package: httpd-2.4.6-93.el7.centos.x86_64
+--> Running transaction check
+---> Package apr.x86_64 0:1.4.8-5.el7 will be installed
+---> Package apr-util.x86_64 0:1.5.2-6.el7 will be installed
+---> Package httpd-tools.x86_64 0:2.4.6-93.el7.centos will be installed
+---> Package mailcap.noarch 0:2.1.41-2.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=============================================================================================================================================================================================
+ Package                                       Arch                                     Version                                                 Repository                              Size
+=============================================================================================================================================================================================
+Installing:
+ httpd                                         x86_64                                   2.4.6-93.el7.centos                                     base                                   2.7 M
+Installing for dependencies:
+ apr                                           x86_64                                   1.4.8-5.el7                                             base                                   103 k
+ apr-util                                      x86_64                                   1.5.2-6.el7                                             base                                    92 k
+ httpd-tools                                   x86_64                                   2.4.6-93.el7.centos                                     base                                    92 k
+ mailcap                                       noarch                                   2.1.41-2.el7                                            base                                    31 k
+
+Transaction Summary
+=============================================================================================================================================================================================
+Install  1 Package (+4 Dependent packages)
+
+Total download size: 3.0 M
+Installed size: 10 M
+Is this ok [y/d/N]: y
+Downloading packages:
+(1/5): apr-util-1.5.2-6.el7.x86_64.rpm                                                                                                                                |  92 kB  00:00:00
+(2/5): apr-1.4.8-5.el7.x86_64.rpm                                                                                                                                     | 103 kB  00:00:00
+(3/5): httpd-tools-2.4.6-93.el7.centos.x86_64.rpm                                                                                                                     |  92 kB  00:00:00
+(4/5): mailcap-2.1.41-2.el7.noarch.rpm                                                                                                                                |  31 kB  00:00:00
+(5/5): httpd-2.4.6-93.el7.centos.x86_64.rpm                                                                                                                           | 2.7 MB  00:00:00
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                                        6.8 MB/s | 3.0 MB  00:00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : apr-1.4.8-5.el7.x86_64                                                                                                                                                    1/5
+  Installing : apr-util-1.5.2-6.el7.x86_64                                                                                                                                               2/5
+  Installing : httpd-tools-2.4.6-93.el7.centos.x86_64                                                                                                                                    3/5
+  Installing : mailcap-2.1.41-2.el7.noarch                                                                                                                                               4/5
+  Installing : httpd-2.4.6-93.el7.centos.x86_64                                                                                                                                          5/5
+  Verifying  : apr-1.4.8-5.el7.x86_64                                                                                                                                                    1/5
+  Verifying  : httpd-tools-2.4.6-93.el7.centos.x86_64                                                                                                                                    2/5
+  Verifying  : mailcap-2.1.41-2.el7.noarch                                                                                                                                               3/5
+  Verifying  : httpd-2.4.6-93.el7.centos.x86_64                                                                                                                                          4/5
+  Verifying  : apr-util-1.5.2-6.el7.x86_64                                                                                                                                               5/5
+
+Installed:
+  httpd.x86_64 0:2.4.6-93.el7.centos
+
+Dependency Installed:
+  apr.x86_64 0:1.4.8-5.el7                apr-util.x86_64 0:1.5.2-6.el7                httpd-tools.x86_64 0:2.4.6-93.el7.centos                mailcap.noarch 0:2.1.41-2.el7
+
+Complete!
+[aaron@tbyalf ~]$ sudo systemctl start httpd.service
+[aaron@tbyalf ~]$ sudo systemctl status httpd
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled; vendor preset: disabled)
+   Active: active (running) since Tue 2020-10-06 20:15:46 CDT; 48s ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+ Main PID: 7091 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─7091 /usr/sbin/httpd -DFOREGROUND
+           ├─7092 /usr/sbin/httpd -DFOREGROUND
+           ├─7093 /usr/sbin/httpd -DFOREGROUND
+           ├─7094 /usr/sbin/httpd -DFOREGROUND
+           ├─7095 /usr/sbin/httpd -DFOREGROUND
+           └─7096 /usr/sbin/httpd -DFOREGROUND
+
+Oct 06 20:15:46 tbyalf.dev.lan systemd[1]: Starting The Apache HTTP Server...
+Oct 06 20:15:46 tbyalf.dev.lan systemd[1]: Started The Apache HTTP Server.
+[aaron@tbyalf ~]$ sudo systemctl enable httpd.service
+Created symlink from /etc/systemd/system/multi-user.target.wants/httpd.service to /usr/lib/systemd/system/httpd.service.
+[aaron@tbyalf ~]$ sudo firewall-cmd --add-service=http --permanent
+success
+[aaron@tbyalf ~]$ sudo firewall-cmd --reload
+success
+[aaron@tbyalf ~]$ sudo yum install mariadb-server mariadb
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: repos-tx.psychz.net
+ * extras: mirror.dal.nexril.net
+ * updates: mirror.cc.columbia.edu
+Resolving Dependencies
+--> Running transaction check
+---> Package mariadb.x86_64 1:5.5.65-1.el7 will be installed
+---> Package mariadb-server.x86_64 1:5.5.65-1.el7 will be installed
+--> Processing Dependency: perl-DBI for package: 1:mariadb-server-5.5.65-1.el7.x86_64
+--> Processing Dependency: perl-DBD-MySQL for package: 1:mariadb-server-5.5.65-1.el7.x86_64
+--> Processing Dependency: perl(Data::Dumper) for package: 1:mariadb-server-5.5.65-1.el7.x86_64
+--> Processing Dependency: perl(DBI) for package: 1:mariadb-server-5.5.65-1.el7.x86_64
+--> Processing Dependency: libaio.so.1(LIBAIO_0.4)(64bit) for package: 1:mariadb-server-5.5.65-1.el7.x86_64
+--> Processing Dependency: libaio.so.1(LIBAIO_0.1)(64bit) for package: 1:mariadb-server-5.5.65-1.el7.x86_64
+--> Processing Dependency: libaio.so.1()(64bit) for package: 1:mariadb-server-5.5.65-1.el7.x86_64
+--> Running transaction check
+---> Package libaio.x86_64 0:0.3.109-13.el7 will be installed
+---> Package perl-DBD-MySQL.x86_64 0:4.023-6.el7 will be installed
+---> Package perl-DBI.x86_64 0:1.627-4.el7 will be installed
+--> Processing Dependency: perl(RPC::PlServer) >= 0.2001 for package: perl-DBI-1.627-4.el7.x86_64
+--> Processing Dependency: perl(RPC::PlClient) >= 0.2000 for package: perl-DBI-1.627-4.el7.x86_64
+---> Package perl-Data-Dumper.x86_64 0:2.145-3.el7 will be installed
+--> Running transaction check
+---> Package perl-PlRPC.noarch 0:0.2020-14.el7 will be installed
+--> Processing Dependency: perl(Net::Daemon) >= 0.13 for package: perl-PlRPC-0.2020-14.el7.noarch
+--> Processing Dependency: perl(Net::Daemon::Test) for package: perl-PlRPC-0.2020-14.el7.noarch
+--> Processing Dependency: perl(Net::Daemon::Log) for package: perl-PlRPC-0.2020-14.el7.noarch
+--> Processing Dependency: perl(Compress::Zlib) for package: perl-PlRPC-0.2020-14.el7.noarch
+--> Running transaction check
+---> Package perl-IO-Compress.noarch 0:2.061-2.el7 will be installed
+--> Processing Dependency: perl(Compress::Raw::Zlib) >= 2.061 for package: perl-IO-Compress-2.061-2.el7.noarch
+--> Processing Dependency: perl(Compress::Raw::Bzip2) >= 2.061 for package: perl-IO-Compress-2.061-2.el7.noarch
+---> Package perl-Net-Daemon.noarch 0:0.48-5.el7 will be installed
+--> Running transaction check
+---> Package perl-Compress-Raw-Bzip2.x86_64 0:2.061-3.el7 will be installed
+---> Package perl-Compress-Raw-Zlib.x86_64 1:2.061-4.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=============================================================================================================================================================================================
+ Package                                                 Arch                                   Version                                           Repository                            Size
+=============================================================================================================================================================================================
+Installing:
+ mariadb                                                 x86_64                                 1:5.5.65-1.el7                                    base                                 8.7 M
+ mariadb-server                                          x86_64                                 1:5.5.65-1.el7                                    base                                  11 M
+Installing for dependencies:
+ libaio                                                  x86_64                                 0.3.109-13.el7                                    base                                  24 k
+ perl-Compress-Raw-Bzip2                                 x86_64                                 2.061-3.el7                                       base                                  32 k
+ perl-Compress-Raw-Zlib                                  x86_64                                 1:2.061-4.el7                                     base                                  57 k
+ perl-DBD-MySQL                                          x86_64                                 4.023-6.el7                                       base                                 140 k
+ perl-DBI                                                x86_64                                 1.627-4.el7                                       base                                 802 k
+ perl-Data-Dumper                                        x86_64                                 2.145-3.el7                                       base                                  47 k
+ perl-IO-Compress                                        noarch                                 2.061-2.el7                                       base                                 260 k
+ perl-Net-Daemon                                         noarch                                 0.48-5.el7                                        base                                  51 k
+ perl-PlRPC                                              noarch                                 0.2020-14.el7                                     base                                  36 k
+
+Transaction Summary
+=============================================================================================================================================================================================
+Install  2 Packages (+9 Dependent packages)
+
+Total download size: 21 M
+Installed size: 110 M
+Is this ok [y/d/N]: y
+Downloading packages:
+(1/11): libaio-0.3.109-13.el7.x86_64.rpm                                                                                                                              |  24 kB  00:00:00
+(2/11): perl-Compress-Raw-Bzip2-2.061-3.el7.x86_64.rpm                                                                                                                |  32 kB  00:00:00
+(3/11): perl-Compress-Raw-Zlib-2.061-4.el7.x86_64.rpm                                                                                                                 |  57 kB  00:00:00
+(4/11): perl-DBD-MySQL-4.023-6.el7.x86_64.rpm                                                                                                                         | 140 kB  00:00:00
+(5/11): perl-Data-Dumper-2.145-3.el7.x86_64.rpm                                                                                                                       |  47 kB  00:00:00
+(6/11): mariadb-5.5.65-1.el7.x86_64.rpm                                                                                                                               | 8.7 MB  00:00:00
+(7/11): perl-IO-Compress-2.061-2.el7.noarch.rpm                                                                                                                       | 260 kB  00:00:00
+(8/11): perl-DBI-1.627-4.el7.x86_64.rpm                                                                                                                               | 802 kB  00:00:00
+(9/11): perl-Net-Daemon-0.48-5.el7.noarch.rpm                                                                                                                         |  51 kB  00:00:00
+(10/11): mariadb-server-5.5.65-1.el7.x86_64.rpm                                                                                                                       |  11 MB  00:00:00
+(11/11): perl-PlRPC-0.2020-14.el7.noarch.rpm                                                                                                                          |  36 kB  00:00:00
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                                         24 MB/s |  21 MB  00:00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : perl-Data-Dumper-2.145-3.el7.x86_64                                                                                                                                      1/11
+  Installing : 1:mariadb-5.5.65-1.el7.x86_64                                                                                                                                            2/11
+  Installing : libaio-0.3.109-13.el7.x86_64                                                                                                                                             3/11
+  Installing : perl-Compress-Raw-Bzip2-2.061-3.el7.x86_64                                                                                                                               4/11
+  Installing : 1:perl-Compress-Raw-Zlib-2.061-4.el7.x86_64                                                                                                                              5/11
+  Installing : perl-IO-Compress-2.061-2.el7.noarch                                                                                                                                      6/11
+  Installing : perl-Net-Daemon-0.48-5.el7.noarch                                                                                                                                        7/11
+  Installing : perl-PlRPC-0.2020-14.el7.noarch                                                                                                                                          8/11
+  Installing : perl-DBI-1.627-4.el7.x86_64                                                                                                                                              9/11
+  Installing : perl-DBD-MySQL-4.023-6.el7.x86_64                                                                                                                                       10/11
+  Installing : 1:mariadb-server-5.5.65-1.el7.x86_64                                                                                                                                    11/11
+  Verifying  : 1:mariadb-server-5.5.65-1.el7.x86_64                                                                                                                                     1/11
+  Verifying  : perl-Net-Daemon-0.48-5.el7.noarch                                                                                                                                        2/11
+  Verifying  : perl-Data-Dumper-2.145-3.el7.x86_64                                                                                                                                      3/11
+  Verifying  : perl-DBD-MySQL-4.023-6.el7.x86_64                                                                                                                                        4/11
+  Verifying  : perl-IO-Compress-2.061-2.el7.noarch                                                                                                                                      5/11
+  Verifying  : 1:perl-Compress-Raw-Zlib-2.061-4.el7.x86_64                                                                                                                              6/11
+  Verifying  : perl-Compress-Raw-Bzip2-2.061-3.el7.x86_64                                                                                                                               7/11
+  Verifying  : perl-DBI-1.627-4.el7.x86_64                                                                                                                                              8/11
+  Verifying  : libaio-0.3.109-13.el7.x86_64                                                                                                                                             9/11
+  Verifying  : perl-PlRPC-0.2020-14.el7.noarch                                                                                                                                         10/11
+  Verifying  : 1:mariadb-5.5.65-1.el7.x86_64                                                                                                                                           11/11
+
+Installed:
+  mariadb.x86_64 1:5.5.65-1.el7                                                             mariadb-server.x86_64 1:5.5.65-1.el7
+
+Dependency Installed:
+  libaio.x86_64 0:0.3.109-13.el7           perl-Compress-Raw-Bzip2.x86_64 0:2.061-3.el7        perl-Compress-Raw-Zlib.x86_64 1:2.061-4.el7        perl-DBD-MySQL.x86_64 0:4.023-6.el7
+  perl-DBI.x86_64 0:1.627-4.el7            perl-Data-Dumper.x86_64 0:2.145-3.el7               perl-IO-Compress.noarch 0:2.061-2.el7              perl-Net-Daemon.noarch 0:0.48-5.el7
+  perl-PlRPC.noarch 0:0.2020-14.el7
+
+Complete!
+[aaron@tbyalf ~]$ sudo systemctl start mariadb
+[aaron@tbyalf ~]$ sudo systemctl enable mariadb
+Created symlink from /etc/systemd/system/multi-user.target.wants/mariadb.service to /usr/lib/systemd/system/mariadb.service.
+[aaron@tbyalf ~]$ sudo mysql_secure_installation
+
+NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MariaDB
+      SERVERS IN PRODUCTION USE!  PLEASE READ EACH STEP CAREFULLY!
+
+In order to log into MariaDB to secure it, we'll need the current
+password for the root user.  If you've just installed MariaDB, and
+you haven't set the root password yet, the password will be blank,
+so you should just press enter here.
+
+Enter current password for root (enter for none):
+OK, successfully used password, moving on...
+
+Setting the root password ensures that nobody can log into the MariaDB
+root user without the proper authorisation.
+
+Set root password? [Y/n] y
+New password:
+Re-enter new password:
+Password updated successfully!
+Reloading privilege tables..
+ ... Success!
+
+
+By default, a MariaDB installation has an anonymous user, allowing anyone
+to log into MariaDB without having to have a user account created for
+them.  This is intended only for testing, and to make the installation
+go a bit smoother.  You should remove them before moving into a
+production environment.
+
+Remove anonymous users? [Y/n] y
+ ... Success!
+
+Normally, root should only be allowed to connect from 'localhost'.  This
+ensures that someone cannot guess at the root password from the network.
+
+Disallow root login remotely? [Y/n] y
+ ... Success!
+
+By default, MariaDB comes with a database named 'test' that anyone can
+access.  This is also intended only for testing, and should be removed
+before moving into a production environment.
+
+Remove test database and access to it? [Y/n] y
+ - Dropping test database...
+ ... Success!
+ - Removing privileges on test database...
+ ... Success!
+
+Reloading the privilege tables will ensure that all changes made so far
+will take effect immediately.
+
+Reload privilege tables now? [Y/n] y
+ ... Success!
+
+Cleaning up...
+
+All done!  If you've completed all of the above steps, your MariaDB
+installation should now be secure.
+
+Thanks for using MariaDB!
+[aaron@tbyalf ~]$ sudo yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+Loaded plugins: fastestmirror
+epel-release-latest-7.noarch.rpm                                                                                                                                      |  15 kB  00:00:00
+Examining /var/tmp/yum-root-RL3Ugu/epel-release-latest-7.noarch.rpm: epel-release-7-12.noarch
+Marking /var/tmp/yum-root-RL3Ugu/epel-release-latest-7.noarch.rpm to be installed
+Resolving Dependencies
+--> Running transaction check
+---> Package epel-release.noarch 0:7-12 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=============================================================================================================================================================================================
+ Package                                     Arch                                  Version                                Repository                                                    Size
+=============================================================================================================================================================================================
+Installing:
+ epel-release                                noarch                                7-12                                   /epel-release-latest-7.noarch                                 24 k
+
+Transaction Summary
+=============================================================================================================================================================================================
+Install  1 Package
+
+Total size: 24 k
+Installed size: 24 k
+Downloading packages:
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : epel-release-7-12.noarch                                                                                                                                                  1/1
+  Verifying  : epel-release-7-12.noarch                                                                                                                                                  1/1
+
+Installed:
+  epel-release.noarch 0:7-12
+
+Complete!
+[aaron@tbyalf ~]$ sudo yum -y install https://rpms.remirepo.net/enterprise/remi-release-7.rpm
+Loaded plugins: fastestmirror
+remi-release-7.rpm                                                                                                                                                    |  20 kB  00:00:00
+Examining /var/tmp/yum-root-RL3Ugu/remi-release-7.rpm: remi-release-7.8-1.el7.remi.noarch
+Marking /var/tmp/yum-root-RL3Ugu/remi-release-7.rpm to be installed
+Resolving Dependencies
+--> Running transaction check
+---> Package remi-release.noarch 0:7.8-1.el7.remi will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=============================================================================================================================================================================================
+ Package                                      Arch                                   Version                                           Repository                                       Size
+=============================================================================================================================================================================================
+Installing:
+ remi-release                                 noarch                                 7.8-1.el7.remi                                    /remi-release-7                                  28 k
+
+Transaction Summary
+=============================================================================================================================================================================================
+Install  1 Package
+
+Total size: 28 k
+Installed size: 28 k
+Downloading packages:
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : remi-release-7.8-1.el7.remi.noarch                                                                                                                                        1/1
+  Verifying  : remi-release-7.8-1.el7.remi.noarch                                                                                                                                        1/1
+
+Installed:
+  remi-release.noarch 0:7.8-1.el7.remi
+
+Complete!
+[aaron@tbyalf ~]$ sudo yum -y install yum-utils
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+epel/x86_64/metalink                                                                                                                                                  |  16 kB  00:00:00
+ * base: centos.mirror.lstn.net
+ * epel: mirror.dal.nexril.net
+ * extras: mirror.dal.nexril.net
+ * remi-safe: repo1.dal.innoscale.net
+ * updates: mirror.oss.ou.edu
+epel                                                                                                                                                                  | 4.7 kB  00:00:00
+remi-safe                                                                                                                                                             | 3.0 kB  00:00:00
+(1/4): remi-safe/primary_db                                                                                                                                           | 1.8 MB  00:00:00
+(2/4): epel/x86_64/group_gz                                                                                                                                           |  95 kB  00:00:00
+(3/4): epel/x86_64/primary_db                                                                                                                                         | 6.9 MB  00:00:00
+(4/4): epel/x86_64/updateinfo                                                                                                                                         | 1.0 MB  00:00:01
+Resolving Dependencies
+--> Running transaction check
+---> Package yum-utils.noarch 0:1.1.31-54.el7_8 will be installed
+--> Processing Dependency: python-kitchen for package: yum-utils-1.1.31-54.el7_8.noarch
+--> Processing Dependency: libxml2-python for package: yum-utils-1.1.31-54.el7_8.noarch
+--> Running transaction check
+---> Package libxml2-python.x86_64 0:2.9.1-6.el7.4 will be installed
+---> Package python-kitchen.noarch 0:1.1.1-5.el7 will be installed
+--> Processing Dependency: python-chardet for package: python-kitchen-1.1.1-5.el7.noarch
+--> Running transaction check
+---> Package python-chardet.noarch 0:2.2.1-3.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=============================================================================================================================================================================================
+ Package                                          Arch                                     Version                                           Repository                                 Size
+=============================================================================================================================================================================================
+Installing:
+ yum-utils                                        noarch                                   1.1.31-54.el7_8                                   updates                                   122 k
+Installing for dependencies:
+ libxml2-python                                   x86_64                                   2.9.1-6.el7.4                                     base                                      247 k
+ python-chardet                                   noarch                                   2.2.1-3.el7                                       base                                      227 k
+ python-kitchen                                   noarch                                   1.1.1-5.el7                                       base                                      267 k
+
+Transaction Summary
+=============================================================================================================================================================================================
+Install  1 Package (+3 Dependent packages)
+
+Total download size: 862 k
+Installed size: 4.3 M
+Downloading packages:
+(1/4): libxml2-python-2.9.1-6.el7.4.x86_64.rpm                                                                                                                        | 247 kB  00:00:00
+(2/4): python-kitchen-1.1.1-5.el7.noarch.rpm                                                                                                                          | 267 kB  00:00:00
+(3/4): python-chardet-2.2.1-3.el7.noarch.rpm                                                                                                                          | 227 kB  00:00:00
+(4/4): yum-utils-1.1.31-54.el7_8.noarch.rpm                                                                                                                           | 122 kB  00:00:00
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                                        1.7 MB/s | 862 kB  00:00:00
+Running transaction check
+Running transaction test
+yTransaction test succeeded
+Running transaction
+  Installing : python-chardet-2.2.1-3.el7.noarch                                                                                                                                         1/4
+  Installing : python-kitchen-1.1.1-5.el7.noarch                                                                                                                                         2/4
+  Installing : libxml2-python-2.9.1-6.el7.4.x86_64                                                                                                                                       3/4
+  Installing : yum-utils-1.1.31-54.el7_8.noarch                                                                                                                                          4/4
+  Verifying  : libxml2-python-2.9.1-6.el7.4.x86_64                                                                                                                                       1/4
+  Verifying  : python-kitchen-1.1.1-5.el7.noarch                                                                                                                                         2/4
+  Verifying  : yum-utils-1.1.31-54.el7_8.noarch                                                                                                                                          3/4
+  Verifying  : python-chardet-2.2.1-3.el7.noarch                                                                                                                                         4/4
+
+Installed:
+  yum-utils.noarch 0:1.1.31-54.el7_8
+
+Dependency Installed:
+  libxml2-python.x86_64 0:2.9.1-6.el7.4                           python-chardet.noarch 0:2.2.1-3.el7                           python-kitchen.noarch 0:1.1.1-5.el7
+
+Complete!
+[aaron@tbyalf ~]$ sudo yum-config-manager --enable remi-php74
+Loaded plugins: fastestmirror
+===================================================================================== repo: remi-php74 ======================================================================================
+[remi-php74]
+async = True
+bandwidth = 0
+base_persistdir = /var/lib/yum/repos/x86_64/7
+baseurl =
+cache = 0
+cachedir = /var/cache/yum/x86_64/7/remi-php74
+check_config_file_age = True
+compare_providers_priority = 80
+cost = 1000
+deltarpm_metadata_percentage = 100
+deltarpm_percentage =
+enabled = 1
+enablegroups = True
+exclude =
+failovermethod = priority
+ftp_disable_epsv = False
+gpgcadir = /var/lib/yum/repos/x86_64/7/remi-php74/gpgcadir
+gpgcakey =
+gpgcheck = True
+gpgdir = /var/lib/yum/repos/x86_64/7/remi-php74/gpgdir
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-remi
+hdrdir = /var/cache/yum/x86_64/7/remi-php74/headers
+http_caching = all
+includepkgs =
+ip_resolve =
+keepalive = True
+keepcache = False
+mddownloadpolicy = sqlite
+mdpolicy = group:small
+mediaid =
+metadata_expire = 21600
+metadata_expire_filter = read-only:present
+metalink =
+minrate = 0
+mirrorlist = http://cdn.remirepo.net/enterprise/7/php74/mirror
+mirrorlist_expire = 86400
+name = Remi's PHP 7.4 RPM repository for Enterprise Linux 7 - x86_64
+old_base_cache_dir =
+password =
+persistdir = /var/lib/yum/repos/x86_64/7/remi-php74
+pkgdir = /var/cache/yum/x86_64/7/remi-php74/packages
+proxy = False
+proxy_dict =
+proxy_password =
+proxy_username =
+repo_gpgcheck = False
+retries = 10
+skip_if_unavailable = False
+ssl_check_cert_permissions = True
+sslcacert =
+sslclientcert =
+sslclientkey =
+sslverify = True
+throttle = 0
+timeout = 30.0
+ui_id = remi-php74
+ui_repoid_vars = releasever,
+   basearch
+username =
+
+[aaron@tbyalf ~]$ sudo yum update
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: centos.mirror.lstn.net
+ * epel: dfw.mirror.rackspace.com
+ * extras: mirror.dal.nexril.net
+ * remi-php74: repo1.dal.innoscale.net
+ * remi-safe: repo1.dal.innoscale.net
+ * updates: mirror.oss.ou.edu
+remi-php74                                                                                                                                                            | 3.0 kB  00:00:00
+remi-php74/primary_db                                                                                                                                                 | 220 kB  00:00:00
+No packages marked for update
+[aaron@tbyalf ~]$ sudo yum install php php-cli
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirror.dal.nexril.net
+ * epel: d2lzkl7pfhq30w.cloudfront.net
+ * extras: mirror.dal.nexril.net
+ * remi-php74: repo1.dal.innoscale.net
+ * remi-safe: repo1.dal.innoscale.net
+ * updates: mirror.oss.ou.edu
+Resolving Dependencies
+--> Running transaction check
+---> Package php.x86_64 0:7.4.11-1.el7.remi will be installed
+--> Processing Dependency: php-common(x86-64) = 7.4.11-1.el7.remi for package: php-7.4.11-1.el7.remi.x86_64
+--> Processing Dependency: php-sodium(x86-64) = 7.4.11-1.el7.remi for package: php-7.4.11-1.el7.remi.x86_64
+---> Package php-cli.x86_64 0:7.4.11-1.el7.remi will be installed
+--> Running transaction check
+---> Package php-common.x86_64 0:7.4.11-1.el7.remi will be installed
+--> Processing Dependency: php-json(x86-64) = 7.4.11-1.el7.remi for package: php-common-7.4.11-1.el7.remi.x86_64
+---> Package php-sodium.x86_64 0:7.4.11-1.el7.remi will be installed
+--> Processing Dependency: libsodium.so.23()(64bit) for package: php-sodium-7.4.11-1.el7.remi.x86_64
+--> Running transaction check
+---> Package libsodium.x86_64 0:1.0.18-1.el7 will be installed
+---> Package php-json.x86_64 0:7.4.11-1.el7.remi will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=============================================================================================================================================================================================
+ Package                                     Arch                                    Version                                               Repository                                   Size
+=============================================================================================================================================================================================
+Installing:
+ php                                         x86_64                                  7.4.11-1.el7.remi                                     remi-php74                                  3.4 M
+ php-cli                                     x86_64                                  7.4.11-1.el7.remi                                     remi-php74                                  5.1 M
+Installing for dependencies:
+ libsodium                                   x86_64                                  1.0.18-1.el7                                          epel                                        147 k
+ php-common                                  x86_64                                  7.4.11-1.el7.remi                                     remi-php74                                  1.2 M
+ php-json                                    x86_64                                  7.4.11-1.el7.remi                                     remi-php74                                   70 k
+ php-sodium                                  x86_64                                  7.4.11-1.el7.remi                                     remi-php74                                   82 k
+
+Transaction Summary
+=============================================================================================================================================================================================
+Install  2 Packages (+4 Dependent packages)
+
+Total download size: 10 M
+Installed size: 42 M
+Is this ok [y/d/N]: y
+Downloading packages:
+warning: /var/cache/yum/x86_64/7/remi-php74/packages/php-7.4.11-1.el7.remi.x86_64.rpm: Header V4 DSA/SHA1 Signature, key ID 00f97f56: NOKEY
+Public key for php-7.4.11-1.el7.remi.x86_64.rpm is not installed
+(1/6): php-7.4.11-1.el7.remi.x86_64.rpm                                                                                                                               | 3.4 MB  00:00:00
+(2/6): php-cli-7.4.11-1.el7.remi.x86_64.rpm                                                                                                                           | 5.1 MB  00:00:00
+warning: /var/cache/yum/x86_64/7/epel/packages/libsodium-1.0.18-1.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID 352c64e5: NOKEY
+Public key for libsodium-1.0.18-1.el7.x86_64.rpm is not installed
+(3/6): libsodium-1.0.18-1.el7.x86_64.rpm                                                                                                                              | 147 kB  00:00:00
+(4/6): php-json-7.4.11-1.el7.remi.x86_64.rpm                                                                                                                          |  70 kB  00:00:00
+(5/6): php-sodium-7.4.11-1.el7.remi.x86_64.rpm                                                                                                                        |  82 kB  00:00:00
+(6/6): php-common-7.4.11-1.el7.remi.x86_64.rpm                                                                                                                        | 1.2 MB  00:00:00
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                                         12 MB/s |  10 MB  00:00:00
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-remi
+Importing GPG key 0x00F97F56:
+ Userid     : "Remi Collet <RPMS@FamilleCollet.com>"
+ Fingerprint: 1ee0 4cce 88a4 ae4a a29a 5df5 004e 6f47 00f9 7f56
+ Package    : remi-release-7.8-1.el7.remi.noarch (@/remi-release-7)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-remi
+Is this ok [y/N]: y
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+Importing GPG key 0x352C64E5:
+ Userid     : "Fedora EPEL (7) <epel@fedoraproject.org>"
+ Fingerprint: 91e9 7d7c 4a5e 96f1 7f3e 888f 6a2f aea2 352c 64e5
+ Package    : epel-release-7-12.noarch (@/epel-release-latest-7.noarch)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+Is this ok [y/N]: y
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : php-common-7.4.11-1.el7.remi.x86_64                                                                                                                                       1/6
+  Installing : php-json-7.4.11-1.el7.remi.x86_64                                                                                                                                         2/6
+  Installing : php-cli-7.4.11-1.el7.remi.x86_64                                                                                                                                          3/6
+  Installing : libsodium-1.0.18-1.el7.x86_64                                                                                                                                             4/6
+  Installing : php-sodium-7.4.11-1.el7.remi.x86_64                                                                                                                                       5/6
+  Installing : php-7.4.11-1.el7.remi.x86_64                                                                                                                                              6/6
+  Verifying  : php-7.4.11-1.el7.remi.x86_64                                                                                                                                              1/6
+  Verifying  : libsodium-1.0.18-1.el7.x86_64                                                                                                                                             2/6
+  Verifying  : php-json-7.4.11-1.el7.remi.x86_64                                                                                                                                         3/6
+  Verifying  : php-common-7.4.11-1.el7.remi.x86_64                                                                                                                                       4/6
+  Verifying  : php-cli-7.4.11-1.el7.remi.x86_64                                                                                                                                          5/6
+  Verifying  : php-sodium-7.4.11-1.el7.remi.x86_64                                                                                                                                       6/6
+
+Installed:
+  php.x86_64 0:7.4.11-1.el7.remi                                                              php-cli.x86_64 0:7.4.11-1.el7.remi
+
+Dependency Installed:
+  libsodium.x86_64 0:1.0.18-1.el7            php-common.x86_64 0:7.4.11-1.el7.remi            php-json.x86_64 0:7.4.11-1.el7.remi            php-sodium.x86_64 0:7.4.11-1.el7.remi
+
+Complete!
+[aaron@tbyalf ~]$ sudo yum install php-mysql
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirror.dal10.us.leaseweb.net
+ * epel: d2lzkl7pfhq30w.cloudfront.net
+ * extras: mirror.dal.nexril.net
+ * remi-php74: repo1.dal.innoscale.net
+ * remi-safe: repo1.dal.innoscale.net
+ * updates: mirror.oss.ou.edu
+Package php-mysql is obsoleted by php-mysqlnd, trying to install php-mysqlnd-7.4.11-1.el7.remi.x86_64 instead
+Resolving Dependencies
+--> Running transaction check
+---> Package php-mysqlnd.x86_64 0:7.4.11-1.el7.remi will be installed
+--> Processing Dependency: php-pdo(x86-64) = 7.4.11-1.el7.remi for package: php-mysqlnd-7.4.11-1.el7.remi.x86_64
+--> Running transaction check
+---> Package php-pdo.x86_64 0:7.4.11-1.el7.remi will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=============================================================================================================================================================================================
+ Package                                      Arch                                    Version                                              Repository                                   Size
+=============================================================================================================================================================================================
+Installing:
+ php-mysqlnd                                  x86_64                                  7.4.11-1.el7.remi                                    remi-php74                                  251 k
+Installing for dependencies:
+ php-pdo                                      x86_64                                  7.4.11-1.el7.remi                                    remi-php74                                  136 k
+
+Transaction Summary
+=============================================================================================================================================================================================
+Install  1 Package (+1 Dependent package)
+
+Total download size: 387 k
+Installed size: 1.2 M
+Is this ok [y/d/N]: y
+Downloading packages:
+(1/2): php-pdo-7.4.11-1.el7.remi.x86_64.rpm                                                                                                                           | 136 kB  00:00:00
+(2/2): php-mysqlnd-7.4.11-1.el7.remi.x86_64.rpm                                                                                                                       | 251 kB  00:00:00
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                                        1.4 MB/s | 387 kB  00:00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : php-pdo-7.4.11-1.el7.remi.x86_64                                                                                                                                          1/2
+  Installing : php-mysqlnd-7.4.11-1.el7.remi.x86_64                                                                                                                                      2/2
+  Verifying  : php-pdo-7.4.11-1.el7.remi.x86_64                                                                                                                                          1/2
+  Verifying  : php-mysqlnd-7.4.11-1.el7.remi.x86_64                                                                                                                                      2/2
+
+Installed:
+  php-mysqlnd.x86_64 0:7.4.11-1.el7.remi
+
+Dependency Installed:
+  php-pdo.x86_64 0:7.4.11-1.el7.remi
+
+Complete!
+[aaron@tbyalf ~]$ sudo systemctl restart httpd.service
+[aaron@tbyalf ~]$ sudo vim /var/www/html/info.php
+[aaron@tbyalf ~]$ sudo firewall-cmd --permanent --zone=public --add-service=http
+Warning: ALREADY_ENABLED: http
+success
+[aaron@tbyalf ~]$ sudo firewall-cmd --permanent --zone=public --add-service=https
+success
+[aaron@tbyalf ~]$ sudo firewall-cmd --reload
+success
+[aaron@tbyalf ~]$ sudo yum makecache
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+epel/x86_64/metalink                                                                                                                                                  |  16 kB  00:00:00
+ * base: mirror.dal10.us.leaseweb.net
+ * epel: pubmirror1.math.uh.edu
+ * extras: mirror.dal.nexril.net
+ * remi-php74: repo1.dal.innoscale.net
+ * remi-safe: repo1.dal.innoscale.net
+ * updates: mirror.oss.ou.edu
+base                                                                                                                                                                  | 3.6 kB  00:00:00
+extras                                                                                                                                                                | 2.9 kB  00:00:00
+remi-php74                                                                                                                                                            | 3.0 kB  00:00:00
+remi-safe                                                                                                                                                             | 3.0 kB  00:00:00
+updates                                                                                                                                                               | 2.9 kB  00:00:00
+(1/13): base/7/x86_64/other_db                                                                                                                                        | 2.6 MB  00:00:00
+(2/13): base/7/x86_64/filelists_db                                                                                                                                    | 7.1 MB  00:00:00
+(3/13): epel/x86_64/filelists_db                                                                                                                                      |  12 MB  00:00:01
+(4/13): epel/x86_64/prestodelta                                                                                                                                       |  412 B  00:00:00
+(5/13): epel/x86_64/other_db                                                                                                                                          | 3.3 MB  00:00:00
+(6/13): remi-php74/filelists_db                                                                                                                                       | 128 kB  00:00:00
+(7/13): remi-php74/other_db                                                                                                                                           |  42 kB  00:00:00
+(8/13): extras/7/x86_64/filelists_db                                                                                                                                  | 217 kB  00:00:00
+(9/13): remi-safe/other_db                                                                                                                                            | 481 kB  00:00:00
+(10/13): remi-safe/filelists_db                                                                                                                                       | 1.4 MB  00:00:00
+(11/13): extras/7/x86_64/other_db                                                                                                                                     | 124 kB  00:00:00
+(12/13): updates/7/x86_64/other_db                                                                                                                                    | 318 kB  00:00:00
+(13/13): updates/7/x86_64/filelists_db                                                                                                                                | 2.4 MB  00:00:01
+Metadata Cache Created
+[aaron@tbyalf ~]$ sudo yum install epel-release
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: centos.mirror.lstn.net
+ * epel: d2lzkl7pfhq30w.cloudfront.net
+ * extras: mirror.dal.nexril.net
+ * remi-php74: repo1.dal.innoscale.net
+ * remi-safe: repo1.dal.innoscale.net
+ * updates: mirror.oss.ou.edu
+Package epel-release-7-12.noarch already installed and latest version
+Nothing to do
+[aaron@tbyalf ~]$ sudo yum search pip | grep python3
+python3-apipkg.noarch : A Python namespace control and lazy-import mechanism
+python3-pip.noarch : A tool for installing and managing Python3 packages
+python34-pip.noarch : A tool for installing and managing Python3 packages
+[aaron@tbyalf ~]$ sudo yum install python34-pip
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: repos-tx.psychz.net
+ * epel: dfw.mirror.rackspace.com
+ * extras: mirror.dal.nexril.net
+ * remi-php74: repo1.dal.innoscale.net
+ * remi-safe: repo1.dal.innoscale.net
+ * updates: mirror.oss.ou.edu
+Resolving Dependencies
+--> Running transaction check
+---> Package python34-pip.noarch 0:8.1.2-14.el7 will be installed
+--> Processing Dependency: python(abi) = 3.4 for package: python34-pip-8.1.2-14.el7.noarch
+--> Processing Dependency: /usr/bin/python3.4 for package: python34-pip-8.1.2-14.el7.noarch
+--> Processing Dependency: python34-setuptools for package: python34-pip-8.1.2-14.el7.noarch
+--> Running transaction check
+---> Package python34.x86_64 0:3.4.10-6.el7 will be installed
+--> Processing Dependency: python34-libs(x86-64) = 3.4.10-6.el7 for package: python34-3.4.10-6.el7.x86_64
+--> Processing Dependency: libpython3.4m.so.1.0()(64bit) for package: python34-3.4.10-6.el7.x86_64
+---> Package python34-setuptools.noarch 0:39.2.0-4.el7 will be installed
+--> Running transaction check
+---> Package python34-libs.x86_64 0:3.4.10-6.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=============================================================================================================================================================================================
+ Package                                               Arch                                     Version                                         Repository                              Size
+=============================================================================================================================================================================================
+Installing:
+ python34-pip                                          noarch                                   8.1.2-14.el7                                    epel                                   1.7 M
+Installing for dependencies:
+ python34                                              x86_64                                   3.4.10-6.el7                                    epel                                    52 k
+ python34-libs                                         x86_64                                   3.4.10-6.el7                                    epel                                   8.3 M
+ python34-setuptools                                   noarch                                   39.2.0-4.el7                                    epel                                   613 k
+
+Transaction Summary
+=============================================================================================================================================================================================
+Install  1 Package (+3 Dependent packages)
+
+Total download size: 11 M
+Installed size: 39 M
+Is this ok [y/d/N]: y
+Downloading packages:
+(1/4): python34-3.4.10-6.el7.x86_64.rpm                                                                                                                               |  52 kB  00:00:00
+(2/4): python34-libs-3.4.10-6.el7.x86_64.rpm                                                                                                                          | 8.3 MB  00:00:00
+(3/4): python34-pip-8.1.2-14.el7.noarch.rpm                                                                                                                           | 1.7 MB  00:00:00
+(4/4): python34-setuptools-39.2.0-4.el7.noarch.rpm                                                                                                                    | 613 kB  00:00:00
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                                        9.1 MB/s |  11 MB  00:00:01
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : python34-libs-3.4.10-6.el7.x86_64                                                                                                                                         1/4
+  Installing : python34-3.4.10-6.el7.x86_64                                                                                                                                              2/4
+  Installing : python34-setuptools-39.2.0-4.el7.noarch                                                                                                                                   3/4
+  Installing : python34-pip-8.1.2-14.el7.noarch                                                                                                                                          4/4
+  Verifying  : python34-3.4.10-6.el7.x86_64                                                                                                                                              1/4
+  Verifying  : python34-pip-8.1.2-14.el7.noarch                                                                                                                                          2/4
+  Verifying  : python34-libs-3.4.10-6.el7.x86_64                                                                                                                                         3/4
+  Verifying  : python34-setuptools-39.2.0-4.el7.noarch                                                                                                                                   4/4
+
+Installed:
+  python34-pip.noarch 0:8.1.2-14.el7
+
+Dependency Installed:
+  python34.x86_64 0:3.4.10-6.el7                           python34-libs.x86_64 0:3.4.10-6.el7                           python34-setuptools.noarch 0:39.2.0-4.el7
+
+Complete!
+[aaron@tbyalf ~]$ pip3 -V
+-bash: pip3: command not found
+[aaron@tbyalf ~]$ pip3 -v
+-bash: pip3: command not found
+[aaron@tbyalf ~]$ pip3
+-bash: pip3: command not found
+[aaron@tbyalf ~]$ pip -V
+-bash: pip: command not found
+[aaron@tbyalf ~]$ sudo dnf reinstall python3-pip
+sudo: dnf: command not found
+[aaron@tbyalf ~]$ sudo yum reinstall python3-pip
+Loaded plugins: fastestmirror
+No Match for argument: python3-pip
+Loading mirror speeds from cached hostfile
+ * base: centos.mirror.lstn.net
+ * epel: dfw.mirror.rackspace.com
+ * extras: mirror.dal.nexril.net
+ * remi-php74: repo1.dal.innoscale.net
+ * remi-safe: repo1.dal.innoscale.net
+ * updates: mirror.oss.ou.edu
+Package(s) python3-pip available, but not installed.
+Error: Nothing to do
+[aaron@tbyalf ~]$ pip34 -V
+-bash: pip34: command not found
+[aaron@tbyalf ~]$ sudo yum reinstall python34-pip
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: repos-tx.psychz.net
+ * epel: dfw.mirror.rackspace.com
+ * extras: mirror.dal.nexril.net
+ * remi-php74: repo1.dal.innoscale.net
+ * remi-safe: repo1.dal.innoscale.net
+ * updates: mirror.oss.ou.edu
+Resolving Dependencies
+--> Running transaction check
+---> Package python34-pip.noarch 0:8.1.2-14.el7 will be reinstalled
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=============================================================================================================================================================================================
+ Package                                          Arch                                       Version                                          Repository                                Size
+=============================================================================================================================================================================================
+Reinstalling:
+ python34-pip                                     noarch                                     8.1.2-14.el7                                     epel                                     1.7 M
+
+Transaction Summary
+=============================================================================================================================================================================================
+Reinstall  1 Package
+
+Total download size: 1.7 M
+Installed size: 6.8 M
+Is this ok [y/d/N]: y
+Downloading packages:
+python34-pip-8.1.2-14.el7.noarch.rpm                                                                                                                                  | 1.7 MB  00:00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : python34-pip-8.1.2-14.el7.noarch                                                                                                                                          1/1
+  Verifying  : python34-pip-8.1.2-14.el7.noarch                                                                                                                                          1/1
+
+Installed:
+  python34-pip.noarch 0:8.1.2-14.el7
+
+Complete!
+[aaron@tbyalf ~]$ pip3 -V
+-bash: pip3: command not found
+[aaron@tbyalf ~]$ pip-3.2 --version
+-bash: pip-3.2: command not found
+[aaron@tbyalf ~]$ sudo vim /etc/ssh/sshd_config
+[aaron@tbyalf ~]$ sudo reboot
+login as: aaron
+aaron@192.168.127.65's password:
+Last login: Tue Oct  6 20:13:17 2020 from 192.168.127.158
+[aaron@tbyalf ~]$ pip-3.2 --version
+-bash: pip-3.2: command not found
+[aaron@tbyalf ~]$ pip3 -V
+-bash: pip3: command not found
+[aaron@tbyalf ~]$ locate pip3
+-bash: locate: command not found
+[aaron@tbyalf ~]$ sudo yum install locate
+[sudo] password for aaron:
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: repos-tx.psychz.net
+ * epel: pubmirror2.math.uh.edu
+ * extras: mirror.dal.nexril.net
+ * remi-php74: repo1.dal.innoscale.net
+ * remi-safe: repo1.dal.innoscale.net
+ * updates: mirror.oss.ou.edu
+No package locate available.
+Error: Nothing to do
+[aaron@tbyalf ~]$ python3 -m pip
+-bash: python3: command not found
+[aaron@tbyalf ~]$ python34 -m pip
+-bash: python34: command not found
+[aaron@tbyalf ~]$ python -m pip
+/usr/bin/python: No module named pip
+[aaron@tbyalf ~]$ python -v
+# installing zipimport hook
+import zipimport # builtin
+# installed zipimport hook
+# /usr/lib64/python2.7/site.pyc matches /usr/lib64/python2.7/site.py
+import site # precompiled from /usr/lib64/python2.7/site.pyc
+# /usr/lib64/python2.7/os.pyc matches /usr/lib64/python2.7/os.py
+import os # precompiled from /usr/lib64/python2.7/os.pyc
+import errno # builtin
+import posix # builtin
+# /usr/lib64/python2.7/posixpath.pyc matches /usr/lib64/python2.7/posixpath.py
+import posixpath # precompiled from /usr/lib64/python2.7/posixpath.pyc
+# /usr/lib64/python2.7/stat.pyc matches /usr/lib64/python2.7/stat.py
+import stat # precompiled from /usr/lib64/python2.7/stat.pyc
+# /usr/lib64/python2.7/genericpath.pyc matches /usr/lib64/python2.7/genericpath.py
+import genericpath # precompiled from /usr/lib64/python2.7/genericpath.pyc
+# /usr/lib64/python2.7/warnings.pyc matches /usr/lib64/python2.7/warnings.py
+import warnings # precompiled from /usr/lib64/python2.7/warnings.pyc
+# /usr/lib64/python2.7/linecache.pyc matches /usr/lib64/python2.7/linecache.py
+import linecache # precompiled from /usr/lib64/python2.7/linecache.pyc
+# /usr/lib64/python2.7/types.pyc matches /usr/lib64/python2.7/types.py
+import types # precompiled from /usr/lib64/python2.7/types.pyc
+# /usr/lib64/python2.7/UserDict.pyc matches /usr/lib64/python2.7/UserDict.py
+import UserDict # precompiled from /usr/lib64/python2.7/UserDict.pyc
+# /usr/lib64/python2.7/_abcoll.pyc matches /usr/lib64/python2.7/_abcoll.py
+import _abcoll # precompiled from /usr/lib64/python2.7/_abcoll.pyc
+# /usr/lib64/python2.7/abc.pyc matches /usr/lib64/python2.7/abc.py
+import abc # precompiled from /usr/lib64/python2.7/abc.pyc
+# /usr/lib64/python2.7/_weakrefset.pyc matches /usr/lib64/python2.7/_weakrefset.py
+import _weakrefset # precompiled from /usr/lib64/python2.7/_weakrefset.pyc
+import _weakref # builtin
+# /usr/lib64/python2.7/copy_reg.pyc matches /usr/lib64/python2.7/copy_reg.py
+import copy_reg # precompiled from /usr/lib64/python2.7/copy_reg.pyc
+# /usr/lib64/python2.7/traceback.pyc matches /usr/lib64/python2.7/traceback.py
+import traceback # precompiled from /usr/lib64/python2.7/traceback.pyc
+# /usr/lib64/python2.7/sysconfig.pyc matches /usr/lib64/python2.7/sysconfig.py
+import sysconfig # precompiled from /usr/lib64/python2.7/sysconfig.pyc
+# /usr/lib64/python2.7/re.pyc matches /usr/lib64/python2.7/re.py
+import re # precompiled from /usr/lib64/python2.7/re.pyc
+# /usr/lib64/python2.7/sre_compile.pyc matches /usr/lib64/python2.7/sre_compile.py
+import sre_compile # precompiled from /usr/lib64/python2.7/sre_compile.pyc
+import _sre # builtin
+# /usr/lib64/python2.7/sre_parse.pyc matches /usr/lib64/python2.7/sre_parse.py
+import sre_parse # precompiled from /usr/lib64/python2.7/sre_parse.pyc
+# /usr/lib64/python2.7/sre_constants.pyc matches /usr/lib64/python2.7/sre_constants.py
+import sre_constants # precompiled from /usr/lib64/python2.7/sre_constants.pyc
+# /usr/lib64/python2.7/_sysconfigdata.pyc matches /usr/lib64/python2.7/_sysconfigdata.py
+import _sysconfigdata # precompiled from /usr/lib64/python2.7/_sysconfigdata.pyc
+import encodings # directory /usr/lib64/python2.7/encodings
+# /usr/lib64/python2.7/encodings/__init__.pyc matches /usr/lib64/python2.7/encodings/__init__.py
+import encodings # precompiled from /usr/lib64/python2.7/encodings/__init__.pyc
+# /usr/lib64/python2.7/codecs.pyc matches /usr/lib64/python2.7/codecs.py
+import codecs # precompiled from /usr/lib64/python2.7/codecs.pyc
+import _codecs # builtin
+# /usr/lib64/python2.7/encodings/aliases.pyc matches /usr/lib64/python2.7/encodings/aliases.py
+import encodings.aliases # precompiled from /usr/lib64/python2.7/encodings/aliases.pyc
+# /usr/lib64/python2.7/encodings/utf_8.pyc matches /usr/lib64/python2.7/encodings/utf_8.py
+import encodings.utf_8 # precompiled from /usr/lib64/python2.7/encodings/utf_8.pyc
+Python 2.7.5 (default, Apr  2 2020, 13:16:51)
+[GCC 4.8.5 20150623 (Red Hat 4.8.5-39)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+dlopen("/usr/lib64/python2.7/lib-dynload/readline.so", 2);
+import readline # dynamically loaded from /usr/lib64/python2.7/lib-dynload/readline.so
+>>> q
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'q' is not defined
+>>> exit
+Use exit() or Ctrl-D (i.e. EOF) to exit
+>>>
+KeyboardInterrupt
+>>> EOF
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'EOF' is not defined
+>>>
+# clear __builtin__._
+# clear sys.path
+# clear sys.argv
+# clear sys.ps1
+# clear sys.ps2
+# clear sys.exitfunc
+# clear sys.exc_type
+# clear sys.exc_value
+# clear sys.exc_traceback
+# clear sys.last_type
+# clear sys.last_value
+# clear sys.last_traceback
+# clear sys.path_hooks
+# clear sys.path_importer_cache
+# clear sys.meta_path
+# clear sys.flags
+# clear sys.float_info
+# restore sys.stdin
+# restore sys.stdout
+# restore sys.stderr
+# cleanup __main__
+# cleanup[1] encodings
+# cleanup[1] site
+# cleanup[1] sysconfig
+# cleanup[1] abc
+# cleanup[1] _weakrefset
+# cleanup[1] sre_constants
+# cleanup[1] re
+# cleanup[1] _codecs
+# cleanup[1] _warnings
+# cleanup[1] zipimport
+# cleanup[1] _sysconfigdata
+# cleanup[1] encodings.utf_8
+# cleanup[1] codecs
+# cleanup[1] readline
+# cleanup[1] signal
+# cleanup[1] traceback
+# cleanup[1] posix
+# cleanup[1] encodings.aliases
+# cleanup[1] exceptions
+# cleanup[1] _weakref
+# cleanup[1] sre_compile
+# cleanup[1] _sre
+# cleanup[1] sre_parse
+# cleanup[2] copy_reg
+# cleanup[2] posixpath
+# cleanup[2] errno
+# cleanup[2] _abcoll
+# cleanup[2] types
+# cleanup[2] genericpath
+# cleanup[2] stat
+# cleanup[2] warnings
+# cleanup[2] UserDict
+# cleanup[2] os.path
+# cleanup[2] linecache
+# cleanup[2] os
+# cleanup sys
+# cleanup __builtin__
+# cleanup ints: 19 unfreed ints
+# cleanup floats
+[aaron@tbyalf ~]$ python --version
+Python 2.7.5
+[aaron@tbyalf ~]$ sudo yum remove python34-pip
+Loaded plugins: fastestmirror
+Resolving Dependencies
+--> Running transaction check
+---> Package python34-pip.noarch 0:8.1.2-14.el7 will be erased
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=============================================================================================================================================================================================
+ Package                                         Arch                                      Version                                            Repository                                Size
+=============================================================================================================================================================================================
+Removing:
+ python34-pip                                    noarch                                    8.1.2-14.el7                                       @epel                                    6.8 M
+
+Transaction Summary
+=============================================================================================================================================================================================
+Remove  1 Package
+
+Installed size: 6.8 M
+Is this ok [y/N]: ^Cn
+Exiting on user command
+Your transaction was saved, rerun it with:
+ yum load-transaction /tmp/yum_save_tx.2020-10-06.20-34.fW0A2l.yumtx
+[aaron@tbyalf ~]$ sudo yum remove python34-pip python34-libs python34-setuptools python34
+Loaded plugins: fastestmirror
+Resolving Dependencies
+--> Running transaction check
+---> Package python34.x86_64 0:3.4.10-6.el7 will be erased
+---> Package python34-libs.x86_64 0:3.4.10-6.el7 will be erased
+---> Package python34-pip.noarch 0:8.1.2-14.el7 will be erased
+---> Package python34-setuptools.noarch 0:39.2.0-4.el7 will be erased
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=============================================================================================================================================================================================
+ Package                                               Arch                                     Version                                        Repository                               Size
+=============================================================================================================================================================================================
+Removing:
+ python34                                              x86_64                                   3.4.10-6.el7                                   @epel                                    36 k
+ python34-libs                                         x86_64                                   3.4.10-6.el7                                   @epel                                    29 M
+ python34-pip                                          noarch                                   8.1.2-14.el7                                   @epel                                   6.8 M
+ python34-setuptools                                   noarch                                   39.2.0-4.el7                                   @epel                                   2.9 M
+
+Transaction Summary
+=============================================================================================================================================================================================
+Remove  4 Packages
+
+Installed size: 39 M
+Is this ok [y/N]: y
+Downloading packages:
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Erasing    : python34-pip-8.1.2-14.el7.noarch                                                                                                                                          1/4
+  Erasing    : python34-setuptools-39.2.0-4.el7.noarch                                                                                                                                   2/4
+  Erasing    : python34-libs-3.4.10-6.el7.x86_64                                                                                                                                         3/4
+  Erasing    : python34-3.4.10-6.el7.x86_64                                                                                                                                              4/4
+  Verifying  : python34-setuptools-39.2.0-4.el7.noarch                                                                                                                                   1/4
+  Verifying  : python34-pip-8.1.2-14.el7.noarch                                                                                                                                          2/4
+  Verifying  : python34-libs-3.4.10-6.el7.x86_64                                                                                                                                         3/4
+  Verifying  : python34-3.4.10-6.el7.x86_64                                                                                                                                              4/4
+
+Removed:
+  python34.x86_64 0:3.4.10-6.el7            python34-libs.x86_64 0:3.4.10-6.el7            python34-pip.noarch 0:8.1.2-14.el7            python34-setuptools.noarch 0:39.2.0-4.el7
+
+Complete!
+[aaron@tbyalf ~]$ sudo yum install rh-python36
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: repos-tx.psychz.net
+ * epel: dfw.mirror.rackspace.com
+ * extras: mirror.dal.nexril.net
+ * remi-php74: repo1.dal.innoscale.net
+ * remi-safe: repo1.dal.innoscale.net
+ * updates: mirror.oss.ou.edu
+No package rh-python36 available.
+Error: Nothing to do
+[aaron@tbyalf ~]$ sudo yum install python36
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: centos.mirror.lstn.net
+ * epel: d2lzkl7pfhq30w.cloudfront.net
+ * extras: mirror.dal.nexril.net
+ * remi-php74: repo1.dal.innoscale.net
+ * remi-safe: repo1.dal.innoscale.net
+ * updates: mirror.oss.ou.edu
+Resolving Dependencies
+--> Running transaction check
+---> Package python3.x86_64 0:3.6.8-13.el7 will be installed
+--> Processing Dependency: python3-libs(x86-64) = 3.6.8-13.el7 for package: python3-3.6.8-13.el7.x86_64
+--> Processing Dependency: python3-setuptools for package: python3-3.6.8-13.el7.x86_64
+--> Processing Dependency: python3-pip for package: python3-3.6.8-13.el7.x86_64
+--> Processing Dependency: libpython3.6m.so.1.0()(64bit) for package: python3-3.6.8-13.el7.x86_64
+--> Running transaction check
+---> Package python3-libs.x86_64 0:3.6.8-13.el7 will be installed
+--> Processing Dependency: libtirpc.so.1()(64bit) for package: python3-libs-3.6.8-13.el7.x86_64
+---> Package python3-pip.noarch 0:9.0.3-7.el7_7 will be installed
+---> Package python3-setuptools.noarch 0:39.2.0-10.el7 will be installed
+--> Running transaction check
+---> Package libtirpc.x86_64 0:0.2.4-0.16.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=============================================================================================================================================================================================
+ Package                                             Arch                                    Version                                          Repository                                Size
+=============================================================================================================================================================================================
+Installing:
+ python3                                             x86_64                                  3.6.8-13.el7                                     base                                      69 k
+Installing for dependencies:
+ libtirpc                                            x86_64                                  0.2.4-0.16.el7                                   base                                      89 k
+ python3-libs                                        x86_64                                  3.6.8-13.el7                                     base                                     7.0 M
+ python3-pip                                         noarch                                  9.0.3-7.el7_7                                    updates                                  1.8 M
+ python3-setuptools                                  noarch                                  39.2.0-10.el7                                    base                                     629 k
+
+Transaction Summary
+=============================================================================================================================================================================================
+Install  1 Package (+4 Dependent packages)
+
+Total download size: 9.5 M
+Installed size: 48 M
+Is this ok [y/d/N]: y
+Downloading packages:
+(1/5): libtirpc-0.2.4-0.16.el7.x86_64.rpm                                                                                                                             |  89 kB  00:00:00
+(2/5): python3-3.6.8-13.el7.x86_64.rpm                                                                                                                                |  69 kB  00:00:00
+(3/5): python3-setuptools-39.2.0-10.el7.noarch.rpm                                                                                                                    | 629 kB  00:00:00
+(4/5): python3-libs-3.6.8-13.el7.x86_64.rpm                                                                                                                           | 7.0 MB  00:00:00
+(5/5): python3-pip-9.0.3-7.el7_7.noarch.rpm                                                                                                                           | 1.8 MB  00:00:01
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                                        8.5 MB/s | 9.5 MB  00:00:01
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : libtirpc-0.2.4-0.16.el7.x86_64                                                                                                                                            1/5
+  Installing : python3-setuptools-39.2.0-10.el7.noarch                                                                                                                                   2/5
+  Installing : python3-libs-3.6.8-13.el7.x86_64                                                                                                                                          3/5
+  Installing : python3-3.6.8-13.el7.x86_64                                                                                                                                               4/5
+  Installing : python3-pip-9.0.3-7.el7_7.noarch                                                                                                                                          5/5
+  Verifying  : python3-pip-9.0.3-7.el7_7.noarch                                                                                                                                          1/5
+  Verifying  : python3-3.6.8-13.el7.x86_64                                                                                                                                               2/5
+  Verifying  : libtirpc-0.2.4-0.16.el7.x86_64                                                                                                                                            3/5
+  Verifying  : python3-setuptools-39.2.0-10.el7.noarch                                                                                                                                   4/5
+  Verifying  : python3-libs-3.6.8-13.el7.x86_64                                                                                                                                          5/5
+
+Installed:
+  python3.x86_64 0:3.6.8-13.el7
+
+Dependency Installed:
+  libtirpc.x86_64 0:0.2.4-0.16.el7           python3-libs.x86_64 0:3.6.8-13.el7           python3-pip.noarch 0:9.0.3-7.el7_7           python3-setuptools.noarch 0:39.2.0-10.el7
+
+Complete!
+[aaron@tbyalf ~]$ scl enable python36 bash
+-bash: scl: command not found
+[aaron@tbyalf ~]$ /opt/rh/rh-python36/enable
+-bash: /opt/rh/rh-python36/enable: No such file or directory
+[aaron@tbyalf ~]$ sudo yum install scl
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirror.dal10.us.leaseweb.net
+ * epel: dfw.mirror.rackspace.com
+ * extras: mirror.dal.nexril.net
+ * remi-php74: repo1.dal.innoscale.net
+ * remi-safe: repo1.dal.innoscale.net
+ * updates: mirror.oss.ou.edu
+No package scl available.
+Error: Nothing to do
+[aaron@tbyalf ~]$ sudo yum search scl
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: centos.mirror.lstn.net
+ * epel: dfw.mirror.rackspace.com
+ * extras: mirror.dal.nexril.net
+ * remi-php74: repo1.dal.innoscale.net
+ * remi-safe: repo1.dal.innoscale.net
+ * updates: mirror.oss.ou.edu
+===================================================================================== N/S matched: scl ======================================================================================
+centos-release-scl.noarch : Software collections from the CentOS SCLo SIG
+centos-release-scl-rh.noarch : Software collections from the CentOS SCLo SIG (upstream scl only)
+radiusclient-ng-devel.x86_64 : Development files for radiusclient-ng
+radiusclient-ng-utils.x86_64 : Utility programs for radiusclient-ng
+texlive-amscls-doc.noarch : Documentation for amscls
+awscli.noarch : Universal Command Line Environment for AWS
+csclng.x86_64 : A compiler wrapper that runs Clang in background
+pcp-pmda-nfsclient.x86_64 : Performance Co-Pilot (PCP) metrics for NFS Clients
+php-pecl-seasclick.x86_64 : An Yandex ClickHouse client driven extension for PHP
+php54-php-pecl-seasclick.x86_64 : An Yandex ClickHouse client driven extension for PHP
+php54-scldevel.x86_64 : Package shipping development files for php54
+php55-php-pecl-seasclick.x86_64 : An Yandex ClickHouse client driven extension for PHP
+php55-scldevel.x86_64 : Package shipping development files for php55
+php56-php-pecl-seasclick.x86_64 : An Yandex ClickHouse client driven extension for PHP
+php56-scldevel.x86_64 : Package shipping development files for php56
+php70-php-pecl-seasclick.x86_64 : An Yandex ClickHouse client driven extension for PHP
+php70-scldevel.x86_64 : Package shipping development files for php70
+php71-php-pecl-seasclick.x86_64 : An Yandex ClickHouse client driven extension for PHP
+php71-scldevel.x86_64 : Package shipping development files for php71
+php72-php-pecl-seasclick.x86_64 : An Yandex ClickHouse client driven extension for PHP
+php72-scldevel.x86_64 : Package shipping development files for php72
+php73-php-pecl-seasclick.x86_64 : An Yandex ClickHouse client driven extension for PHP
+php73-scldevel.x86_64 : Package shipping development files for php73
+php74-php-pecl-seasclick.x86_64 : An Yandex ClickHouse client driven extension for PHP
+php74-scldevel.x86_64 : Package shipping development files for php74
+php80-scldevel.x86_64 : Package shipping development files for php80
+python-ndg_httpsclient.noarch : Provides enhanced HTTPS support for httplib and urllib2 using PyOpenSSL
+radcli-compat-devel.x86_64 : Development files for compatibility with radiusclient-ng and freeradius-client
+radiusclient-ng.x86_64 : RADIUS protocol client library
+scl-utils.x86_64 : Utilities for alternative packaging
+scl-utils-build.x86_64 : RPM build macros for alternative packaging
+soscleaner.noarch : To clean and filter sensitive data from a standard sosreport
+texlive-amscls.noarch : AMS document classes for LaTeX
+
+  Name and summary matches only, use "search all" for everything.
+[aaron@tbyalf ~]$ sudo yum search scl-utils
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: repos-tx.psychz.net
+ * epel: dfw.mirror.rackspace.com
+ * extras: mirror.dal.nexril.net
+ * remi-php74: repo1.dal.innoscale.net
+ * remi-safe: repo1.dal.innoscale.net
+ * updates: mirror.oss.ou.edu
+================================================================================== N/S matched: scl-utils ===================================================================================
+scl-utils.x86_64 : Utilities for alternative packaging
+scl-utils-build.x86_64 : RPM build macros for alternative packaging
+
+  Name and summary matches only, use "search all" for everything.
+[aaron@tbyalf ~]$ sudo yum install scl-utils
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: centos.mirror.lstn.net
+ * epel: dfw.mirror.rackspace.com
+ * extras: mirror.dal.nexril.net
+ * remi-php74: repo1.dal.innoscale.net
+ * remi-safe: repo1.dal.innoscale.net
+ * updates: mirror.oss.ou.edu
+Resolving Dependencies
+--> Running transaction check
+---> Package scl-utils.x86_64 0:20130529-19.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=============================================================================================================================================================================================
+ Package                                       Arch                                       Version                                             Repository                                Size
+=============================================================================================================================================================================================
+Installing:
+ scl-utils                                     x86_64                                     20130529-19.el7                                     base                                      24 k
+
+Transaction Summary
+=============================================================================================================================================================================================
+Install  1 Package
+
+Total download size: 24 k
+Installed size: 25 k
+Is this ok [y/d/N]: y
+Downloading packages:
+scl-utils-20130529-19.el7.x86_64.rpm                                                                                                                                  |  24 kB  00:00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : scl-utils-20130529-19.el7.x86_64                                                                                                                                          1/1
+  Verifying  : scl-utils-20130529-19.el7.x86_64                                                                                                                                          1/1
+
+Installed:
+  scl-utils.x86_64 0:20130529-19.el7
+
+Complete!
+[aaron@tbyalf ~]$ scl enable python36 bash
+Unable to open /etc/scl/conf/python36!
+[aaron@tbyalf ~]$ cd /etc/s
+sasl2/              selinux/            shadow-             ssl/                subgid-             sudoers             sysctl.conf         system-release-cpe
+scl/                services            shells              statetab            subuid              sudoers.d/          sysctl.d/
+securetty           sestatus.conf       skel/               statetab.d/         subuid-             sudo-ldap.conf      systemd/
+security/           shadow              ssh/                subgid              sudo.conf           sysconfig/          system-release
+[aaron@tbyalf ~]$ cd /etc/s
+sasl2/              selinux/            shadow-             ssl/                subgid-             sudoers             sysctl.conf         system-release-cpe
+scl/                services            shells              statetab            subuid              sudoers.d/          sysctl.d/
+securetty           sestatus.conf       skel/               statetab.d/         subuid-             sudo-ldap.conf      systemd/
+security/           shadow              ssh/                subgid              sudo.conf           sysconfig/          system-release
+[aaron@tbyalf ~]$ cd /etc/scl/
+conf/     prefixes/
+[aaron@tbyalf ~]$ sudo yum reinstall python36
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: centos.mirror.lstn.net
+ * epel: mirror.dal.nexril.net
+ * extras: mirror.dal.nexril.net
+ * remi-php74: repo1.dal.innoscale.net
+ * remi-safe: repo1.dal.innoscale.net
+ * updates: mirror.oss.ou.edu
+Resolving Dependencies
+--> Running transaction check
+---> Package python3.x86_64 0:3.6.8-13.el7 will be reinstalled
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=============================================================================================================================================================================================
+ Package                                      Arch                                        Version                                            Repository                                 Size
+=============================================================================================================================================================================================
+Reinstalling:
+ python3                                      x86_64                                      3.6.8-13.el7                                       base                                       69 k
+
+Transaction Summary
+=============================================================================================================================================================================================
+Reinstall  1 Package
+
+Total download size: 69 k
+Installed size: 39 k
+Is this ok [y/d/N]: y
+Downloading packages:
+python3-3.6.8-13.el7.x86_64.rpm                                                                                                                                       |  69 kB  00:00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : python3-3.6.8-13.el7.x86_64                                                                                                                                               1/1
+  Verifying  : python3-3.6.8-13.el7.x86_64                                                                                                                                               1/1
+
+Installed:
+  python3.x86_64 0:3.6.8-13.el7
+
+Complete!
+[aaron@tbyalf ~]$ scl enable python36 bash
+Unable to open /etc/scl/conf/python36!
+[aaron@tbyalf ~]$ sudo scl enable python36 bash
+Unable to open /etc/scl/conf/python36!
+[aaron@tbyalf ~]$ sudo yum install centos-release-scl
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: centos.mirror.lstn.net
+ * epel: mirror.dal.nexril.net
+ * extras: mirror.dal.nexril.net
+ * remi-php74: repo1.dal.innoscale.net
+ * remi-safe: repo1.dal.innoscale.net
+ * updates: mirror.oss.ou.edu
+Resolving Dependencies
+--> Running transaction check
+---> Package centos-release-scl.noarch 0:2-3.el7.centos will be installed
+--> Processing Dependency: centos-release-scl-rh for package: centos-release-scl-2-3.el7.centos.noarch
+--> Running transaction check
+---> Package centos-release-scl-rh.noarch 0:2-3.el7.centos will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=============================================================================================================================================================================================
+ Package                                               Arch                                   Version                                           Repository                              Size
+=============================================================================================================================================================================================
+Installing:
+ centos-release-scl                                    noarch                                 2-3.el7.centos                                    extras                                  12 k
+Installing for dependencies:
+ centos-release-scl-rh                                 noarch                                 2-3.el7.centos                                    extras                                  12 k
+
+Transaction Summary
+=============================================================================================================================================================================================
+Install  1 Package (+1 Dependent package)
+
+Total download size: 24 k
+Installed size: 39 k
+Is this ok [y/d/N]: n
+Exiting on user command
+Your transaction was saved, rerun it with:
+ yum load-transaction /tmp/yum_save_tx.2020-10-06.20-39.AIzSEv.yumtx
+[aaron@tbyalf ~]$ sudo yum remove scl-utils
+Loaded plugins: fastestmirror
+Resolving Dependencies
+--> Running transaction check
+---> Package scl-utils.x86_64 0:20130529-19.el7 will be erased
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=============================================================================================================================================================================================
+ Package                                      Arch                                      Version                                               Repository                                Size
+=============================================================================================================================================================================================
+Removing:
+ scl-utils                                    x86_64                                    20130529-19.el7                                       @base                                     25 k
+
+Transaction Summary
+=============================================================================================================================================================================================
+Remove  1 Package
+
+Installed size: 25 k
+Is this ok [y/N]: y
+Downloading packages:
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Erasing    : scl-utils-20130529-19.el7.x86_64                                                                                                                                          1/1
+  Verifying  : scl-utils-20130529-19.el7.x86_64                                                                                                                                          1/1
+
+Removed:
+  scl-utils.x86_64 0:20130529-19.el7
+
+Complete!
+[aaron@tbyalf ~]$ sudo yum install centos-release-scl
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+sudo yum install centos-release-scl * base: centos.mirror.lstn.net
+ * epel: mirror.dal.nexril.net
+ * extras: mirror.dal.nexril.net
+ * remi-php74: repo1.dal.innoscale.net
+ * remi-safe: repo1.dal.innoscale.net
+ * updates: mirror.oss.ou.edu
+Resolving Dependencies
+--> Running transaction check
+---> Package centos-release-scl.noarch 0:2-3.el7.centos will be installed
+--> Processing Dependency: centos-release-scl-rh for package: centos-release-scl-2-3.el7.centos.noarch
+--> Running transaction check
+---> Package centos-release-scl-rh.noarch 0:2-3.el7.centos will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=============================================================================================================================================================================================
+ Package                                               Arch                                   Version                                           Repository                              Size
+=============================================================================================================================================================================================
+Installing:
+ centos-release-scl                                    noarch                                 2-3.el7.centos                                    extras                                  12 k
+Installing for dependencies:
+ centos-release-scl-rh                                 noarch                                 2-3.el7.centos                                    extras                                  12 k
+
+Transaction Summary
+=============================================================================================================================================================================================
+Install  1 Package (+1 Dependent package)
+
+Total download size: 24 k
+Installed size: 39 k
+Is this ok [y/d/N]: y
+Is this ok [y/d/N]: y
+Downloading packages:
+(1/2): centos-release-scl-2-3.el7.centos.noarch.rpm                                                                                                                   |  12 kB  00:00:00
+(2/2): centos-release-scl-rh-2-3.el7.centos.noarch.rpm                                                                                                                |  12 kB  00:00:00
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                                         70 kB/s |  24 kB  00:00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : centos-release-scl-rh-2-3.el7.centos.noarch                                                                                                                               1/2
+  Installing : centos-release-scl-2-3.el7.centos.noarch                                                                                                                                  2/2
+  Verifying  : centos-release-scl-2-3.el7.centos.noarch                                                                                                                                  1/2
+  Verifying  : centos-release-scl-rh-2-3.el7.centos.noarch                                                                                                                               2/2
+
+Installed:
+  centos-release-scl.noarch 0:2-3.el7.centos
+
+Dependency Installed:
+  centos-release-scl-rh.noarch 0:2-3.el7.centos
+
+Complete!
+[aaron@tbyalf ~]$ sudo yum install rh-python36
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: centos.mirror.lstn.net
+ * centos-sclo-rh: repos-tx.psychz.net
+ * centos-sclo-sclo: mirror.steadfastnet.com
+ * epel: pubmirror2.math.uh.edu
+ * extras: mirror.dal.nexril.net
+ * remi-php74: repo1.dal.innoscale.net
+ * remi-safe: repo1.dal.innoscale.net
+ * updates: mirror.oss.ou.edu
+centos-sclo-rh                                                                                                                                                        | 3.0 kB  00:00:00
+centos-sclo-sclo                                                                                                                                                      | 3.0 kB  00:00:00
+(1/2): centos-sclo-rh/x86_64/primary_db                                                                                                                               | 2.8 MB  00:00:00
+(2/2): centos-sclo-sclo/x86_64/primary_db                                                                                                                             | 292 kB  00:00:00
+Resolving Dependencies
+--> Running transaction check
+---> Package rh-python36.x86_64 0:2.0-1.el7 will be installed
+--> Processing Dependency: rh-python36-runtime for package: rh-python36-2.0-1.el7.x86_64
+--> Processing Dependency: rh-python36-python for package: rh-python36-2.0-1.el7.x86_64
+--> Processing Dependency: rh-python36-python-pip for package: rh-python36-2.0-1.el7.x86_64
+--> Processing Dependency: rh-python36-python-setuptools for package: rh-python36-2.0-1.el7.x86_64
+--> Processing Dependency: rh-python36-python-virtualenv for package: rh-python36-2.0-1.el7.x86_64
+--> Running transaction check
+---> Package rh-python36-python.x86_64 0:3.6.9-2.el7 will be installed
+--> Processing Dependency: rh-python36-python-libs(x86-64) = 3.6.9-2.el7 for package: rh-python36-python-3.6.9-2.el7.x86_64
+--> Processing Dependency: libpython3.6m.so.rh-python36-1.0()(64bit) for package: rh-python36-python-3.6.9-2.el7.x86_64
+---> Package rh-python36-python-pip.noarch 0:9.0.1-2.el7 will be installed
+---> Package rh-python36-python-setuptools.noarch 0:36.5.0-1.el7 will be installed
+---> Package rh-python36-python-virtualenv.noarch 0:15.1.0-2.el7 will be installed
+--> Processing Dependency: rh-python36-python-devel for package: rh-python36-python-virtualenv-15.1.0-2.el7.noarch
+---> Package rh-python36-runtime.x86_64 0:2.0-1.el7 will be installed
+--> Processing Dependency: scl-utils for package: rh-python36-runtime-2.0-1.el7.x86_64
+--> Running transaction check
+---> Package rh-python36-python-devel.x86_64 0:3.6.9-2.el7 will be installed
+--> Processing Dependency: scl-utils-build for package: rh-python36-python-devel-3.6.9-2.el7.x86_64
+---> Package rh-python36-python-libs.x86_64 0:3.6.9-2.el7 will be installed
+---> Package scl-utils.x86_64 0:20130529-19.el7 will be installed
+--> Running transaction check
+---> Package scl-utils-build.x86_64 0:20130529-19.el7 will be installed
+--> Processing Dependency: redhat-rpm-config for package: scl-utils-build-20130529-19.el7.x86_64
+--> Processing Dependency: iso-codes for package: scl-utils-build-20130529-19.el7.x86_64
+--> Running transaction check
+---> Package iso-codes.noarch 0:3.46-2.el7 will be installed
+--> Processing Dependency: xml-common for package: iso-codes-3.46-2.el7.noarch
+---> Package redhat-rpm-config.noarch 0:9.1.0-88.el7.centos will be installed
+--> Processing Dependency: dwz >= 0.4 for package: redhat-rpm-config-9.1.0-88.el7.centos.noarch
+--> Processing Dependency: zip for package: redhat-rpm-config-9.1.0-88.el7.centos.noarch
+--> Processing Dependency: python-srpm-macros for package: redhat-rpm-config-9.1.0-88.el7.centos.noarch
+--> Processing Dependency: perl-srpm-macros for package: redhat-rpm-config-9.1.0-88.el7.centos.noarch
+--> Running transaction check
+---> Package dwz.x86_64 0:0.11-3.el7 will be installed
+---> Package perl-srpm-macros.noarch 0:1-8.el7 will be installed
+---> Package python-srpm-macros.noarch 0:3-32.el7 will be installed
+---> Package xml-common.noarch 0:0.6.3-39.el7 will be installed
+---> Package zip.x86_64 0:3.0-11.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=============================================================================================================================================================================================
+ Package                                                  Arch                              Version                                          Repository                                 Size
+=============================================================================================================================================================================================
+Installing:
+ rh-python36                                              x86_64                            2.0-1.el7                                        centos-sclo-rh                            2.7 k
+Installing for dependencies:
+ dwz                                                      x86_64                            0.11-3.el7                                       base                                       99 k
+ iso-codes                                                noarch                            3.46-2.el7                                       base                                      2.7 M
+ perl-srpm-macros                                         noarch                            1-8.el7                                          base                                      4.6 k
+ python-srpm-macros                                       noarch                            3-32.el7                                         base                                      8.4 k
+ redhat-rpm-config                                        noarch                            9.1.0-88.el7.centos                              base                                       81 k
+ rh-python36-python                                       x86_64                            3.6.9-2.el7                                      centos-sclo-rh                             56 k
+ rh-python36-python-devel                                 x86_64                            3.6.9-2.el7                                      centos-sclo-rh                            841 k
+ rh-python36-python-libs                                  x86_64                            3.6.9-2.el7                                      centos-sclo-rh                            7.6 M
+ rh-python36-python-pip                                   noarch                            9.0.1-2.el7                                      centos-sclo-rh                            1.7 M
+ rh-python36-python-setuptools                            noarch                            36.5.0-1.el7                                     centos-sclo-rh                            566 k
+ rh-python36-python-virtualenv                            noarch                            15.1.0-2.el7                                     centos-sclo-rh                            1.8 M
+ rh-python36-runtime                                      x86_64                            2.0-1.el7                                        centos-sclo-rh                            1.1 M
+ scl-utils                                                x86_64                            20130529-19.el7                                  base                                       24 k
+ scl-utils-build                                          x86_64                            20130529-19.el7                                  base                                       18 k
+ xml-common                                               noarch                            0.6.3-39.el7                                     base                                       26 k
+ zip                                                      x86_64                            3.0-11.el7                                       base                                      260 k
+
+Transaction Summary
+=============================================================================================================================================================================================
+Install  1 Package (+16 Dependent packages)
+
+Total download size: 17 M
+Installed size: 71 M
+Is this ok [y/d/N]: y
+Downloading packages:
+(1/17): perl-srpm-macros-1-8.el7.noarch.rpm                                                                                                                           | 4.6 kB  00:00:00
+(2/17): dwz-0.11-3.el7.x86_64.rpm                                                                                                                                     |  99 kB  00:00:00
+warning: /var/cache/yum/x86_64/7/centos-sclo-rh/packages/rh-python36-2.0-1.el7.x86_64.rpm: Header V4 RSA/SHA1 Signature, key ID f2ee9d55: NOKEY
+Public key for rh-python36-2.0-1.el7.x86_64.rpm is not installed
+(3/17): rh-python36-2.0-1.el7.x86_64.rpm                                                                                                                              | 2.7 kB  00:00:00
+(4/17): rh-python36-python-3.6.9-2.el7.x86_64.rpm                                                                                                                     |  56 kB  00:00:00
+(5/17): redhat-rpm-config-9.1.0-88.el7.centos.noarch.rpm                                                                                                              |  81 kB  00:00:00
+(6/17): python-srpm-macros-3-32.el7.noarch.rpm                                                                                                                        | 8.4 kB  00:00:00
+(7/17): iso-codes-3.46-2.el7.noarch.rpm                                                                                                                               | 2.7 MB  00:00:00
+(8/17): rh-python36-python-devel-3.6.9-2.el7.x86_64.rpm                                                                                                               | 841 kB  00:00:00
+(9/17): rh-python36-python-setuptools-36.5.0-1.el7.noarch.rpm                                                                                                         | 566 kB  00:00:00
+(10/17): rh-python36-python-libs-3.6.9-2.el7.x86_64.rpm                                                                                                               | 7.6 MB  00:00:00
+(11/17): rh-python36-python-virtualenv-15.1.0-2.el7.noarch.rpm                                                                                                        | 1.8 MB  00:00:00
+(12/17): rh-python36-python-pip-9.0.1-2.el7.noarch.rpm                                                                                                                | 1.7 MB  00:00:00
+(13/17): scl-utils-build-20130529-19.el7.x86_64.rpm                                                                                                                   |  18 kB  00:00:00
+(14/17): rh-python36-runtime-2.0-1.el7.x86_64.rpm                                                                                                                     | 1.1 MB  00:00:00
+(15/17): xml-common-0.6.3-39.el7.noarch.rpm                                                                                                                           |  26 kB  00:00:00
+(16/17): zip-3.0-11.el7.x86_64.rpm                                                                                                                                    | 260 kB  00:00:00
+(17/17): scl-utils-20130529-19.el7.x86_64.rpm                                                                                                                         |  24 kB  00:00:00
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                                         18 MB/s |  17 MB  00:00:00
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
+Importing GPG key 0xF2EE9D55:
+ Userid     : "CentOS SoftwareCollections SIG (https://wiki.centos.org/SpecialInterestGroup/SCLo) <security@centos.org>"
+ Fingerprint: c4db d535 b1fb ba14 f8ba 64a8 4eb8 4e71 f2ee 9d55
+ Package    : centos-release-scl-rh-2-3.el7.centos.noarch (@extras)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
+Is this ok [y/N]: y
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : python-srpm-macros-3-32.el7.noarch                                                                                                                                       1/17
+  Installing : dwz-0.11-3.el7.x86_64                                                                                                                                                    2/17
+  Installing : zip-3.0-11.el7.x86_64                                                                                                                                                    3/17
+  Installing : perl-srpm-macros-1-8.el7.noarch                                                                                                                                          4/17
+  Installing : redhat-rpm-config-9.1.0-88.el7.centos.noarch                                                                                                                             5/17
+  Installing : scl-utils-20130529-19.el7.x86_64                                                                                                                                         6/17
+  Installing : rh-python36-runtime-2.0-1.el7.x86_64                                                                                                                                     7/17
+  Installing : rh-python36-python-pip-9.0.1-2.el7.noarch                                                                                                                                8/17
+  Installing : rh-python36-python-libs-3.6.9-2.el7.x86_64                                                                                                                               9/17
+  Installing : rh-python36-python-3.6.9-2.el7.x86_64                                                                                                                                   10/17
+  Installing : rh-python36-python-setuptools-36.5.0-1.el7.noarch                                                                                                                       11/17
+  Installing : xml-common-0.6.3-39.el7.noarch                                                                                                                                          12/17
+  Installing : iso-codes-3.46-2.el7.noarch                                                                                                                                             13/17
+  Installing : scl-utils-build-20130529-19.el7.x86_64                                                                                                                                  14/17
+  Installing : rh-python36-python-devel-3.6.9-2.el7.x86_64                                                                                                                             15/17
+  Installing : rh-python36-python-virtualenv-15.1.0-2.el7.noarch                                                                                                                       16/17
+  Installing : rh-python36-2.0-1.el7.x86_64                                                                                                                                            17/17
+  Verifying  : rh-python36-runtime-2.0-1.el7.x86_64                                                                                                                                     1/17
+  Verifying  : rh-python36-2.0-1.el7.x86_64                                                                                                                                             2/17
+  Verifying  : xml-common-0.6.3-39.el7.noarch                                                                                                                                           3/17
+  Verifying  : iso-codes-3.46-2.el7.noarch                                                                                                                                              4/17
+  Verifying  : scl-utils-20130529-19.el7.x86_64                                                                                                                                         5/17
+  Verifying  : rh-python36-python-virtualenv-15.1.0-2.el7.noarch                                                                                                                        6/17
+  Verifying  : perl-srpm-macros-1-8.el7.noarch                                                                                                                                          7/17
+  Verifying  : zip-3.0-11.el7.x86_64                                                                                                                                                    8/17
+  Verifying  : rh-python36-python-devel-3.6.9-2.el7.x86_64                                                                                                                              9/17
+  Verifying  : dwz-0.11-3.el7.x86_64                                                                                                                                                   10/17
+  Verifying  : rh-python36-python-pip-9.0.1-2.el7.noarch                                                                                                                               11/17
+  Verifying  : rh-python36-python-3.6.9-2.el7.x86_64                                                                                                                                   12/17
+  Verifying  : rh-python36-python-libs-3.6.9-2.el7.x86_64                                                                                                                              13/17
+  Verifying  : redhat-rpm-config-9.1.0-88.el7.centos.noarch                                                                                                                            14/17
+  Verifying  : rh-python36-python-setuptools-36.5.0-1.el7.noarch                                                                                                                       15/17
+  Verifying  : python-srpm-macros-3-32.el7.noarch                                                                                                                                      16/17
+  Verifying  : scl-utils-build-20130529-19.el7.x86_64                                                                                                                                  17/17
+
+Installed:
+  rh-python36.x86_64 0:2.0-1.el7
+
+Dependency Installed:
+  dwz.x86_64 0:0.11-3.el7                                          iso-codes.noarch 0:3.46-2.el7                                    perl-srpm-macros.noarch 0:1-8.el7
+  python-srpm-macros.noarch 0:3-32.el7                             redhat-rpm-config.noarch 0:9.1.0-88.el7.centos                   rh-python36-python.x86_64 0:3.6.9-2.el7
+  rh-python36-python-devel.x86_64 0:3.6.9-2.el7                    rh-python36-python-libs.x86_64 0:3.6.9-2.el7                     rh-python36-python-pip.noarch 0:9.0.1-2.el7
+  rh-python36-python-setuptools.noarch 0:36.5.0-1.el7              rh-python36-python-virtualenv.noarch 0:15.1.0-2.el7              rh-python36-runtime.x86_64 0:2.0-1.el7
+  scl-utils.x86_64 0:20130529-19.el7                               scl-utils-build.x86_64 0:20130529-19.el7                         xml-common.noarch 0:0.6.3-39.el7
+  zip.x86_64 0:3.0-11.el7
+
+Complete!
+[aaron@tbyalf ~]$ python ––version
+python: can't open file '––version': [Errno 2] No such file or directory
+[aaron@tbyalf ~]$ scl enable rh-python36 bash
+[aaron@tbyalf ~]$ sudo vim /etc/ssh/sshd_config
+[aaron@tbyalf ~]$ pip3 -V
+pip 9.0.1 from /opt/rh/rh-python36/root/usr/lib/python3.6/site-packages (python 3.6)
+[aaron@tbyalf ~]$ python --version
+Python 3.6.9
+[aaron@tbyalf ~]$ pip install torch==1.6.0+cpu torchvision==0.7.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
+Collecting torch==1.6.0+cpu
+  Downloading https://download.pytorch.org/whl/cpu/torch-1.6.0%2Bcpu-cp36-cp36m-linux_x86_64.whl (154.6MB)
+    100% |████████████████████████████████| 154.6MB 7.1kB/s
+Collecting torchvision==0.7.0+cpu
+  Downloading https://download.pytorch.org/whl/cpu/torchvision-0.7.0%2Bcpu-cp36-cp36m-linux_x86_64.whl (5.1MB)
+    100% |████████████████████████████████| 5.1MB 201kB/s
+Collecting numpy (from torch==1.6.0+cpu)
+  Downloading https://files.pythonhosted.org/packages/b8/e5/a64ef44a85397ba3c377f6be9c02f3cb3e18023f8c89850dd319e7945521/numpy-1.19.2-cp36-cp36m-manylinux1_x86_64.whl (13.4MB)
+    100% |████████████████████████████████| 13.4MB 72kB/s
+Collecting future (from torch==1.6.0+cpu)
+  Downloading https://files.pythonhosted.org/packages/45/0b/38b06fd9b92dc2b68d58b75f900e97884c45bedd2ff83203d933cf5851c9/future-0.18.2.tar.gz (829kB)
+    100% |████████████████████████████████| 829kB 871kB/s
+Collecting pillow>=4.1.1 (from torchvision==0.7.0+cpu)
+  Downloading https://files.pythonhosted.org/packages/30/bf/92385b4262178ca22b34f82e0e09c2922eb351fe39f3cc7b8ba9ea555b41/Pillow-7.2.0-cp36-cp36m-manylinux1_x86_64.whl (2.2MB)
+    100% |████████████████████████████████| 2.2MB 447kB/s
+Installing collected packages: numpy, future, torch, pillow, torchvision
+Exception:
+Traceback (most recent call last):
+  File "/opt/rh/rh-python36/root/usr/lib/python3.6/site-packages/pip/basecommand.py", line 215, in main
+    status = self.run(options, args)
+  File "/opt/rh/rh-python36/root/usr/lib/python3.6/site-packages/pip/commands/install.py", line 351, in run
+    strip_file_prefix=options.strip_file_prefix,
+  File "/opt/rh/rh-python36/root/usr/lib/python3.6/site-packages/pip/req/req_set.py", line 784, in install
+    **kwargs
+  File "/opt/rh/rh-python36/root/usr/lib/python3.6/site-packages/pip/req/req_install.py", line 854, in install
+    strip_file_prefix=strip_file_prefix
+  File "/opt/rh/rh-python36/root/usr/lib/python3.6/site-packages/pip/req/req_install.py", line 1069, in move_wheel_files
+    strip_file_prefix=strip_file_prefix,
+  File "/opt/rh/rh-python36/root/usr/lib/python3.6/site-packages/pip/wheel.py", line 345, in move_wheel_files
+    clobber(source, lib_dir, True)
+  File "/opt/rh/rh-python36/root/usr/lib/python3.6/site-packages/pip/wheel.py", line 316, in clobber
+    ensure_dir(destdir)
+  File "/opt/rh/rh-python36/root/usr/lib/python3.6/site-packages/pip/utils/__init__.py", line 83, in ensure_dir
+    os.makedirs(path)
+  File "/opt/rh/rh-python36/root/usr/lib64/python3.6/os.py", line 220, in makedirs
+    mkdir(name, mode)
+PermissionError: [Errno 13] Permission denied: '/opt/rh/rh-python36/root/usr/lib64/python3.6/site-packages/numpy.libs'
+You are using pip version 9.0.1, however version 20.2.3 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+[aaron@tbyalf ~]$ pip install --upgrade pip
+Collecting pip
+  Downloading https://files.pythonhosted.org/packages/4e/5f/528232275f6509b1fff703c9280e58951a81abe24640905de621c9f81839/pip-20.2.3-py2.py3-none-any.whl (1.5MB)
+    100% |████████████████████████████████| 1.5MB 470kB/s
+Installing collected packages: pip
+  Found existing installation: pip 9.0.1
+    Uninstalling pip-9.0.1:
+Exception:
+Traceback (most recent call last):
+  File "/opt/rh/rh-python36/root/usr/lib64/python3.6/shutil.py", line 550, in move
+    os.rename(src, real_dst)
+PermissionError: [Errno 13] Permission denied: '/opt/rh/rh-python36/root/usr/bin/pip' -> '/tmp/pip-1ygerxcf-uninstall/opt/rh/rh-python36/root/usr/bin/pip'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/rh/rh-python36/root/usr/lib/python3.6/site-packages/pip/basecommand.py", line 215, in main
+    status = self.run(options, args)
+  File "/opt/rh/rh-python36/root/usr/lib/python3.6/site-packages/pip/commands/install.py", line 351, in run
+    strip_file_prefix=options.strip_file_prefix,
+  File "/opt/rh/rh-python36/root/usr/lib/python3.6/site-packages/pip/req/req_set.py", line 778, in install
+    requirement.uninstall(auto_confirm=True)
+  File "/opt/rh/rh-python36/root/usr/lib/python3.6/site-packages/pip/req/req_install.py", line 754, in uninstall
+    paths_to_remove.remove(auto_confirm)
+  File "/opt/rh/rh-python36/root/usr/lib/python3.6/site-packages/pip/req/req_uninstall.py", line 115, in remove
+    renames(path, new_path)
+  File "/opt/rh/rh-python36/root/usr/lib/python3.6/site-packages/pip/utils/__init__.py", line 267, in renames
+    shutil.move(old, new)
+  File "/opt/rh/rh-python36/root/usr/lib64/python3.6/shutil.py", line 565, in move
+    os.unlink(src)
+PermissionError: [Errno 13] Permission denied: '/opt/rh/rh-python36/root/usr/bin/pip'
+You are using pip version 9.0.1, however version 20.2.3 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+[aaron@tbyalf ~]$ sudo pip install --upgrade pip
+sudo: pip: command not found
+[aaron@tbyalf ~]$ sudo s^Cp install --upgrade pip
+[aaron@tbyalf ~]$ sudo su
+[root@tbyalf aaron]# pip install --upgrade pip
+bash: pip: command not found
+[root@tbyalf aaron]#
+[root@tbyalf aaron]# scl enable rh-python36 bash
+[root@tbyalf aaron]# scl enable rh-python36 bash^C
+[root@tbyalf aaron]# pip install --upgrade pip
+Collecting pip
+  Downloading https://files.pythonhosted.org/packages/4e/5f/528232275f6509b1fff703c9280e58951a81abe24640905de621c9f81839/pip-20.2.3-py2.py3-none-any.whl (1.5MB)
+    100% |████████████████████████████████| 1.5MB 461kB/s
+Installing collected packages: pip
+  Found existing installation: pip 9.0.1
+    Uninstalling pip-9.0.1:
+      Successfully uninstalled pip-9.0.1
+Successfully installed pip-20.2.3
+[root@tbyalf aaron]# pip install torch==1.6.0+cpu torchvision==0.7.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
+Looking in links: https://download.pytorch.org/whl/torch_stable.html
+Collecting torch==1.6.0+cpu
+  Downloading https://download.pytorch.org/whl/cpu/torch-1.6.0%2Bcpu-cp36-cp36m-linux_x86_64.whl (154.6 MB)
+     |████████████████████████████████| 154.6 MB 17 kB/s
+Collecting torchvision==0.7.0+cpu
+  Downloading https://download.pytorch.org/whl/cpu/torchvision-0.7.0%2Bcpu-cp36-cp36m-linux_x86_64.whl (5.1 MB)
+     |████████████████████████████████| 5.1 MB 8.2 MB/s
+Collecting future
+  Downloading future-0.18.2.tar.gz (829 kB)
+     |████████████████████████████████| 829 kB 2.4 MB/s
+Collecting numpy
+  Downloading numpy-1.19.2-cp36-cp36m-manylinux2010_x86_64.whl (14.5 MB)
+     |████████████████████████████████| 14.5 MB 34 kB/s
+Collecting pillow>=4.1.1
+  Downloading Pillow-7.2.0-cp36-cp36m-manylinux1_x86_64.whl (2.2 MB)
+     |████████████████████████████████| 2.2 MB 20.8 MB/s
+Using legacy 'setup.py install' for future, since package 'wheel' is not installed.
+Installing collected packages: future, numpy, torch, pillow, torchvision
+    Running setup.py install for future ... done
+Successfully installed future-0.18.2 numpy-1.19.2 pillow-7.2.0 torch-1.6.0+cpu torchvision-0.7.0+cpu
+[root@tbyalf aaron]# pip install wheel
+Collecting wheel
+  Downloading wheel-0.35.1-py2.py3-none-any.whl (33 kB)
+Installing collected packages: wheel
+Successfully installed wheel-0.35.1
+[root@tbyalf aaron]# exit
+exit
+[root@tbyalf aaron]# exit
+exit
+[aaron@tbyalf ~]$ pip install wheel
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: wheel in /opt/rh/rh-python36/root/usr/lib/python3.6/site-packages (0.35.1)
+[aaron@tbyalf ~]$

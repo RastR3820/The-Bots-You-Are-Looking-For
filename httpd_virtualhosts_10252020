@@ -1,0 +1,13 @@
+[aaron@tbyalf html]$ cat /etc/httpd/conf.d/tbyalf.conf
+<VirtualHost *:80>
+    ServerName tbyalf.home.lan
+    ServerAdmin aheald.tamu@gmail.com
+    DocumentRoot /var/www/html/
+    <directory /var/www/html/nextcloud>
+        Require all granted
+        AllowOverride All
+        Options FollowSymLinks MultiViews
+        SetEnv HOME /var/www/html/nextcloud
+        SetEnv HTTP_HOME /var/www/html/nextcloud
+    </directory>
+</VirtualHost>

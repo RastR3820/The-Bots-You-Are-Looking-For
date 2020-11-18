@@ -1,0 +1,94 @@
+login as: aaron
+aaron@192.168.127.66's password:
+Last login: Sun Nov  8 16:01:22 2020 from 192.168.127.186
+[aaron@tbyalf ~]$ cd /py_venv/
+[aaron@tbyalf py_venv]$ mkdir tbyalf_flask/
+[aaron@tbyalf py_venv]$ cd tbyalf_flask/
+[aaron@tbyalf tbyalf_flask]$ python3 -m venv venv
+[aaron@tbyalf tbyalf_flask]$ source venv/bin/activate
+(venv) [aaron@tbyalf tbyalf_flask]$ pip install Flask
+Collecting Flask
+  Downloading https://files.pythonhosted.org/packages/f2/28/2a03252dfb9ebf377f40fba6a7841b47083260bf8bd8e737b0c6952df83f/Flask-1.1.2-py2.py3-none-any.whl (94kB)
+    100% |████████████████████████████████| 102kB 1.6MB/s
+Collecting Jinja2>=2.10.1 (from Flask)
+  Downloading https://files.pythonhosted.org/packages/30/9e/f663a2aa66a09d838042ae1a2c5659828bb9b41ea3a6efa20a20fd92b121/Jinja2-2.11.2-py2.py3-none-any.whl (125kB)
+    100% |████████████████████████████████| 133kB 2.6MB/s
+Collecting click>=5.1 (from Flask)
+  Downloading https://files.pythonhosted.org/packages/d2/3d/fa76db83bf75c4f8d338c2fd15c8d33fdd7ad23a9b5e57eb6c5de26b430e/click-7.1.2-py2.py3-none-any.whl (82kB)
+    100% |████████████████████████████████| 92kB 6.0MB/s
+Collecting Werkzeug>=0.15 (from Flask)
+  Downloading https://files.pythonhosted.org/packages/cc/94/5f7079a0e00bd6863ef8f1da638721e9da21e5bacee597595b318f71d62e/Werkzeug-1.0.1-py2.py3-none-any.whl (298kB)
+    100% |████████████████████████████████| 307kB 1.9MB/s
+Collecting itsdangerous>=0.24 (from Flask)
+  Downloading https://files.pythonhosted.org/packages/76/ae/44b03b253d6fade317f32c24d100b3b35c2239807046a4c953c7b89fa49e/itsdangerous-1.1.0-py2.py3-none-any.whl
+Collecting MarkupSafe>=0.23 (from Jinja2>=2.10.1->Flask)
+  Downloading https://files.pythonhosted.org/packages/b2/5f/23e0023be6bb885d00ffbefad2942bc51a620328ee910f64abe5a8d18dd1/MarkupSafe-1.1.1-cp36-cp36m-manylinux1_x86_64.whl
+Installing collected packages: MarkupSafe, Jinja2, click, Werkzeug, itsdangerous, Flask
+Successfully installed Flask-1.1.2 Jinja2-2.11.2 MarkupSafe-1.1.1 Werkzeug-1.0.1 click-7.1.2 itsdangerous-1.1.0
+You are using pip version 9.0.3, however version 20.2.4 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+(venv) [aaron@tbyalf tbyalf_flask]$ pip install --upgrade pip
+Cache entry deserialization failed, entry ignored
+Collecting pip
+  Downloading https://files.pythonhosted.org/packages/cb/28/91f26bd088ce8e22169032100d4260614fc3da435025ff389ef1d396a433/pip-20.2.4-py2.py3-none-any.whl (1.5MB)
+    100% |████████████████████████████████| 1.5MB 631kB/s
+Installing collected packages: pip
+  Found existing installation: pip 9.0.3
+    Uninstalling pip-9.0.3:
+      Successfully uninstalled pip-9.0.3
+Successfully installed pip-20.2.4
+(venv) [aaron@tbyalf tbyalf_flask]$ python -m Flask --version
+/py_venv/tbyalf_flask/venv/bin/python: No module named Flask
+(venv) [aaron@tbyalf tbyalf_flask]$ pip install Flask
+Requirement already satisfied: Flask in ./venv/lib/python3.6/site-packages (1.1.2)
+Requirement already satisfied: click>=5.1 in ./venv/lib/python3.6/site-packages (from Flask) (7.1.2)
+Requirement already satisfied: itsdangerous>=0.24 in ./venv/lib/python3.6/site-packages (from Flask) (1.1.0)
+Requirement already satisfied: Jinja2>=2.10.1 in ./venv/lib/python3.6/site-packages (from Flask) (2.11.2)
+Requirement already satisfied: Werkzeug>=0.15 in ./venv/lib/python3.6/site-packages (from Flask) (1.0.1)
+Requirement already satisfied: MarkupSafe>=0.23 in ./venv/lib/python3.6/site-packages (from Jinja2>=2.10.1->Flask) (1.1.1)
+(venv) [aaron@tbyalf tbyalf_flask]$ python -m Flask --version
+/py_venv/tbyalf_flask/venv/bin/python: No module named Flask
+(venv) [aaron@tbyalf tbyalf_flask]$ pip install flask
+Requirement already satisfied: flask in ./venv/lib/python3.6/site-packages (1.1.2)
+Requirement already satisfied: Werkzeug>=0.15 in ./venv/lib/python3.6/site-packages (from flask) (1.0.1)
+Requirement already satisfied: click>=5.1 in ./venv/lib/python3.6/site-packages (from flask) (7.1.2)
+Requirement already satisfied: itsdangerous>=0.24 in ./venv/lib/python3.6/site-packages (from flask) (1.1.0)
+Requirement already satisfied: Jinja2>=2.10.1 in ./venv/lib/python3.6/site-packages (from flask) (2.11.2)
+Requirement already satisfied: MarkupSafe>=0.23 in ./venv/lib/python3.6/site-packages (from Jinja2>=2.10.1->flask) (1.1.1)
+(venv) [aaron@tbyalf tbyalf_flask]$ vim flask_test.py
+(venv) [aaron@tbyalf tbyalf_flask]$ FLASK_APP=flask_test.py flask run
+ * Serving Flask app "flask_test.py"
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [08/Nov/2020 16:16:44] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/Nov/2020 16:16:44] "GET /favicon.ico HTTP/1.1" 404 -
+^C(venv) [aaron@tbyalf tbyalf_flask]$
+
+
+
+
+login as: aaron
+aaron@192.168.127.66's password:
+Last login: Sun Nov  8 16:23:27 2020 from 192.168.127.186
+/usr/bin/xauth:  file /home/aaron/.Xauthority does not exist
+[aaron@tbyalf ~]$ firefox -no-remote
+Failed to open connection to "session" message bus: /usr/bin/dbus-launch terminated abnormally without any error message
+Running without a11y support!
+libGL error: unable to load driver: swrast_dri.so
+libGL error: failed to load driver: swrast
+
+
+
+
+^C(venv) [aaron@tbyalf tbyalf_flask]$ cat flask_test.py
+from flask import Flask
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+    return "Hello World!"
+
+(venv) [aaron@tbyalf tbyalf_flask]$

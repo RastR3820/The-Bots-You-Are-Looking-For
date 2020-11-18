@@ -1,0 +1,370 @@
+(venv) [aaron@tbyalf tbyalf_flask]$ ls
+app.py  db.yaml  flask_test.py  __pycache__  Templates  venv
+(reverse-i-search)`flask': pip install ^Cask-mysqldb
+(venv) [aaron@tbyalf tbyalf_flask]$ export FLASK_APP=app.py
+(venv) [aaron@tbyalf tbyalf_flask]$ flask run
+ * Serving Flask app "app.py"
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+Usage: flask run [OPTIONS]
+
+Error: While importing "app", an ImportError was raised:
+
+Traceback (most recent call last):
+  File "/py_venv/tbyalf_flask/venv/lib64/python3.6/site-packages/flask/cli.py", line 240, in locate_app
+    __import__(module_name)
+  File "/py_venv/tbyalf_flask/app.py", line 3, in <module>
+    import yaml
+ModuleNotFoundError: No module named 'yaml'
+
+(venv) [aaron@tbyalf tbyalf_flask]$ pip install yaml
+ERROR: Could not find a version that satisfies the requirement yaml (from versions: none)
+ERROR: No matching distribution found for yaml
+(venv) [aaron@tbyalf tbyalf_flask]$ pip search yaml
+yaml-utilities (0.1)                                   - YAML utilities
+validate-yaml (0.0)                                    - validate yaml
+yaml-rulz (0.0.1)                                      - A YAML validator
+recursive-yaml (0.0.2)                                 - Load YAML Recursively
+lens-yaml (0.0.1)                                      - A YAML parser for lens
+yaml-1.3 (0.1.0)                                       - next YAML parser
+fixture-yaml (0.1.2)                                   - fixture-yaml is an extension that adds YAML support to fixture library
+datasette-yaml (0.1)                                   - Export Datasette records as YAML
+selenium-yaml (1.0.5)                                  - Selenium bots using YAML
+yaml-structureddata (5.1)                              - A YAML based database with types.
+dynamic-yaml (1.2.3)                                   - Enables self referential yaml entries
+phoopy-yaml (1.1.3)                                    - Yaml parsing library for phoopy framework
+djangorestframework-yaml (2.0.0)                       - YAML support for Django REST Framework
+codeship-yaml (0.4.0)                                  - YAML configuration file support for Codeship.
+yaml-model (0.1.5)                                     - Semi-transparent YAML serialization/deserialization
+yaml-include (1.0.0)                                   - Tool to generate yaml file with include
+yaml-merge (0.1.1)                                     - Merge YAML several files into one object.
+export-yaml (0.0.2)                                    - Export environment variable from YAML file
+radioactive-yaml (1.0.1)                               - Radioactive YAML, storing data absurdly simply!
+trivia-yaml (0.0.1)                                    - Convert Red's V2 trivia lists to YAML
+yaml-mako (1.0.0)                                      - use mako templating in your YAML files
+yaml-serialize (0.1)                                   - A simple way to store python objects in yaml
+setuptools-yaml (0.4)                                  - Use YAML file for your project metadata
+config-yaml (0.0.2)                                    - Serialize and deserialize your configurations/arguments to yaml.
+perde-yaml (0.0.1)                                     - Fast and flexible YAML serialization library based on perde.
+yaml-resume (0.7.6)                                    - Command line interface to build/validate YAML resumes
+yaml-builder (0.1.1)                                   - A wrapper around PyYaml for building complex yaml files
+yaml-config (0.1.5)                                    - Python client for reading yaml based config files
+templated-yaml (1.1.1)                                 - A helper library that allows hierarchical YAML files with variable substitution.
+yaml-configuration (0.2.5)                             - A python module to easily read from and write to yaml config files.
+YAML-Project-Loader (0.0.4)                            - YAML Project Loader
+tendril-utils-yaml (0.2.2)                             - YAML utilities for Tendril
+betamax-yaml-serializer (0.1.6)                        - YAML serializer for betamax
+pytest-yaml (1.2.1)                                    - This plugin is used to load yaml output to your test using pytest framework.
+yaml-injection (0.0.4)                                 - pyyaml loader. With this loader you can inject (include) other yaml files either from local file system or from public web or from already constructed sections of the yaml.
+reveal-yaml (2.3.0)                                    - A YAML, Markdown, reveal.js based Flask application. Supports gh-pages deployment actions.
+yaml-walker (1.0.24)                                   - Data walker (in dot notation style) & filter (Xpath analog) for yaml look data structure
+yaml-template (0.3)                                    - &#53216;&#48260;&#45348;&#54000;&#49828;&#52376;&#47100; YAML &#54028;&#51068;&#47196; &#51060;&#47336;&#50612;&#51652; &#53596;&#54540;&#47551;&#51012; &#49789;&#44172;
+                                                         &#53596;&#54540;&#47551;&#51032; &#53440;&#51077;&#50640; &#46384;&#46972; &#45796;&#47476;&#44172; &#52376;&#47532;&#54644;&#51452;&#45716;
+                                                         &#54056;&#53412;&#51648;&#51077;&#45768;&#45796;.
+plover-yaml-dictionary (0.0.1)                         - YAML dictionary support for Plover.
+sqla-filters-yaml (0.0.1)                              - YAML parser for sqla-filters.
+config-with-yaml (0.1.0)                               - Loads configurations from yaml files
+sqla-yaml-fixtures (0.9.1)                             - Load YAML data fixtures for SQLAlchemy
+sphinxcontrib-lookup-yaml (0.0.1)                      - Sphinx extension to lookup YAML values
+dffml-config-yaml (0.0.10)                             - DFFML config dffml-config-yaml
+yaml-config-parser (1.0.4)                             - A simple yaml config parser tool
+yaml-to-sqlite (0.3)                                   - Utility for converting YAML files to SQLite
+xstatic-js-yaml (3.8.1.0)                              - JS-Yaml 3.8.1 (XStatic packaging standard)
+python-yaml-logger (0.3.1)                             - YAML formatter for the standard Python logging module
+jinja-yaml-magic (0.1.2)                               - Support Jinja2 and YAML in IPython/Jupyter notebooks
+sphinx-docfx-yaml (1.2.75)                             - Sphinx Python Domain to DocFX YAML Generator
+yaml-error-report (0.1.0)                              - Create console error reports for YAML (and JSON) documents
+yaml-to-object (0.0.7)                                 - Generate Python Class & Object from YAML file
+embedded-yaml-docs (0.0.12)                            - embedded_yaml_docs is a CLI used for generating markdown documentation, from your YAML files. This can be useful for documenting YAML files such as CI pipelines.
+gmail-yaml-filters (0.9.4)                             - A quick tool for generating Gmail filters from YAML rules.
+django-yaml-redirects (0.5.4)                          - A simple redirects utility that uses a YAML file for redirects definitions
+layered-yaml-attrdict-config (18.12.3)                 - YAML-based configuration module
+canonicalwebteam.views-from-yaml (0.2.3)               - A helper function for creating Django views from a YAML file of URL paths
+Py-YAML-Fixtures (0.6.1)                               - Load Django and SQLAlchemy database fixtures from Jinja-templated YAML files
+simple-grid-yaml-compiler (1.0.6)                      - The YAML compiler for the SIMPLE Grid Framework
+intake-nested-yaml-catalog (0.1.0)                     - Intake single YAML hierarchical catalog.
+markdown-full-yaml-metadata (2.0.1)                    - YAML metadata extension for Python-Markdown
+pptx-builder-from-yaml (0.0.4)                         - CLI to generate powerpoint slides from simple yaml file[s]
+sphinxcontrib-yaml (1.0.0)                             - Obsolete - use sphinxcontrib-autoyaml instead
+pycopy-yaml (0.1)                                      - PyYAML compatible wrapper for Pycopy's uyaml module
+simple-yaml (0.1.0)                                    - A simple version of pyyaml
+valohai-yaml (0.13.0)                                  - Valohai.yaml validation and parsing
+cfn-yaml (0.1.3)                                       - Let you load cloudformation template.yaml
+yaml-helper (0.0.2)                                    - Helper methods to read and write .yml files.
+topology-yaml (0.1.5)                                  - Opinionated topology file generator and parser
+avocado-framework-plugin-loader-yaml (82.0)            - Avocado Plugin that loads tests from YAML files
+yaml-lint-to-junit-xml (0.1.1)                         - Convert yaml-lint outputs to a jUnit valid xml tests result file
+ccorp-yaml-include-relative-path (0.0.4)               - Exactly ccorp-yaml-include package with a bug fix and support of relative paths for included aliases
+avocado-framework-plugin-varianter-yaml-to-mux (82.0)  - Avocado Varianter plugin to parse YAML file into variants
+pytest-env-yaml (0.2.0)                                -
+schemed-yaml-config (0.0.4)                            -
+ccorp-yaml-include (0.0.2)                             - An extension of ruamel.yaml to support including aliases
+asym-crypto-yaml (0.0.11)                              -
+codalab-yaml-validator (0.0.10)                        -
+mininet-topology-yaml (0.1.5)                          - Mininet specific topology generator and parser
+defusedyml (0.0.1)                                     - YAML parser
+piy (0.0.1)                                            - POM in YAML
+yamlplus (1.2.0)                                       - yaml puls
+yash (0.6.3)                                           - YAML to Bash
+yachain (0.1.4)                                        - YAML parser
+kroissan (0.2.2)                                       - YAML spreadsheet
+defusedyaml (0.0.1)                                    - YAML parser
+validyaml (0.2)                                        - YAML validator
+dumbyaml (0.9.3)                                       - A YAML parser that reads only a restricted version of YAML.
+yamllint (1.25.0)                                      - A linter for YAML files.
+frugy (0.2.1)                                          - FRU Generator YAML
+yamldoc (0.1.2)                                        - Documentation engine for YAML.
+yamliz (0.1.2)                                         - Dataclasses married with yaml.
+yamlip (0.0.2)                                         - A yaml interpolation tool
+YConPy (1.0)                                           - Yaml to python config
+yargparse (0.6)                                        - YAML / Argparse merger
+chokola (0.2.1)                                        - YAML to HTML Table
+yamllintelerir (1.17.14)                               - A linter for YAML files.
+envyamlconverter (0.1)                                 - Env Yaml Converter
+dubbel (0.8.2)                                         - ConfigParser/YAML hybrid
+django-jsonyamlfield (0.1.2)                           - Django JSONField as YAML.
+(venv) [aaron@tbyalf tbyalf_flask]$ sudo yum install python-yaml
+[sudo] password for aaron:
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirror.dal10.us.leaseweb.net
+ * centos-sclo-rh: mirror.dal.nexril.net
+ * centos-sclo-sclo: repos-tx.psychz.net
+ * epel: d2lzkl7pfhq30w.cloudfront.net
+ * extras: centos.mirrors.tds.net
+ * remi-php74: repo1.dal.innoscale.net
+ * remi-safe: repo1.dal.innoscale.net
+ * updates: linux-mirrors.fnal.gov
+Resolving Dependencies
+--> Running transaction check
+---> Package PyYAML.x86_64 0:3.10-11.el7 will be installed
+--> Processing Dependency: libyaml-0.so.2()(64bit) for package: PyYAML-3.10-11.el7.x86_64
+--> Running transaction check
+---> Package libyaml.x86_64 0:0.1.4-11.el7_0 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=============================================================================================================================================================================================================================================
+ Package                                                 Arch                                                   Version                                                           Repository                                            Size
+=============================================================================================================================================================================================================================================
+Installing:
+ PyYAML                                                  x86_64                                                 3.10-11.el7                                                       base                                                 153 k
+Installing for dependencies:
+ libyaml                                                 x86_64                                                 0.1.4-11.el7_0                                                    base                                                  55 k
+
+Transaction Summary
+=============================================================================================================================================================================================================================================
+Install  1 Package (+1 Dependent package)
+
+Total download size: 208 k
+Installed size: 760 k
+Is this ok [y/d/N]: y
+Downloading packages:
+(1/2): libyaml-0.1.4-11.el7_0.x86_64.rpm                                                                                                                                                                              |  55 kB  00:00:00
+(2/2): PyYAML-3.10-11.el7.x86_64.rpm                                                                                                                                                                                  | 153 kB  00:00:00
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                                                                                        838 kB/s | 208 kB  00:00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : libyaml-0.1.4-11.el7_0.x86_64                                                                                                                                                                                             1/2
+  Installing : PyYAML-3.10-11.el7.x86_64                                                                                                                                                                                                 2/2
+  Verifying  : libyaml-0.1.4-11.el7_0.x86_64                                                                                                                                                                                             1/2
+  Verifying  : PyYAML-3.10-11.el7.x86_64                                                                                                                                                                                                 2/2
+
+Installed:
+  PyYAML.x86_64 0:3.10-11.el7
+
+Dependency Installed:
+  libyaml.x86_64 0:0.1.4-11.el7_0
+
+Complete!
+(venv) [aaron@tbyalf tbyalf_flask]$ flask run
+ * Serving Flask app "app.py"
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+Usage: flask run [OPTIONS]
+
+Error: While importing "app", an ImportError was raised:
+
+Traceback (most recent call last):
+  File "/py_venv/tbyalf_flask/venv/lib64/python3.6/site-packages/flask/cli.py", line 240, in locate_app
+    __import__(module_name)
+  File "/py_venv/tbyalf_flask/app.py", line 3, in <module>
+    import yaml
+ModuleNotFoundError: No module named 'yaml'
+
+(venv) [aaron@tbyalf tbyalf_flask]$ pip install pyyaml
+Collecting pyyaml
+  Downloading PyYAML-5.3.1.tar.gz (269 kB)
+     |████████████████████████████████| 269 kB 1.7 MB/s
+Building wheels for collected packages: pyyaml
+  Building wheel for pyyaml (setup.py) ... done
+  Created wheel for pyyaml: filename=PyYAML-5.3.1-cp36-cp36m-linux_x86_64.whl size=44619 sha256=e6468e4827986ebe6b83bda380054d50cbb1f3d39668a94c7f8d1859f96bd870
+  Stored in directory: /home/aaron/.cache/pip/wheels/e5/9d/ad/2ee53cf262cba1ffd8afe1487eef788ea3f260b7e6232a80fc
+Successfully built pyyaml
+Installing collected packages: pyyaml
+Successfully installed pyyaml-5.3.1
+(venv) [aaron@tbyalf tbyalf_flask]$ flask run
+ * Serving Flask app "app.py"
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+/py_venv/tbyalf_flask/app.py:7: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  db = yaml.load(open('db.yaml'))
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2020-11-11 20:05:25,930] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/py_venv/tbyalf_flask/venv/lib64/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/py_venv/tbyalf_flask/venv/lib64/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/py_venv/tbyalf_flask/venv/lib64/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/py_venv/tbyalf_flask/venv/lib64/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/py_venv/tbyalf_flask/venv/lib64/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/py_venv/tbyalf_flask/venv/lib64/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/py_venv/tbyalf_flask/app.py", line 33, in login
+    return render_template('login.html')
+  File "/py_venv/tbyalf_flask/venv/lib64/python3.6/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/py_venv/tbyalf_flask/venv/lib64/python3.6/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/py_venv/tbyalf_flask/venv/lib64/python3.6/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/py_venv/tbyalf_flask/venv/lib64/python3.6/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/py_venv/tbyalf_flask/venv/lib64/python3.6/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/py_venv/tbyalf_flask/venv/lib64/python3.6/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/py_venv/tbyalf_flask/venv/lib64/python3.6/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: login.html
+127.0.0.1 - - [11/Nov/2020 20:05:25] "GET / HTTP/1.1" 500 -
+^C(venv) [aaron@tbyalf tbyalf_flask]$ ping dcm.uhcl.edu
+PING dcm.uhcl.edu (129.7.84.135) 56(84) bytes of data.
+^C
+--- dcm.uhcl.edu ping statistics ---
+6 packets transmitted, 0 received, 100% packet loss, time 5000ms
+
+(venv) [aaron@tbyalf tbyalf_flask]$ ls
+app.py  db.yaml  flask_test.py  __pycache__  Templates  venv
+(venv) [aaron@tbyalf tbyalf_flask]$ ping dcm.uhcl.edu
+PING dcm.uhcl.edu (129.7.84.135) 56(84) bytes of data.
+^C
+--- dcm.uhcl.edu ping statistics ---
+5 packets transmitted, 0 received, 100% packet loss, time 3999ms
+
+(venv) [aaron@tbyalf tbyalf_flask]$
+
+
+
+
+!!!!CHANGED!!!! 
+app.py
+
+#app = Flask(__name__)
+app = Flask(__name__, template_folder='/py_venv/tbyalf_flask/Templates')
+
+
+
+
+^C(venv) [aaron@tbyalf tbyalf_flask]$ ping dcm.uhcl.edu
+PING dcm.uhcl.edu (129.7.84.135) 56(84) bytes of data.
+^C
+--- dcm.uhcl.edu ping statistics ---
+6 packets transmitted, 0 received, 100% packet loss, time 5000ms
+
+(venv) [aaron@tbyalf tbyalf_flask]$ ls
+app.py  db.yaml  flask_test.py  __pycache__  Templates  venv
+(venv) [aaron@tbyalf tbyalf_flask]$ ping dcm.uhcl.edu
+PING dcm.uhcl.edu (129.7.84.135) 56(84) bytes of data.
+^C
+--- dcm.uhcl.edu ping statistics ---
+5 packets transmitted, 0 received, 100% packet loss, time 3999ms
+
+(venv) [aaron@tbyalf tbyalf_flask]$ pwd
+/py_venv/tbyalf_flask
+(venv) [aaron@tbyalf tbyalf_flask]$ ls
+app.py  db.yaml  flask_test.py  __pycache__  Templates  venv
+(venv) [aaron@tbyalf tbyalf_flask]$ cd Templates/
+(venv) [aaron@tbyalf Templates]$ pwd
+/py_venv/tbyalf_flask/Templates
+(venv) [aaron@tbyalf Templates]$ cd ..
+(venv) [aaron@tbyalf tbyalf_flask]$ cat app.py
+from flask import Flask, render_template, request, redirect
+from flask_mysqldb import MySQL
+import yaml
+app = Flask(__name__)
+
+#Configure DB
+db = yaml.load(open('db.yaml'))
+app.config['MYSQL_USER'] = db['mysql_user']
+app.config['MYSQL_PASSWORD'] = db['mysql_password']
+app.config['MYSQL_HOST'] = db['mysql_host']
+app.config['MYSQL_DB'] = db['mysql_db']
+#app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
+
+mysql = MySQL(app)
+
+@app.route('/', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        user = request.form
+        global StudentID
+        StudentID = user['StudentID']
+        InputPassword = user['Password']
+        cur = mysql.connection.cursor()
+        resultValue = cur.execute("""SELECT Password FROM logininfo WHERE studentid = %s""", [StudentID])
+        if resultValue > 0:
+            password = cur.fetchall()
+            if InputPassword == password[0][0]:
+                return redirect('/students')
+            else:
+                return redirect('/loginfail')
+        else:
+            return redirect('/loginfail')
+    return render_template('login.html')
+
+@app.route('/students')
+def students():
+    cur = mysql.connection.cursor()
+    resultValue = cur.execute("SELECT * FROM student WHERE studentid = %s", [StudentID])
+    if resultValue > 0:
+        students = cur.fetchall()
+        return render_template('students.html', students=students)
+
+@app.route('/loginfail')
+def loginfail():
+    return render_template('loginfail.html')
+
+
+
+
+if __name__ == "__main__":
+    app.run()
+(venv) [aaron@tbyalf tbyalf_flask]$ vim app.py
+(venv) [aaron@tbyalf tbyalf_flask]$ flask run
+ * Serving Flask app "app.py"
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+/py_venv/tbyalf_flask/app.py:8: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  db = yaml.load(open('db.yaml'))
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [11/Nov/2020 20:36:52] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [11/Nov/2020 20:39:30] "POST / HTTP/1.1" 302 -
+127.0.0.1 - - [11/Nov/2020 20:39:31] "GET /students HTTP/1.1" 200 -
+
