@@ -1,11 +1,13 @@
 import torch
 import torch.nn as nn
 import random
-import json
 import nltk
 import numpy as np
+import modelStart
 from nltk.stem.porter import PorterStemmer
 stemmer = PorterStemmer()
+#This class will handle the prediction of what users input with
+#implementation of feed forward neural net data that has been pre-trained
 class IntentHandler:
     
     def GetIntent(self, inString):
@@ -17,19 +19,19 @@ class IntentHandler:
         
         #convert wordbag to numpy array
         #all_words needs passed from model info from initial model initialization
-        X = InputProcessor.wordbag(sentence, all_words)
+        X = InputProcessor.wordbag(sentence, modelStart.all_words)
         X = X.reshape(1, X.shape[0])
         #device info need passed from initialized model code
-        X = torch.from_numpy(X).to(device)
+        X = torch.from_numpy(X).to(modelStart.device)
         
         #model needs to be initialized once in the main program 
         #then needs to be referenced here to obtain probable intent
-        output = model(X)
+        output = modelStart.model(X)
         _, predicted = torch.max(output, dim=1)
         
         #tags need to be passed from the initial load of our model
         #not sure how to implement at this time
-        tag = tags[predicted.item()]
+        tag = modelStart.tags[predicted.item()]
         
         #calculate probability of intent from sentence
         probabilities = torch.softmax(output, dim=1)
@@ -37,7 +39,7 @@ class IntentHandler:
         #if tag more than 75% probable, go with prediction
         if probability.item() > 0.75:
             #intents data needs be passed from initial model initialization block
-            for currentIntent in intents['intents']:
+            for currentIntent in modelStart.intents['intents']:
                 if tag == currentIntent["tag"]:
                     return random.choice(currentIntent['responses'])
         #not more than 75% probable, output not understood tag
@@ -73,10 +75,11 @@ class InputProcessor:
 #this class defines the layout of the feed forward neural net
 class NeuralNet(nn.Module):
     def __init__(self, input_size, hidden_size, num_classes):
+        super(NeuralNet, self).__init__()
         self.l1 = nn.Linear(input_size, hidden_size)
         self.l2 = nn.Linear(hidden_size, hidden_size)
         self.l3 = nn.Linear(hidden_size,num_classes)
-        self.relu = nn.ReLu()
+        self.relu = nn.ReLU()
         
     def forward(self, x):
         out = self.l1(x)
