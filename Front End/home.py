@@ -21,22 +21,46 @@ mysql = MySQL(app)
 def login():
     if request.method == 'POST':
         session.pop('StudentID', None)
-        StudentID = request.form['StudentID']
-        InputPassword = request.form['Password']
-        cur = mysql.connection.cursor()
-        resultValue = cur.execute("""SELECT Password FROM logininfo WHERE studentid = %s""", [StudentID])
-        if resultValue > 0:
-            password = cur.fetchall()
-            if InputPassword == password[0][0]:
-                session['StudentID'] = StudentID
-                return redirect(url_for('chatbot'))
+        session.pop('FName', None)
+        session.pop('LName', None)
+        if request.form['StudentID']:
+            StudentID = request.form['StudentID']
+            InputPassword = request.form['Password']
+            cur = mysql.connection.cursor()
+            resultValue = cur.execute("""SELECT Password FROM logininfo WHERE studentid = %s""", [StudentID])
+            if resultValue > 0:
+                password = cur.fetchall()
+                if InputPassword == password[0][0]:
+                    cur = mysql.connection.cursor()
+                    resultValue = cur.execute('''SELECT FName, LName FROM Student WHERE studentid = %s''', [StudentID])
+                    if resultValue > 0:
+                        name = cur.fetchall()
+                        user = name[0]
+                        FName = user[0]
+                        LName = user[1]
+                        session['StudentID'] = StudentID
+                        session['FName'] = FName
+                        session['LName'] = LName
+                        return redirect(url_for('chatbot'))
+                else:
+                    flash('Login Failed! Please try again')
+                    return redirect(url_for('login'))
             else:
                 flash('Login Failed! Please try again')
                 return redirect(url_for('login'))
         else:
-            flash('Login Failed! Please try again')
-            return redirect(url_for('login'))
-     
+            StudentID = 0
+            cur = mysql.connection.cursor()
+            resultValue = cur.execute('''SELECT FName, LName FROM Student WHERE studentid = %s''', [StudentID])
+            name = cur.fetchall()
+            user = name[0]
+            FName = user[0]
+            LName = user[1]
+            session['StudentID'] = StudentID
+            session['FName'] = FName
+            session['LName'] = LName
+            return redirect(url_for('chatbot'))
+        
     return render_template("index.html")
 
 @app.route("/advising-chatbot", methods=['POST','GET'])
@@ -44,6 +68,7 @@ def chatbot():
     if request.method == 'POST':
         userform = request.form
         userinput = userform['user_input']
+        print(userinput)
         return redirect(url_for('chatbot'))
     
     return render_template("chatbot.html")

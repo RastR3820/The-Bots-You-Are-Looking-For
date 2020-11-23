@@ -23,21 +23,21 @@
 
 				<div class="chat bot">
 					<div class="user-photo"><img src="{{url_for('static', filename='img/mascot.png')}}"></div>
-					<p class="chat-message"> Hello! Thanks for contacting Hunter the Hawk Advising Chat Bot! You are currently logged in as {{session['StudentID']}}. How may I assist you today? </p>
-			</div>
+					<p class="chat-message"> Hello! Thanks for contacting Hunter the Hawk Advising Chat Bot! You are currently logged in as {{session['FName']}} {{session['LName']}}. How may I assist you today? </p>
+				</div>
 				<div class="chat user">
 					<div class="user-photo"><img src="{{url_for('static', filename='img/student1.jpg')}}"></div>
 					<p class="chat-message"> TEXT2 </p>
-			</div>
+				</div>
 				<div class="chat bot">
 					<div class="user-photo"><img src="{{url_for('static', filename='img/mascot.png')}}"></div>
 					<p class="chat-message"> TEXT3 </p>
-			</div>
+				</div>
 				<div class="chat user">
 					<div class="user-photo"><img src="{{url_for('static', filename='img/student1.jpg')}}"></div>
 					<p class="chat-message"> Miusov, as a man man of breeding and deilcacy, could not but feel some inwrd qualms, when he reached the Father Superior's with Ivan: he felt ashamed of havin lost his temper. He felt that he ought to have disdaimed that despicable wretch, Fyodor Pavlovitch, too much to have been upset by him in Father Zossima's cell, and so to have forgotten himself. "Teh monks were not to blame, in any case," he reflceted, on the steps. "And if they're decent people here (and the Father Superior, I understand, is a nobleman) why not be friendly and courteous withthem? I won't argue, I'll fall in with everything, I'll win them by politness, and show them that I've nothing to do with that Aesop, thta buffoon, that Pierrot, and have merely been takken in over this affair, just as they have." </p>
+				</div>
 			</div>
-	</div>
 	
 	<div class="chat-form">
 		<textarea name="user_input" form="userinput" placeholder="Ask me a question!" autofocus></textarea>
