@@ -87,6 +87,13 @@ body{
 	border-radius: 50px;
 }
 
+.username:hover{
+	background:#0078AE;	
+}
+
+.password:hover{
+	background:#0078AE;	
+}
 .button1:hover{
 	background:#0078AE;
 }
