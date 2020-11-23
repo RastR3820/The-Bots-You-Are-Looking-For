@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Advising ChatBot</title>
+		
+		<link rel="stylesheet" type="text/css" 
+		href="{{ url_for('static', filename='desktop_login.css') }}"/>
+		
+	</head>
+	
+	<body>
+		
+		<div class="banner">
+		</div>
+		
+		<div class="rectangle-1">
+		<h2>Hunter the Hawk Advising</h2>
+		</div>
+		
+		<div class="greeting">
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+				{% for message in messages %}
+					<h3>{{ message }}</h3>
+				{% endfor %}
+			{% else %}
+				<h3>Please login to your E-Services account</h3>
+			{% endif %}
+		{% endwith %}
+		</div>
+		
+
+		
+		<form method="POST" action="">
+		<div class="username">
+		<label>StudentID:</label>
+		<input type="text" name="StudentID">
+		</div> 
+		
+		<div class="password">
+		<label>Password:</label>
+		<input type="password" password="Password" name="Password">
+		</div> 
+		
+		<div class="button1"> 
+		<input type="submit" value="Login">
+		</div>
+		
+		<div class="button2">
+		<input type="submit" value="I don't have an E-Services account">
+		</div>
+		</form>
+	</body>
+</html>
