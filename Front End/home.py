@@ -12,6 +12,7 @@ app.config['MYSQL_DB'] = db['mysql_db']
 
 mysql = MySQL(app)
 
+#This gets credentials from the database to fetch login
 @app.route("/", methods=['POST','GET'])
 def home():
     if request.method == 'POST':
