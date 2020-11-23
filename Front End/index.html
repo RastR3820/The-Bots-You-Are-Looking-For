@@ -18,8 +18,18 @@
 		</div>
 		
 		<div class="greeting">
-		<h3>Please login to your E-Services account</h3>
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+				{% for message in messages %}
+					<h3>{{ message }}</h3>
+				{% endfor %}
+			{% else %}
+				<h3>Please login to your E-Services account</h3>
+			{% endif %}
+		{% endwith %}
 		</div>
+		
+
 		
 		<form method="POST" action="">
 		<div class="username">

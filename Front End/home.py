@@ -1,10 +1,15 @@
-from flask import Flask, redirect, request, url_for, render_template
+#pip install flask
+#pip install flask_mysqldb
+#pip install pyyaml
+from flask import Flask, redirect, request, url_for, render_template, session, flash
 from flask_mysqldb import MySQL
 import yaml
+
 app = Flask(__name__)
+app.secret_key = "GBw-8lWlxoAFJkhWWxs_2w"
 
 #Configure DB
-db = yaml.load(open('db.yaml'))
+db = yaml.load(open('db.yaml'), Loader=yaml.FullLoader)
 app.config['MYSQL_USER'] = db['mysql_user']
 app.config['MYSQL_PASSWORD'] = db['mysql_password']
 app.config['MYSQL_HOST'] = db['mysql_host']
@@ -12,24 +17,25 @@ app.config['MYSQL_DB'] = db['mysql_db']
 
 mysql = MySQL(app)
 
-#This gets credentials from the database to fetch login
 @app.route("/", methods=['POST','GET'])
-def home():
+def login():
     if request.method == 'POST':
-        user = request.form
-        global StudentID
-        StudentID = user['StudentID']
-        InputPassword = user['Password']
+        session.pop('StudentID', None)
+        StudentID = request.form['StudentID']
+        InputPassword = request.form['Password']
         cur = mysql.connection.cursor()
         resultValue = cur.execute("""SELECT Password FROM logininfo WHERE studentid = %s""", [StudentID])
         if resultValue > 0:
             password = cur.fetchall()
             if InputPassword == password[0][0]:
-                return redirect('/advising-chatbot')
+                session['StudentID'] = StudentID
+                return redirect(url_for('chatbot'))
             else:
-                return 'Login Failed'
+                flash('Login Failed! Please try again')
+                return redirect(url_for('login'))
         else:
-            return 'Login Failed'
+            flash('Login Failed! Please try again')
+            return redirect(url_for('login'))
      
     return render_template("index.html")
 
@@ -38,8 +44,8 @@ def chatbot():
     if request.method == 'POST':
         userform = request.form
         userinput = userform['user_input']
-        print(userinput)
-        return 'Done!'
+        return redirect(url_for('chatbot'))
+    
     return render_template("chatbot.html")
 
 if __name__ == "__main__":
