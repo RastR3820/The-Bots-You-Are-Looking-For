@@ -117,7 +117,7 @@ CREATE TABLE IF NOT EXISTS Student (
 	StudentID			INT NOT NULL,
 	FName				VARCHAR(35) NOT NULL,
 	LName				VARCHAR(35) NOT NULL,
-	Email				VARCHAR(45) NOT NULL,
+	Email				VARCHAR(45),
 	CreditsTaken		INT(3) DEFAULT 0,
 	Major				VARCHAR(4),
 	Minor				VARCHAR(4),
@@ -165,6 +165,7 @@ CREATE TABLE IF NOT EXISTS LoginInfo (
 );
 -- Populate tables with values
 INSERT INTO Student VALUES
+	(0000000, 'Guest', 'User', NULL, NULL, NULL, NULL),
 	(1794794, 'John', 'Naisbitt', 'NaisbittJ4859@UHCL.edu', 121, 'ITEC', 'CSEC'),
     (1594057, 'Richard', 'Fly', 'FlyR7169@UHCL.edu', 120, 'ITEC', 'CSEC'),
 	(1132784, 'Jane', 'Doe', 'DoeJ5763@UHCL.edu', 65, 'CSCI', NULL),
@@ -363,9 +364,10 @@ INSERT INTO Requisite VALUES
 	(8008, 8004, 'Prerequisite'),
 	(8008, 4000, 'Prerequisite');
 INSERT INTO LoginInfo VALUES
-	(1794794, 'test123'),
+	(1794794, 'secret'),
     (1594057, 'test123'),
-    (1132784, 'test123');
+    (1132784, 'test123'),
+	(1535670, 'password');
 INSERT INTO Date VALUES
 	(10, 'Drop Date Fall 2020', '2020-11-09', 'Last day to Drop/Withdraw'),
     (11, 'Last Class Day Fall 2020 Regular Session', '2020-12-05', 'Last day of classes'),
