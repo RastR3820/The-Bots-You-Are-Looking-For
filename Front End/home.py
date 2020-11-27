@@ -3,9 +3,7 @@
 #pip install pyyaml
 from flask import Flask, redirect, request, url_for, render_template, session, flash
 from flask_mysqldb import MySQL
-from nlp.IntentHandler import IntentHandler
-# ryan - modelstart import added to have it run on application start
-# from nlp.modelStart import modelStart
+from IntentHandler import IntentHandler
 import yaml
 
 app = Flask(__name__)
@@ -71,17 +69,15 @@ def chatbot():
     if request.method == 'POST':
         userform = request.form
         userinput = userform['user_input']
-        print(userinput)
+        print('Input from webpage: ',userinput)
 
         # ryan - this is where the intent handler will read the input
         intenter = IntentHandler()
-        print("intent: ", intenter.GetIntent(userinput))
+        print("Intent from chatbot: ", intenter.GetIntent(userinput))
 
         return redirect(url_for('chatbot'))
     
     return render_template("chatbot.html")
 
 if __name__ == "__main__":
-    # ryan - running model training before app starts
-    #ms = modelStart()
     app.run()
