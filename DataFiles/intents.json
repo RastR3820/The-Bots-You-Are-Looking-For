@@ -68,7 +68,7 @@
 	  "patterns": ["Remove", "Removing courses", "Drop", "Drop courses"],
 	  "responses": [
 	  "My apologies, but we cannot grant this request, please contact the College of Science and Engineering. Phone:281-283-3700	Email:cseadvising@uhcl.edu"
-        ]
+          ]
 	},
 
 	{
@@ -87,12 +87,12 @@
 	  "Happy to help!", 
 	  "Any time!", 
 	  "My pleasure"
-	]
+	  ]
     	},
 
 	{
 	  "tag": "faculty-contact",
-	  "patterns": ["Faculty", "Teacher", "Instructor", "Professor" "Contact information", "Teacher information", "Instructor information" 
+	  "patterns": ["Faculty", "Teacher", "Instructor", "Professor" "Contact information", "Teacher information", "Instructor information"],
       	  "responses": [
 	  "My apologies, please follow the link to search for your instructor's contact information.	https://www.uhcl.edu/directory/"
     	]
