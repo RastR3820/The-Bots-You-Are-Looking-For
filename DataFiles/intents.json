@@ -1,101 +1,100 @@
 {
-  "intents": [
-    {
-      "tag": "greeting",
-      "patterns": ["Hi","How are you","Hello"],
-      "responses": [
-        "Hello, how can I help you today?",
-        "Hi there, what can I do for you?",
-        "Hi there, how can I help?"
-      ]
-    },
+	"intents": [{
+			"tag": "greeting",
+			"patterns": ["Hi", "How are you", "Hello"],
+			"responses": [
+				"Hello, how can I help you today?",
+				"Hi there, what can I do for you?",
+				"Hi there, how can I help?"
+			]
+		},
 
-    {
-      "tag": "goodbye",
-      "patterns": ["Bye", "See you later", "Goodbye"],
-      "responses": [
-        "Thank you for visiting!",
-        "Have a nice day!"
-      ]
-    },
+		{
+			"tag": "goodbye",
+			"patterns": ["Bye", "See you later", "Goodbye"],
+			"responses": [
+				"Thank you for visiting!",
+				"Have a nice day!"
+			]
+		},
 
-	{
-	  "tag": "degree",
-	  "patterns": ["Degree", "Degree plan", "CSE", "College of Science and Engineering"],
-	  "responses": [
-	  "Do you want to see your degree plan?",
-	  "Is there a degree plan you are looking for?",
-	  "Would you like to search for a degree plan?"
-	  ]
-	},
+		{
+			"tag": "degree",
+			"patterns": ["Degree", "Degree plan", "CSE", "College of Science and Engineering"],
+			"responses": [
+				"Do you want to see your degree plan?",
+				"Is there a degree plan you are looking for?",
+				"Would you like to search for a degree plan?"
+			]
+		},
 
-	{
-	  "tag": "course",
-	  "patterns": ["Courses", "Course lookup", "Course availability", "Course sections", "Course information", "Prerequisite", "prereq"],
-	  "responses": [
-	  "Are you looking for a course?",
-	  "I can help search if a course is available this semester. If needed I can also provide the course sections and prerequisistes if any."
-	  ]
-	},
+		{
+			"tag": "course",
+			"patterns": ["Courses", "Course lookup", "Course availability", "Course sections", "Course information", "Prerequisite", "prereq"],
+			"responses": [
+				"Are you looking for a course?",
+				"I can help search if a course is available this semester. If needed I can also provide the course sections and prerequisistes if any."
+			]
+		},
 
-	{
-	  "tag": "my-courses",
-	  "patterns": ["Schedule", "My classes", "My course", "Course schedule"],
-	  "responses": [
-	  "Would you like to view your courses?",
-	  "Do you want to view your current enrolled courses?"
-	  ]
-	},
+		{
+			"tag": "my-courses",
+			"patterns": ["Schedule", "My classes", "My course", "Course schedule"],
+			"responses": [
+				"Would you like to view your courses?",
+				"Do you want to view your current enrolled courses?"
+			]
+		},
 
-	{
-	  "tag": "non-cse",
-	  "patterns": ["HSH", "College of Human Sciences and Humanitites", "COB", "College of Business", "COE", "College of Education"],
-	  "responses": [
-	  "I apologize but at the moment I can only support the College of Science and Engineering (CSE)"
-	  ]
-	},
+		{
+			"tag": "non-cse",
+			"patterns": ["HSH", "College of Human Sciences and Humanitites", "COB", "College of Business", "COE", "College of Education"],
+			"responses": [
+				"I apologize but at the moment I can only support the College of Science and Engineering (CSE)"
+			]
+		},
 
-	{
-	  "tag": "add-course",
-	  "patterns": ["Add course", "Adding course"],
-	  "responses": [
-	  "My apologies, but we cannot grant this request, please contact the College of Science and Engineering. Phone:281-283-3700	Email:cseadvising@uhcl.edu"
-	  ]
-	},
+		{
+			"tag": "add-course",
+			"patterns": ["Add course", "Adding course"],
+			"responses": [
+				"My apologies, but we cannot grant this request, please contact the College of Science and Engineering. Phone:281-283-3700 Email:cseadvising@uhcl.edu"
+			]
+		},
 
-	{
-	  "tag": "remove-course",
-	  "patterns": ["Remove", "Removing courses", "Drop", "Drop courses"],
-	  "responses": [
-	  "My apologies, but we cannot grant this request, please contact the College of Science and Engineering. Phone:281-283-3700	Email:cseadvising@uhcl.edu"
-          ]
-	},
+		{
+			"tag": "remove-course",
+			"patterns": ["Remove", "Removing courses", "Drop", "Drop courses"],
+			"responses": [
+				"My apologies, but we cannot grant this request, please contact the College of Science and Engineering. Phone:281-283-3700 Email:cseadvising@uhcl.edu"
+			]
+		},
 
-	{
-	  "tag": "advising",
-	  "patterns": ["Advising office", "Advising", "Advisor", "Appointment", "Schedule an appointment"],
-	  "responses": [
-	  "Did you want the advising office contact information?",
-	  "I can assist you in scheduling an appointment with your advisor"
-	  ]
-	},
+		{
+			"tag": "advising",
+			"patterns": ["Advising office", "Advising", "Advisor", "Appointment", "Schedule an appointment"],
+			"responses": [
+				"Did you want the advising office contact information?",
+				"I can assist you in scheduling an appointment with your advisor"
+			]
+		},
 
-       {
-      	  "tag": "thanks",
-      	  "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
-      	  "responses": [
-	  "Happy to help!", 
-	  "Any time!", 
-	  "My pleasure"
-	  ]
-    	},
+		{
+			"tag": "thanks",
+			"patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+			"responses": [
+				"Happy to help!",
+				"Any time!",
+				"My pleasure"
+			]
+		},
 
-	{
-	  "tag": "faculty-contact",
-	  "patterns": ["Faculty", "Teacher", "Instructor", "Professor" "Contact information", "Teacher information", "Instructor information"],
-      	  "responses": [
-	  "My apologies, please follow the link to search for your instructor's contact information.	https://www.uhcl.edu/directory/"
-    	]
-     }
-  ]
+		{
+			"tag": "faculty-contact",
+			"patterns": ["Faculty", "Teacher", "Instructor", "Professor", "Contact information", "Teacher information", "Instructor information"],
+			"responses": [
+				"My apologies, please follow the link to search for your instructor's contact information. https://www.uhcl.edu/directory/"
+			]
+		}
+	]
 }
