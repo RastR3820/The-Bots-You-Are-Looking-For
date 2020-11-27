@@ -3,7 +3,8 @@ import torch.nn as nn
 import random
 import nltk
 import numpy as np
-import modelStart
+#ryan - had issue with this import as it was causing a circular import
+#from nlp.modelStart import modelStart
 from nltk.stem.porter import PorterStemmer
 stemmer = PorterStemmer()
 #This class will handle the prediction of what users input with
@@ -45,6 +46,11 @@ class IntentHandler:
         #not more than 75% probable, output not understood tag
         else:
             return "unknown"
+
+    #ryan - test method to ensure this file is actually getting imported into the home.py file
+    def echoThing(self):
+    	print("Intent Handler has been reached.")
+
     
 class InputProcessor:
     #split query into tokens
