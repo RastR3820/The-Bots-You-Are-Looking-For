@@ -3,7 +3,11 @@ import torch.nn as nn
 import random
 import nltk
 import numpy as np
-from nlp.modelStart import modelStart
+# ryan - commented out to have it run in this file instead
+# from nlp.modelStart import modelStart
+# ryan - added corect imports to have modelstart in this file
+import os
+import json
 from nltk.stem.porter import PorterStemmer
 stemmer = PorterStemmer()
 nltk.download('punkt')
@@ -93,3 +97,30 @@ class NeuralNet(nn.Module):
         out = self.relu(out)
         out = self.l3(out)
         return out
+
+class modelStart:
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    
+    # ryan - filepath  for the intents.json file
+    filedir = os.path.dirname(os.path.realpath('../__file__'))
+    filename = os.path.join(filedir, 'DataFiles/intents.json')
+
+    with open(filename, 'r') as json_data:
+        intents = json.load(json_data)
+    
+    # ryan filepath reading for the data.pth file
+    filedir = os.path.dirname(os.path.realpath('../__file__'))
+    filename = os.path.join(filedir, 'DataFiles/data.pth')
+
+    data = torch.load(filename)
+    
+    input_size = data["input_size"]
+    hidden_size = data["hidden_size"]
+    output_size = data["output_size"]
+    all_words = data['all_words']
+    tags = data['tags']
+    model_state = data["model_state"]
+    
+    model = IntentHandler.Model.NeuralNet(input_size, hidden_size, output_size).to(device)
+    model.load_state_dict(model_state)
+    model.eval()

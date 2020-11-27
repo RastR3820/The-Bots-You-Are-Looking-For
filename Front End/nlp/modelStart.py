@@ -17,8 +17,9 @@ class modelStart:
     with open(filename, 'r') as json_data:
         intents = json.load(json_data)
     
-    FILE = "data.pth"
-    data = torch.load(FILE)
+    filedir = os.path.dirname(os.path.realpath('../__file__'))
+    filename = os.path.join(filedir, 'DataFiles/data.pth')
+    data = torch.load(filename)
     
     input_size = data["input_size"]
     hidden_size = data["hidden_size"]

@@ -4,6 +4,8 @@
 from flask import Flask, redirect, request, url_for, render_template, session, flash
 from flask_mysqldb import MySQL
 from nlp.IntentHandler import IntentHandler
+# ryan - modelstart import added to have it run on application start
+# from nlp.modelStart import modelStart
 import yaml
 
 app = Flask(__name__)
@@ -80,4 +82,6 @@ def chatbot():
     return render_template("chatbot.html")
 
 if __name__ == "__main__":
+    # ryan - running model training before app starts
+    #ms = modelStart()
     app.run()
