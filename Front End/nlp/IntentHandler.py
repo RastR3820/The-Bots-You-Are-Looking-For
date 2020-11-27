@@ -3,10 +3,10 @@ import torch.nn as nn
 import random
 import nltk
 import numpy as np
-#ryan - had issue with this import as it was causing a circular import
-#from nlp.modelStart import modelStart
+from nlp.modelStart import modelStart
 from nltk.stem.porter import PorterStemmer
 stemmer = PorterStemmer()
+nltk.download('punkt')
 #This class will handle the prediction of what users input with
 #implementation of feed forward neural net data that has been pre-trained
 class IntentHandler:
@@ -93,3 +93,24 @@ class NeuralNet(nn.Module):
         out = self.relu(out)
         out = self.l3(out)
         return out
+
+# ryan - added from other file to fix circular import
+# class modelStart:
+#     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    
+#     with open('../../DataFile/intents.json', 'r') as json_data:
+#         intents = json.load(json_data)
+    
+#     FILE = "data.pth"
+#     data = torch.load(FILE)
+    
+#     input_size = data["input_size"]
+#     hidden_size = data["hidden_size"]
+#     output_size = data["output_size"]
+#     all_words = data['all_words']
+#     tags = data['tags']
+#     model_state = data["model_state"]
+    
+#     model = IntentHandler.Model.NeuralNet(input_size, hidden_size, output_size).to(device)
+#     model.load_state_dict(model_state)
+#     model.eval()
