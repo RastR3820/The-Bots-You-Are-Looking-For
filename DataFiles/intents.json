@@ -17,14 +17,30 @@
 				"Have a nice day!"
 			]
 		},
+		
+		{
+			"tag": "thanks",
+			"patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+			"responses": [
+				"Happy to help!",
+				"Any time!",
+				"My pleasure"
+			]
+		},
 
 		{
-			"tag": "degree",
-			"patterns": ["Degree", "Degree plan", "CSE", "College of Science and Engineering"],
+			"tag": "my-degree",
+			"patterns": ["My Degree", "My Degree plan", "Show My Degree plan", "CSE", "College of Science and Engineering"],
 			"responses": [
-				"Do you want to see your degree plan?",
-				"Is there a degree plan you are looking for?",
-				"Would you like to search for a degree plan?"
+				"Requesting degree plan..."
+			]
+		},
+		
+		{
+			"tag": "degree",
+			"patterns": ["What degree plans are offered", "Degree", "Degree plans", "Show me another degree plan", "College of Science and Engineering"],
+			"responses": [
+				"Here are College of Science and Engineering degree plans currently offered."
 			]
 		},
 
@@ -32,14 +48,13 @@
 			"tag": "course",
 			"patterns": ["Courses", "Course lookup", "Course availability", "Course sections", "Course information", "Prerequisite", "prereq"],
 			"responses": [
-				"Are you looking for a course?",
-				"I can help search if a course is available this semester. If needed I can also provide the course sections and prerequisistes if any."
+				"Here is course XXXX requested..."
 			]
 		},
 
 		{
 			"tag": "my-courses",
-			"patterns": ["Schedule", "My classes", "My course", "Course schedule"],
+			"patterns": ["Schedule", "My classes", "My course", "Course schedule","current enrollment"],
 			"responses": [
 				"Would you like to view your courses?",
 				"Do you want to view your current enrolled courses?"
@@ -74,21 +89,42 @@
 			"tag": "advising",
 			"patterns": ["Advising office", "Advising", "Advisor", "Appointment", "Schedule an appointment"],
 			"responses": [
-				"Did you want the advising office contact information?",
-				"I can assist you in scheduling an appointment with your advisor"
+				"Heres the advising info..."
 			]
 		},
-
+		
 		{
-			"tag": "thanks",
-			"patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+		"tag": "appt-times",
+			"patterns": ["appointment times", "schedule an appointment", "Appointment", "Schedule an appointment"],
 			"responses": [
-				"Happy to help!",
-				"Any time!",
-				"My pleasure"
+				"appttimerequest"
 			]
 		},
-
+		
+		{
+		"tag": "deadline",
+			"patterns": ["deadline", "show me deadlines", "deadline request", "important deadlines"],
+			"responses": [
+				"deadlinerequest"
+			]
+		},
+		
+		{
+			"tag": "major",
+			"patterns": ["what is my major", "major", "major request", "show me my major"],
+			"responses": [
+				"major request"
+			]
+		},
+		
+		{
+			"tag": "minor",
+			"patterns": ["what is my minor", "minor", "minor request", "show me my minor"],
+			"responses": [
+				"minor request"
+			]
+		},
+		
 		{
 			"tag": "faculty-contact",
 			"patterns": ["Faculty", "Teacher", "Instructor", "Professor", "Contact information", "Teacher information", "Instructor information"],
