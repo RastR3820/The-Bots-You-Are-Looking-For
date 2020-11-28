@@ -3,6 +3,7 @@
 #pip install pyyaml
 from flask import Flask, redirect, request, url_for, render_template, session, flash
 from flask_mysqldb import MySQL
+from IntentHandler import IntentHandler
 import yaml
 
 app = Flask(__name__)
@@ -68,7 +69,12 @@ def chatbot():
     if request.method == 'POST':
         userform = request.form
         userinput = userform['user_input']
-        print(userinput)
+        print('Input from webpage: ',userinput)
+
+        # ryan - this is where the intent handler will read the input
+        intenter = IntentHandler()
+        print("Intent from chatbot: ", intenter.GetIntent(userinput))
+
         return redirect(url_for('chatbot'))
     
     return render_template("chatbot.html")

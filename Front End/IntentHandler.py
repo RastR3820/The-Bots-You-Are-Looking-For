@@ -3,13 +3,17 @@ import torch.nn as nn
 import random
 import nltk
 import numpy as np
-import modelStart
+# ryan - commented out to have it run in this file instead
+# from nlp.modelStart import modelStart
+# ryan - imported os and json libraries to have modelstart in this file
+import os
+import json
 from nltk.stem.porter import PorterStemmer
 stemmer = PorterStemmer()
+nltk.download('punkt')
 #This class will handle the prediction of what users input with
 #implementation of feed forward neural net data that has been pre-trained
 class IntentHandler:
-    
     def GetIntent(self, inString):
         sentence = inString
         if sentence == "exit":
@@ -45,7 +49,6 @@ class IntentHandler:
         #not more than 75% probable, output not understood tag
         else:
             return "unknown"
-
     
 class InputProcessor:
     #split query into tokens
@@ -69,8 +72,7 @@ class InputProcessor:
         for index, currentWord in enumerate(words):
             if currentWord in stemmedTokenWords: 
                 bag[index] = 1
-            return bag
-        
+            return bag      
         
 #this class defines the layout of the feed forward neural net
 class NeuralNet(nn.Module):
@@ -88,3 +90,30 @@ class NeuralNet(nn.Module):
         out = self.relu(out)
         out = self.l3(out)
         return out
+
+# ryan - moved modelStart to this file so that variable passing would be handled better
+class modelStart:
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    
+    # ryan - filepath for the intents.json file
+    filedir = os.path.dirname(os.path.realpath('../__file__'))
+    filename = os.path.join(filedir, 'DataFiles/intents.json')
+    with open(filename, 'r') as json_data:
+        intents = json.load(json_data)
+    
+    # ryan - filepath for the data.pth file
+    filedir = os.path.dirname(os.path.realpath('../__file__'))
+    filename = os.path.join(filedir, 'DataFiles/data.pth')
+    data = torch.load(filename)
+    
+    input_size = data["input_size"]
+    hidden_size = data["hidden_size"]
+    output_size = data["output_size"]
+    all_words = data['all_words']
+    tags = data['tags']
+    model_state = data["model_state"]
+    
+    # ryan - fixed this line by removing IntentHandler.Model.
+    model = NeuralNet(input_size, hidden_size, output_size).to(device)
+    model.load_state_dict(model_state)
+    model.eval()
