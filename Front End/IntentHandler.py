@@ -70,7 +70,7 @@ class InputProcessor:
         for index, currentWord in enumerate(words):
             if currentWord in stemmedTokenWords: 
                 bag[index] = 1
-            return bag      
+        return bag      
         
 #this class defines the layout of the feed forward neural net
 class NeuralNet(nn.Module):
