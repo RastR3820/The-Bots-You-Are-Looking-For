@@ -4,6 +4,7 @@
 from flask import Flask, redirect, request, url_for, render_template, session, flash
 from flask_mysqldb import MySQL
 from IntentHandler import IntentHandler
+from IntentHandler import modelStart
 import yaml
 
 app = Flask(__name__)

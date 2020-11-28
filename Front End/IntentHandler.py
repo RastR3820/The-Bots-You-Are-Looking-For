@@ -3,8 +3,6 @@ import torch.nn as nn
 import random
 import nltk
 import numpy as np
-# ryan - commented out to have it run in this file instead
-# from nlp.modelStart import modelStart
 # ryan - imported os and json libraries to have modelstart in this file
 import os
 import json
