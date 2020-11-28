@@ -12,7 +12,8 @@ nltk.download('punkt')
 #This class will handle the prediction of what users input with
 #implementation of feed forward neural net data that has been pre-trained
 class IntentHandler:
-    def GetIntent(self, inString):
+    
+    def GetIntent(self,inString,userID):
         sentence = inString
         if sentence == "exit":
             return "quit"
@@ -43,11 +44,46 @@ class IntentHandler:
             #intents data needs be passed from initial model initialization block
             for currentIntent in modelStart.intents['intents']:
                 if tag == currentIntent["tag"]:
-                    return random.choice(currentIntent['responses'])
+                    return self.GetOutput(tag,inString,random.choice(currentIntent['responses']),userID)
         #not more than 75% probable, output not understood tag
         else:
-            return "unknown"
-    
+            return self.GetOutput("unknown")
+    def GetOutput(self,intent,inString,pregenResponse,user):
+        
+        if intent == "unknown":
+            return "I'm sorry, I don't understand. You can type help to display a list of inquiries supported"
+        elif intent == "my-degree":
+            if user == 0:
+                return "Please login to view your degree plan."
+            else:
+                return "This is the placeholder for my degree plan request db query"
+        elif intent == "degree":
+            return "This is the placeholder for list of CSE degree plans request db query"
+        elif intent == "course":
+            return pregenResponse
+        elif intent == "my-courses":
+            if user == 0:
+                return "Please login to view your courses."
+            else:
+                return pregenResponse
+        elif intent == "advising":
+            return "Here is the advising contact information for the College of Science and Engineering. Phone:281-283-3700 Email:cseadvising@uhcl.edu"
+        elif intent == "appt-times":
+            return "This is the placeholder for appointment times request db query"
+        elif intent == "deadline":
+            return "This is the placeholder for deadline request db query"
+        elif intent == "major":
+            if user == 0:
+                return "Please login to view your current major."
+            else:
+                return "This is the placeholder for major request db query"
+        elif intent == "minor":
+            if user == 0:
+                return "Please login to view your current minor."
+            else:
+                return "This is the placeholder for minor request db query"
+        else:
+             return pregenResponse
 class InputProcessor:
     #split query into tokens
     def tokenize(sen):
@@ -71,7 +107,7 @@ class InputProcessor:
             if currentWord in stemmedTokenWords: 
                 bag[index] = 1
         return bag      
-        
+
 #this class defines the layout of the feed forward neural net
 class NeuralNet(nn.Module):
     def __init__(self, input_size, hidden_size, num_classes):

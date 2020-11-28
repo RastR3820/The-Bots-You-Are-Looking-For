@@ -82,7 +82,7 @@ def chatbot():
         messages.append(userinput)
         # ryan - this is where the intent handler will read the input
         intenter = IntentHandler()
-        response = intenter.GetIntent(userinput)
+        response = intenter.GetIntent(userinput,session['StudentID'])
         print("Intent from chatbot: ", response)
         messages.append(response)
         
