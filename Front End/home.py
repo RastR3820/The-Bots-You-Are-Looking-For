@@ -1,11 +1,13 @@
 #pip install flask
 #pip install flask_mysqldb
 #pip install pyyaml
-from flask import Flask, redirect, request, url_for, render_template, session, flash
+from flask import Flask, redirect, request, url_for, render_template, session, flash, g
 from flask_mysqldb import MySQL
 from IntentHandler import IntentHandler
 from IntentHandler import modelStart
 import yaml
+
+messages = []
 
 app = Flask(__name__)
 app.secret_key = "GBw-8lWlxoAFJkhWWxs_2w"
@@ -18,7 +20,13 @@ app.config['MYSQL_HOST'] = db['mysql_host']
 app.config['MYSQL_DB'] = db['mysql_db']
 
 mysql = MySQL(app)
-
+    
+@app.before_request
+def before():
+    g.chatlogs = []
+    for message in messages:
+        g.chatlogs.append(message)
+  
 @app.route("/", methods=['POST','GET'])
 def login():
     if request.method == 'POST':
@@ -71,14 +79,22 @@ def chatbot():
         userform = request.form
         userinput = userform['user_input']
         print('Input from webpage: ',userinput)
-
+        messages.append(userinput)
         # ryan - this is where the intent handler will read the input
         intenter = IntentHandler()
-        print("Intent from chatbot: ", intenter.GetIntent(userinput))
-
-        return redirect(url_for('chatbot'))
+        response = intenter.GetIntent(userinput)
+        print("Intent from chatbot: ", response)
+        messages.append(response)
+        
+        return redirect(url_for('direct'))
     
     return render_template("chatbot.html")
 
+@app.route("/redirect")
+def direct():
+    return redirect(url_for('chatbot'))
+
 if __name__ == "__main__":
     app.run()
+
+
