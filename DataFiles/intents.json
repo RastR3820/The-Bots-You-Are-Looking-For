@@ -27,7 +27,15 @@
 				"My pleasure"
 			]
 		},
-
+		
+		{
+			"tag": "help",
+			"patterns": ["help"],
+			"responses": [
+				"Here are a list of inquiries currently supported: [My Degree - display your current degree plan] [Degree - display a list of degree plans in College of Science and Engineering] [Course Lookup- search info for specific course given a course subject and number] [My Courses - Display current enrollment] [Advising - Display advising contact information if request is out of scope] [Appointment Times - Display list of advising appointment times available] [Deadline - Display list of important deadlines] [Major - Display current major] [Minor - Display current minor] [Faculty - Display info for faculty lookup.]"
+			]
+		},
+		
 		{
 			"tag": "my-degree",
 			"patterns": ["My Degree", "My Degree plan", "Show My Degree plan", "CSE", "College of Science and Engineering"],
