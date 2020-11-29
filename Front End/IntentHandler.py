@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 import random
 import nltk
+import re
 import numpy as np
 # ryan - imported os and json libraries to have modelstart in this file
 import os
@@ -59,7 +60,19 @@ class IntentHandler:
                 return "This is the placeholder for my degree plan request db query"
         elif intent == "degree":
             return "This is the placeholder for list of CSE degree plans request db query"
+        #find course info - takes input and searches db for match and outputs course info if found else error msg
         elif intent == "course":
+            result = re.search("[A-Z]{4} \d{4}|[A-Z]{4}\d{4}",inString)
+            print(result)
+            if result == None:
+                return "Course could not be found or invalid input. Please format course request with uppercase subject then number. e.g. MATH2414"
+            else:
+                
+                subject = re.search("[A-Za-z]{4}",result[0])
+                print("Subject requested: ",subject[0])
+                number = re.search("\d{4}",result[0])
+                print("Course requested: ",number[0])
+            #replace this line with query... subject and number correspond to data
             return pregenResponse
         elif intent == "my-courses":
             if user == 0:
