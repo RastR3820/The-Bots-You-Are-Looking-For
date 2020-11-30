@@ -7,9 +7,20 @@ import numpy as np
 # ryan - imported os and json libraries to have modelstart in this file
 import os
 import json
+import MySQLdb
+import yaml
 from nltk.stem.porter import PorterStemmer
 stemmer = PorterStemmer()
 nltk.download('punkt')
+
+config = yaml.load(open('db.yaml'), Loader=yaml.FullLoader)
+db = MySQLdb.connect(
+    host=config["mysql_host"],
+    user=config["mysql_user"],
+    passwd=config["mysql_password"],
+    db=config["mysql_db"],
+    cursorclass=MySQLdb.cursors.DictCursor)
+
 #This class will handle the prediction of what users input with
 #implementation of feed forward neural net data that has been pre-trained
 class IntentHandler:
@@ -48,18 +59,29 @@ class IntentHandler:
                     return self.GetOutput(tag,inString,random.choice(currentIntent['responses']),userID)
         #not more than 75% probable, output not understood tag
         else:
-            return self.GetOutput("unknown")
+            return self.GetOutput(tag, inString, "unknown", userID)
     def GetOutput(self,intent,inString,pregenResponse,user):
         
         if intent == "unknown":
             return "I'm sorry, I don't understand. You can type help to display a list of inquiries supported"
+        
         elif intent == "my-degree":
+            #view the user's major and minor
             if user == 0:
                 return "Please login to view your degree plan."
             else:
-                return "This is the placeholder for my degree plan request db query"
+                cur = db.cursor()
+                cur.execute("SELECT DISTINCT concat(s.major, ' ', ma.name) as Major, concat(s.minor, ' ', mi.name) as Minor FROM student s, majorprogram ma, minorprogram mi WHERE s.studentID = %s AND s.major = ma.majorid AND s.minor = mi.minorid", [user])
+                mydegree = cur.fetchone()
+                return f"Your major is: {mydegree['Major']}, and your minor is: {mydegree['Minor']}"
+                
+                        
         elif intent == "degree":
-            return "This is the placeholder for list of CSE degree plans request db query"
+            cur = db.cursor()
+            cur.execute("SELECT ID, Name, Type FROM (SELECT DISTINCT ma.majorid as ID, ma.Name, 'Major' as Type FROM majorprogram ma UNION SELECT DISTINCT mi.minorid as ID, mi.Name, 'Minor' as Type FROM minorprogram mi) degrees")
+            degrees = cur.fetchall()
+            return degrees
+        
         #find course info - takes input and searches db for match and outputs course info if found else error msg
         elif intent == "course":
             result = re.search("[A-Z]{4} \d{4}|[A-Z]{4}\d{4}",inString)
@@ -67,36 +89,56 @@ class IntentHandler:
             if result == None:
                 return "Course could not be found or invalid input. Please format course request with uppercase subject then number. e.g. MATH2414"
             else:
-                
                 subject = re.search("[A-Za-z]{4}",result[0])
                 print("Subject requested: ",subject[0])
                 number = re.search("\d{4}",result[0])
                 print("Course requested: ",number[0])
-            #replace this line with query... subject and number correspond to data
+                cur = db.cursor()
+                resultValue = cur.execute("SELECT DISTINCT concat(co.coursesubject, ' ', co.coursenumber, ' ', co.name) as Course FROM course co WHERE co.coursenumber LIKE %s AND co.coursesubject LIKE %s;", ([number[0]], [subject[0]]))
+                if resultValue > 0:
+                    courses = cur.fetchall()              
+                    return courses
+                else:
+                    cur.execute("SELECT DISTINCT concat(co.coursesubject, ' ', co.coursenumber, ' ', co.name) as Course FROM course co WHERE co.coursenumber LIKE %s OR co.coursesubject LIKE %s;", ([number[0]], [subject[0]]))
+                    courses = cur.fetchall()
+                    return f"Course could not be found, here is a list of courses with either the same subject or number. Please try again.\n {courses}"
             return pregenResponse
         elif intent == "my-courses":
             if user == 0:
                 return "Please login to view your courses."
             else:
-                return pregenResponse
+                cur = db.cursor()
+                cur.execute("SELECT DISTINCT c.ClassID, co.Name FROM class c, course co, faculty f, enroll e WHERE c.instructorid = f.facultyid AND c.courseid = co.courseid AND e.classid = c.classid AND e.studentid = %s", [user])
+                mycourses = cur.fetchall()
+                return mycourses
         elif intent == "advising":
             return "Here is the advising contact information for the College of Science and Engineering. Phone:281-283-3700 Email:cseadvising@uhcl.edu"
         elif intent == "appt-times":
             return "This is the placeholder for appointment times request db query"
         elif intent == "deadline":
-            return "This is the placeholder for deadline request db query"
+            cur = db.cursor()
+            cur.execute("SELECT DISTINCT d.name, d.date, d.description FROM date d WHERE name LIKE '%Deadline%';")
+            deadlines = cur.fetchall()
+            return deadlines
         elif intent == "major":
             if user == 0:
                 return "Please login to view your current major."
             else:
-                return "This is the placeholder for major request db query"
+                cur = db.cursor()
+                cur.execute("SELECT DISTINCT concat(s.major, ' ', ma.name) as Major FROM student s, majorprogram ma WHERE s.studentID = %s AND s.major = ma.majorid;", [user])
+                major = cur.fetchall()
+                return f"Your major is: {major[Major]}"
         elif intent == "minor":
             if user == 0:
                 return "Please login to view your current minor."
             else:
-                return "This is the placeholder for minor request db query"
+                cur = db.cursor()
+                cur.execute("SELECT DISTINCT concat(s.minor, ' ', ma.name) as Minor FROM student s, minorprogram ma WHERE s.studentID = %s AND s.minor = mi.minorid;", [user])
+                minor = cur.fetchall()
+                return f"Your minor is: {minor[Minor]}"
         else:
              return pregenResponse
+
 class InputProcessor:
     #split query into tokens
     def tokenize(sen):
