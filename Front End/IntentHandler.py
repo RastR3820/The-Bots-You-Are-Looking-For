@@ -80,7 +80,12 @@ class IntentHandler:
             cur = db.cursor()
             cur.execute("SELECT ID, Name, Type FROM (SELECT DISTINCT ma.majorid as ID, ma.Name, 'Major' as Type FROM majorprogram ma UNION SELECT DISTINCT mi.minorid as ID, mi.Name, 'Minor' as Type FROM minorprogram mi) degrees")
             degrees = cur.fetchall()
-            return degrees
+            result =''
+            for degree in degrees:
+                degree = str(degree)
+                degree = re.sub("[{}']", '', degree)
+                result = result + degree + '\n'
+            return result
         
         #find course info - takes input and searches db for match and outputs course info if found else error msg
         elif intent == "course":
