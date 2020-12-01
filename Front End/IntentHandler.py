@@ -108,6 +108,7 @@ class IntentHandler:
                 resultValue = cur.execute("SELECT DISTINCT concat(co.coursesubject, ' ', co.coursenumber, ' ', co.name) as Course FROM course co WHERE co.coursenumber LIKE %s AND co.coursesubject LIKE %s;", ([number[0]], [subject[0]]))
                 if resultValue > 0:
                     courses = cur.fetchall()
+                    result =''
                     for course in courses:
                         course = str(course)
                         course = re.sub("[{}']", '', course)
@@ -118,6 +119,7 @@ class IntentHandler:
                     resultValue = cur.execute("SELECT DISTINCT concat(co.coursesubject, ' ', co.coursenumber, ' ', co.name) as Course FROM course co WHERE co.coursenumber LIKE %s OR co.coursesubject LIKE %s;", ([number[0]], [subject[0]]))
                     if resultValue > 0:
                         courses = cur.fetchall()
+                        result =''
                         for course in courses:
                             course = str(course)
                             course = re.sub("[{}']", '', course)
@@ -135,6 +137,7 @@ class IntentHandler:
                 resultValue = cur.execute("SELECT DISTINCT c.ClassID, co.Name FROM class c, course co, faculty f, enroll e WHERE c.instructorid = f.facultyid AND c.courseid = co.courseid AND e.classid = c.classid AND e.studentid = %s", [user])
                 if resultValue > 0:
                     mycourses = cur.fetchall()
+                    result =''
                     for course in mycourses:
                         course = str(course)
                         course = re.sub("[{}']", '', course)
@@ -151,6 +154,7 @@ class IntentHandler:
             cur = db.cursor()
             cur.execute("SELECT DISTINCT d.Name, d.Date, d.Description FROM date d WHERE name LIKE '%Deadline%';")
             deadlines = cur.fetchall()
+            result =''
             for deadline in deadlines:
                 deadline = str(deadline)
                 deadline = re.sub("[{}']", '', deadline)
@@ -164,22 +168,23 @@ class IntentHandler:
             else:
                 cur = db.cursor()
                 cur.execute("SELECT DISTINCT concat(s.major, ' ', ma.name) as Major FROM student s, majorprogram ma WHERE s.studentID = %s AND s.major = ma.majorid;", [user])
-                major = cur.fetchall()
+                major = cur.fetchone()
+                print(major)
                 if major == None:
                     return "Your major is undeclared"
                 else:
-                    return f"Your major is: {major[Major]}"
+                    return f"Your major is: {major['Major']}"
         elif intent == "minor":
             if user == 0:
                 return "Please login to view your current minor."
             else:
                 cur = db.cursor()
                 cur.execute("SELECT DISTINCT concat(s.minor, ' ', ma.name) as Minor FROM student s, minorprogram ma WHERE s.studentID = %s AND s.minor = mi.minorid;", [user])
-                minor = cur.fetchall()
+                minor = cur.fetchone()
                 if minor == None:
                     return "Your minor is undeclared"
                 else:
-                    return f"Your minor is: {minor[Minor]}"
+                    return f"Your minor is: {minor['Minor']}"
         else:
              return pregenResponse
 
