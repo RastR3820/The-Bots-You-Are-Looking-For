@@ -119,7 +119,7 @@
 		
 		{
 			"tag": "major",
-			"patterns": ["what is my major", "major", "major request", "show me my major"],
+			"patterns": ["what is my major", "What's my major", "major", "my major", "major request", "show me my major"],
 			"responses": [
 				"major request"
 			]
@@ -127,7 +127,7 @@
 		
 		{
 			"tag": "minor",
-			"patterns": ["what is my minor", "minor", "minor request", "show me my minor"],
+			"patterns": ["what is my minor", "What's my minor", "minor", "my minor", "minor request", "show me my minor"],
 			"responses": [
 				"minor request"
 			]

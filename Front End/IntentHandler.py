@@ -179,7 +179,7 @@ class IntentHandler:
                 return "Please login to view your current minor."
             else:
                 cur = db.cursor()
-                cur.execute("SELECT DISTINCT concat(s.minor, ' ', ma.name) as Minor FROM student s, minorprogram ma WHERE s.studentID = %s AND s.minor = mi.minorid;", [user])
+                cur.execute("SELECT DISTINCT concat(s.minor, ' ', mi.name) as Minor FROM student s, minorprogram mi WHERE s.studentID = %s AND s.minor = mi.minorid;", [user])
                 minor = cur.fetchone()
                 if minor == None:
                     return "Your minor is undeclared"
