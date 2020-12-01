@@ -110,8 +110,8 @@ class IntentHandler:
                     courses = cur.fetchall()
                     for course in courses:
                         course = str(course)
-                        course = re.sub("[{}']", '', degree)
-                        result = result + degree + '<br><br>'
+                        course = re.sub("[{}']", '', course)
+                        result = result + course + '<br><br>'
                     result = result[:-4]
                     return result
                 else:
@@ -120,7 +120,7 @@ class IntentHandler:
                         courses = cur.fetchall()
                         for course in courses:
                             course = str(course)
-                            course = re.sub("[{}']", '', degree)
+                            course = re.sub("[{}']", '', course)
                             result = result + course + '<br><br>'
                         result = result[:-4]
                         return f"Course could not be found, here is a list of courses with either the same subject or number. Please try again. {result}"
@@ -137,7 +137,7 @@ class IntentHandler:
                     mycourses = cur.fetchall()
                     for course in mycourses:
                         course = str(course)
-                        course = re.sub("[{}']", '', degree)
+                        course = re.sub("[{}']", '', course)
                         result = result + course + '<br><br>'
                     result = result[:-4]
                     return result
@@ -153,7 +153,7 @@ class IntentHandler:
             deadlines = cur.fetchall()
             for deadline in deadlines:
                 deadline = str(deadline)
-                deadline = re.sub("[{}']", '', degree)
+                deadline = re.sub("[{}']", '', deadline)
                 result = result + deadline + '<br><br>'
             result = result[:-4]
             return result
