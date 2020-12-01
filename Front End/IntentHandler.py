@@ -89,7 +89,8 @@ class IntentHandler:
             for degree in degrees:
                 degree = str(degree)
                 degree = re.sub("[{}']", '', degree)
-                result = result + degree + '\n'
+                result = result + degree + '<br><br>'
+            result = result[:-4]
             return result
         
         #find course info - takes input and searches db for match and outputs course info if found else error msg
@@ -106,21 +107,42 @@ class IntentHandler:
                 cur = db.cursor()
                 resultValue = cur.execute("SELECT DISTINCT concat(co.coursesubject, ' ', co.coursenumber, ' ', co.name) as Course FROM course co WHERE co.coursenumber LIKE %s AND co.coursesubject LIKE %s;", ([number[0]], [subject[0]]))
                 if resultValue > 0:
-                    courses = cur.fetchall()              
-                    return courses
-                else:
-                    cur.execute("SELECT DISTINCT concat(co.coursesubject, ' ', co.coursenumber, ' ', co.name) as Course FROM course co WHERE co.coursenumber LIKE %s OR co.coursesubject LIKE %s;", ([number[0]], [subject[0]]))
                     courses = cur.fetchall()
-                    return f"Course could not be found, here is a list of courses with either the same subject or number. Please try again.\n {courses}"
+                    for course in courses:
+                        course = str(course)
+                        course = re.sub("[{}']", '', degree)
+                        result = result + degree + '<br><br>'
+                    result = result[:-4]
+                    return result
+                else:
+                    resultValue = cur.execute("SELECT DISTINCT concat(co.coursesubject, ' ', co.coursenumber, ' ', co.name) as Course FROM course co WHERE co.coursenumber LIKE %s OR co.coursesubject LIKE %s;", ([number[0]], [subject[0]]))
+                    if resultValue > 0:
+                        courses = cur.fetchall()
+                        for course in courses:
+                            course = str(course)
+                            course = re.sub("[{}']", '', degree)
+                            result = result + course + '<br><br>'
+                        result = result[:-4]
+                        return f"Course could not be found, here is a list of courses with either the same subject or number. Please try again. {result}"
+                    else:
+                        return "Course could not be found and no similar courses could be found."
             return pregenResponse
         elif intent == "my-courses":
             if user == 0:
                 return "Please login to view your courses."
             else:
                 cur = db.cursor()
-                cur.execute("SELECT DISTINCT c.ClassID, co.Name FROM class c, course co, faculty f, enroll e WHERE c.instructorid = f.facultyid AND c.courseid = co.courseid AND e.classid = c.classid AND e.studentid = %s", [user])
-                mycourses = cur.fetchall()
-                return mycourses
+                resultValue = cur.execute("SELECT DISTINCT c.ClassID, co.Name FROM class c, course co, faculty f, enroll e WHERE c.instructorid = f.facultyid AND c.courseid = co.courseid AND e.classid = c.classid AND e.studentid = %s", [user])
+                if resultValue > 0:
+                    mycourses = cur.fetchall()
+                    for course in mycourses:
+                        course = str(course)
+                        course = re.sub("[{}']", '', degree)
+                        result = result + course + '<br><br>'
+                    result = result[:-4]
+                    return result
+                else:
+                    return "You are not enrolled in any courses"
         elif intent == "advising":
             return "Here is the advising contact information for the College of Science and Engineering. Phone:281-283-3700 Email:cseadvising@uhcl.edu"
         elif intent == "appt-times":
@@ -129,6 +151,12 @@ class IntentHandler:
             cur = db.cursor()
             cur.execute("SELECT DISTINCT d.Name, d.Date, d.Description FROM date d WHERE name LIKE '%Deadline%';")
             deadlines = cur.fetchall()
+            for deadline in deadlines:
+                deadline = str(deadline)
+                deadline = re.sub("[{}']", '', degree)
+                result = result + deadline + '<br><br>'
+            result = result[:-4]
+            return result
             return deadlines
         elif intent == "major":
             if user == 0:
@@ -137,7 +165,10 @@ class IntentHandler:
                 cur = db.cursor()
                 cur.execute("SELECT DISTINCT concat(s.major, ' ', ma.name) as Major FROM student s, majorprogram ma WHERE s.studentID = %s AND s.major = ma.majorid;", [user])
                 major = cur.fetchall()
-                return f"Your major is: {major[Major]}"
+                if major == None:
+                    return "Your major is undeclared"
+                else:
+                    return f"Your major is: {major[Major]}"
         elif intent == "minor":
             if user == 0:
                 return "Please login to view your current minor."
@@ -145,7 +176,10 @@ class IntentHandler:
                 cur = db.cursor()
                 cur.execute("SELECT DISTINCT concat(s.minor, ' ', ma.name) as Minor FROM student s, minorprogram ma WHERE s.studentID = %s AND s.minor = mi.minorid;", [user])
                 minor = cur.fetchall()
-                return f"Your minor is: {minor[Minor]}"
+                if minor == None:
+                    return "Your minor is undeclared"
+                else:
+                    return f"Your minor is: {minor[Minor]}"
         else:
              return pregenResponse
 

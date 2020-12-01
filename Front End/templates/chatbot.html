@@ -25,10 +25,12 @@
 					<p class="chat-message"> Hello! Thanks for contacting Hunter the Hawk Advising Chat Bot! You are currently logged in as {{session['FName']}} {{session['LName']}}. How may I assist you today? </p>
 				</div>
 				{% for chatlog in g.chatlogs %}
+				{% autoescape false %}
 					<div class="{{ loop.cycle('chat user', 'chat bot') }}">
 					<div class="user-photo"><img src="{{ loop.cycle('/static/student1.jpg', '/static/mascot.png') }}"></div> 
 					<p class="chat-message"> {{chatlog}} </p> 
-					</div>					
+					</div>				
+				{% endautoescape %}
 				{% endfor %}
 			</div>
 	
