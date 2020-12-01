@@ -73,8 +73,13 @@ class IntentHandler:
                 cur = db.cursor()
                 cur.execute("SELECT DISTINCT concat(s.major, ' ', ma.name) as Major, concat(s.minor, ' ', mi.name) as Minor FROM student s, majorprogram ma, minorprogram mi WHERE s.studentID = %s AND s.major = ma.majorid AND s.minor = mi.minorid", [user])
                 mydegree = cur.fetchone()
-                return f"Your major is: {mydegree['Major']}, and your minor is: {mydegree['Minor']}"
-                
+                print (mydegree)
+                if mydegree == None:
+                    return "Your major is undeclared"
+                else:
+                    return f"Your major is: {mydegree['Major']}, and your minor is: {mydegree['Minor']}"
+               
+                    
                         
         elif intent == "degree":
             cur = db.cursor()
@@ -122,7 +127,7 @@ class IntentHandler:
             return "This is the placeholder for appointment times request db query"
         elif intent == "deadline":
             cur = db.cursor()
-            cur.execute("SELECT DISTINCT d.name, d.date, d.description FROM date d WHERE name LIKE '%Deadline%';")
+            cur.execute("SELECT DISTINCT d.Name, d.Date, d.Description FROM date d WHERE name LIKE '%Deadline%';")
             deadlines = cur.fetchall()
             return deadlines
         elif intent == "major":
