@@ -59,7 +59,7 @@ class IntentHandler:
                     return self.GetOutput(tag,inString,random.choice(currentIntent['responses']),userID)
         #not more than 75% probable, output not understood tag
         else:
-            return self.GetOutput(tag, inString, "unknown", userID)
+            return self.GetOutput("unknown", inString, "unknown", userID)
     def GetOutput(self,intent,inString,pregenResponse,user):
         
         if intent == "unknown":
