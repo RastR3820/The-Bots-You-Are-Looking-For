@@ -7,6 +7,7 @@ import mysql.connector
 # TEMP random for credits and gpa num
 import random
 
+# Ryan - created this handler prior to having access to our database to
 class QueryHandler:
 	currentQuery = ""
 	queries = {}
