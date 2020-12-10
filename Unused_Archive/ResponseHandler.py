@@ -1,6 +1,7 @@
 # ./Handlers/ReponseHandler.py
 # This handler will be where the responses are created and sent back to the webpage
 
+# Ryan - created this handler with basic response generation prior to NLP implementation
 from Handlers.WebHandler import WebHandler
 
 class ResponseHandler:
