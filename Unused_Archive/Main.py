@@ -1,6 +1,8 @@
 # ./Main.py
 # The main structure of the chatbot. THis will bring together all of the functions from the other iles
 
+# Ryan - created this to act as the main file for the entire chatbot prior to Flask implementation
+
 # Import statements for the other classes
 from Handlers.InputHandler import InputHandler
 from Handlers.QueryHandler import QueryHandler
