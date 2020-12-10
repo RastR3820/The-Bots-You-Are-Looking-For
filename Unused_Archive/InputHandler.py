@@ -4,6 +4,8 @@
 from Handlers.IntentHandler import IntentHandler
 from Handlers.WebHandler import WebHandler
 
+# Ryan - created this handler with basic bad input checking and terminal input in place of input from the webpage prior to having access to the webpage
+
 class InputHandler:
 	userInput = ""
 	userLogin = False
