@@ -1,3 +1,4 @@
+<!-- THY CODED BELOW -->
 <!DOCTYPE html>
 <html>
 	<head>
@@ -24,6 +25,8 @@
 					<div class="user-photo"><img src="/static/mascot.png"></div>
 					<p class="chat-message"> Hello! Thanks for contacting Hunter the Hawk Advising Chat Bot! You are currently logged in as {{session['FName']}} {{session['LName']}}. How may I assist you today? </p>
 				</div>
+				<!-- THY CODED ABOVE -->
+				<!-- JOHN CODED BELOW -->
 				{% for chatlog in g.chatlogs %}
 				{% autoescape false %}
 					<div class="{{ loop.cycle('chat user', 'chat bot') }}">
@@ -33,7 +36,8 @@
 				{% endautoescape %}
 				{% endfor %}
 			</div>
-	
+	<!-- JOHN CODED ABOVE -->
+	<!-- THY CODED BELOW -->
 	<div class="chat-form">
 		<textarea name="user_input" form="userinput" placeholder="Ask me a question!" autofocus></textarea>
 		<form method="POST" id="userinput" action="">
@@ -45,3 +49,4 @@
 		
 	</body>
 </html>
+<!-- THY CODED ABOVE -->

@@ -1,3 +1,4 @@
+-- JOHN CODED ALL
 -- display courses from a specific major
 SELECT DISTINCT concat(co.coursenumber, ' ', co.coursesubject) as Course, co.Name
 FROM course co, majorprogram mp, majorcourses mc

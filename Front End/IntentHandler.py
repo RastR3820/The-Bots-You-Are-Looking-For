@@ -61,7 +61,7 @@ class IntentHandler:
         else:
             return self.GetOutput("unknown", inString, "unknown", userID)
     def GetOutput(self,intent,inString,pregenResponse,user):
-        
+        #John did all SQL queries and output code in this function
         if intent == "unknown":
             return "I'm sorry, I don't understand. You can type help to display a list of inquiries supported"
         

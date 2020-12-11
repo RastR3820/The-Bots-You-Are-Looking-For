@@ -1,6 +1,7 @@
 #pip install flask
 #pip install flask_mysqldb
 #pip install pyyaml
+#JOHN CODED BELOW
 from flask import Flask, redirect, request, url_for, render_template, session, flash, g
 from flask_mysqldb import MySQL
 from IntentHandler import IntentHandler
@@ -80,9 +81,13 @@ def chatbot():
         userinput = userform['user_input']
         print('Input from webpage: ',userinput)
         messages.append(userinput)
+        #JOHN CODED ABOVE
+        #RYAN CODED BELOW
         # ryan - this is where the intent handler will read the input
         intenter = IntentHandler()
         response = intenter.GetIntent(userinput,session['StudentID'])
+        #RYAN CODED ABOVE
+        #JOHN CODED BELOW
         print("Intent from chatbot: ", response)
         messages.append(response)
         
@@ -96,5 +101,5 @@ def direct():
 
 if __name__ == "__main__":
     app.run()
-
+#JOHN CODED ABOVE
 
