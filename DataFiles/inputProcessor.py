@@ -5,7 +5,7 @@ import numpy as np
 # ryan - imported os and json libraries to have modelstart in this file
 from nltk.stem.porter import PorterStemmer
 stemmer = PorterStemmer()
-
+#abel - wrote following 3 functions
 #split query into tokens
 def tokenize(sen):
     return nltk.word_tokenize(sen)
