@@ -24,7 +24,7 @@ db = MySQLdb.connect(
 #This class will handle the prediction of what users input with
 #implementation of feed forward neural net data that has been pre-trained
 class IntentHandler:
-    
+    #abel - wrote function
     def GetIntent(self,inString,userID):
         sentence = inString
         if sentence == "exit":
@@ -60,6 +60,7 @@ class IntentHandler:
         #not more than 75% probable, output not understood tag
         else:
             return self.GetOutput("unknown", inString, "unknown", userID)
+    #abel - wrote function except for sql queries
     def GetOutput(self,intent,inString,pregenResponse,user):
         #John did all SQL queries and output code in this function
         if intent == "unknown":
@@ -187,7 +188,7 @@ class IntentHandler:
                     return f"Your minor is: {minor['Minor']}"
         else:
              return pregenResponse
-
+#Abel - wrote function
 class InputProcessor:
     #split query into tokens
     def tokenize(sen):
@@ -211,7 +212,7 @@ class InputProcessor:
             if currentWord in stemmedTokenWords: 
                 bag[index] = 1
         return bag      
-
+#Abel - Class written here also, same as in data folder.
 #this class defines the layout of the feed forward neural net
 class NeuralNet(nn.Module):
     def __init__(self, input_size, hidden_size, num_classes):
